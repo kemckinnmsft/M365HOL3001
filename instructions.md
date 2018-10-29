@@ -35,22 +35,22 @@ There are a few extras throughout this lab that are designed to make your lab ex
 
 - Each task contains a series of steps required for successful completion of the lab.  To track your progress throughout the lab, check the box to the left of the numbered series.  
 
-	!IMAGE[6mfi1ekm.jpg](6mfi1ekm.jpg)
+	!IMAGE[6mfi1ekm.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6mfi1ekm.jpg)
 - After you check each box, you will see your lab progress at the bottom of the instruction pane.
 
-	!IMAGE[0ggu265u.jpg](0ggu265u.jpg)
+	!IMAGE[0ggu265u.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/0ggu265u.jpg)
 - When you see an instruction for switching computers, click on the **blue link** in the text to have that VM loaded automatically.
 
-	!IMAGE[12i85vgl.jpg](12i85vgl.jpg)
+	!IMAGE[12i85vgl.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/12i85vgl.jpg)
 - Throughout the lab, you will see green text with a letter **T** in a square to the left.  This indicates that you can **click on the text** and it will **type it for you** in the VM.  **This will save you lots of time**.
 
-	!IMAGE[cnyu1tdi.jpg](cnyu1tdi.jpg)
+	!IMAGE[cnyu1tdi.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/cnyu1tdi.jpg)
 - You will also see Blue Click here links with a lightening bolt that will launch applications for you.  Alternate instructions are typically also provided below these links.
 
-	!IMAGE[m2zvmfhk.jpg](m2zvmfhk.jpg)
+	!IMAGE[m2zvmfhk.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/m2zvmfhk.jpg)
 - The last interactive element you will see throughout the lab is the **Open Screenshot** text below many steps.  To reduce clutter, most screenshots have been configured to launch in a popup window.  The only ones left visible are ones that could cause issues if they are missed or if there are multiple elements that are easier to understand with visual representation.
 
-	!IMAGE[n4cqn070.jpg](n4cqn070.jpg)
+	!IMAGE[n4cqn070.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/n4cqn070.jpg)
 
 ## Additional Information
 
@@ -58,13 +58,13 @@ There are also Knowledge Items, Notes, and Hints throughout the lab.
 
 - Knowledge Items are used to provide additional information about a topic related to the task or step.  These are often collapsed to reduce the amount of space they use, but it is recommended that you review these items if you want more information on the subject.
 
-	!IMAGE[8g9nif1j.jpg](8g9nif1j.jpg)
+	!IMAGE[8g9nif1j.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/8g9nif1j.jpg)
 - Notes are steps that do not require action or modification of any elements.  This includes general observations and reviewing the results of previous steps.
 
-	!IMAGE[kxrbzsr2.jpg](kxrbzsr2.jpg)
+	!IMAGE[kxrbzsr2.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/kxrbzsr2.jpg)
 - Hints are recommendations or observations that help with the completion of a step.
 
-	!IMAGE[w11x99oo.jpg](w11x99oo.jpg)
+	!IMAGE[w11x99oo.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/w11x99oo.jpg)
 
 [🔙](#introduction)
 ===
@@ -74,7 +74,7 @@ There are also Knowledge Items, Notes, and Hints throughout the lab.
 - Run scripts on VictimPC
 - Configure Azure ATP
 
-	>!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+	>!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 ===
 # Microsoft 365 Cloud App Security
 [🔙](#introduction)
@@ -124,16 +124,16 @@ and troubleshooting of the Cloud Discovery feature.
     **AdminPC**.
     Sample logs are downloadable in MCAS when creating new sources.
 	
-	!IMAGE[g5txg1zn.jpg](g5txg1zn.jpg)
+	!IMAGE[g5txg1zn.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/g5txg1zn.jpg)
 
-	!IMAGE[pdp28e19.jpg](pdp28e19.jpg)
+	!IMAGE[pdp28e19.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/pdp28e19.jpg)
   
 1. []    In WinSCP, you have to create a new connection using the credentials
     provided during the log collector creation, its IP address and
     port 21. Then, you upload the logs into the folder named as the data
     source you created in MCAS.
 	
-	!IMAGE[bgyxrnmh.jpg](bgyxrnmh.jpg)
+	!IMAGE[bgyxrnmh.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/bgyxrnmh.jpg)
 
 1. []  After uploading your logs, verify the processing status in MCAS
     using the Governance log. Verify also the "last data received"
@@ -162,7 +162,7 @@ What are the prerequisites to use this native integration?
 Once the integration is complete, you will have a new continuous report
 in the Discovery reports.
 
-!IMAGE[3ezcsz80.jpg](3ezcsz80.jpg)
+!IMAGE[3ezcsz80.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/3ezcsz80.jpg)
 ===
 ## How to troubleshoot the Docker log collector
 
@@ -218,7 +218,7 @@ following command:\
 You can then explore the container filesystem and inspect the
 **/var/adallom** directory. This directory is where you will investigate
 issues with the syslog or ftp logs being sent to the collector\
-!IMAGE[ovjlyn26.jpg](ovjlyn26.jpg)
+!IMAGE[ovjlyn26.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ovjlyn26.jpg)
 
 -   **/adallom/ftp/discovery**: this folder contains the data source
     folders where you send the log files for automated upload. This is
@@ -236,10 +236,10 @@ issues with the syslog or ftp logs being sent to the collector\
 To validate that logs are correctly received from the network appliance,
 you can also verify the **/var/log/pure-ftpd** directory and check the
 transfer log:
-!IMAGE[erx39v7i.jpg](erx39v7i.jpg)
+!IMAGE[erx39v7i.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/erx39v7i.jpg)
 
 Now, move to the **/var/log/adallom** directory.
-!IMAGE[0h029uih.jpg](0h029uih.jpg)
+!IMAGE[0h029uih.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/0h029uih.jpg)
 
 -   **/var/log/adallom/columbus**: this folder is where you will find
     log files useful for troubleshooting issues with the collector
@@ -251,7 +251,7 @@ Now, move to the **/var/log/adallom** directory.
     logs related to the configuration and bootstrapping of the
     collector. For example, trace.log will show you the bootstrapping
     process:
-    !IMAGE[ks4ttuuq.jpg](ks4ttuuq.jpg)
+    !IMAGE[ks4ttuuq.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ks4ttuuq.jpg)
 
  
 
@@ -267,17 +267,17 @@ log and see if it gets uploaded to MCAS.
 
 Upload the logs in the folder named by your source:
 
-!IMAGE[bqhxmpns.jpg](bqhxmpns.jpg)
+!IMAGE[bqhxmpns.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/bqhxmpns.jpg)
 
  
 
 Then, check in MCAS the status:
 
-!IMAGE[21pseval.jpg](21pseval.jpg)
+!IMAGE[21pseval.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/21pseval.jpg)
 
  
 
-!IMAGE[mt0o095m.jpg](mt0o095m.jpg)
+!IMAGE[mt0o095m.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/mt0o095m.jpg)
 
  
 
@@ -286,7 +286,7 @@ connection issue between the log collector and MCAS.
 
 Another way to validate the connection is to log into the container like
 in the previous task and then run *netstat -a* to check if we see
-connections to MCAS:!IMAGE[rxvauw6e.jpg](rxvauw6e.jpg)
+connections to MCAS:!IMAGE[rxvauw6e.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/rxvauw6e.jpg)
 ===
 # Threat Detection
 [🔙](#microsoft-365-cloud-app-security)
@@ -327,7 +327,7 @@ As creating this kind of rules is part of the daily operations in a
 company, we could recommend scoping the monitoring to **sensitive
 groups** of users to monitor but this is not required for this lab.
 
-!IMAGE[deg5ncg3.jpg](deg5ncg3.jpg)
+!IMAGE[deg5ncg3.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/deg5ncg3.jpg)
 
 ### Exchange Online - add user to Exchange administrator role
 
@@ -345,7 +345,7 @@ usually required by security teams.
 Optionally, you could add as a condition "if IP address category is not
 in Corporate".
 
-!IMAGE[ao3du4ms.jpg](ao3du4ms.jpg)
+!IMAGE[ao3du4ms.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ao3du4ms.jpg)
 
 ### Exchange Online - Add management role assignment
 
@@ -363,7 +363,7 @@ address](https://docs.microsoft.com/en-us/exchange/permissions-exo/permissions-e
   |----------------- |----------------------------------- |---------------------
   |Exchange Online   |Add impersonation role assignment   |New-ManagementRoleAssignment
 
-!IMAGE[rilw99v2.jpg](rilw99v2.jpg)
+!IMAGE[rilw99v2.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/rilw99v2.jpg)
 
 ### Exchange Online - New delegated access to sensitive mailbox
 
@@ -387,7 +387,7 @@ many alerts, but this is not required for this lab.
   |Exchange Online   |Add mailbox folder permission   	  |Add-MailboxFolderPermission
   |Exchange Online   |Add permission to mailbox       	  |Add-MailboxPermission
 
-!IMAGE[6kcy2xki.jpg](6kcy2xki.jpg)
+!IMAGE[6kcy2xki.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6kcy2xki.jpg)
 
 ### OneDrive -- Ownership granted to another user
 
@@ -400,7 +400,7 @@ somebody OneDrive for Business site.
   |----------------- |----------------------------------- |---------------------
   |OneDrive   		 |Add site collection administrator   |SiteCollectionAdminAdded
 
-!IMAGE[rb4fqb83.jpg](rb4fqb83.jpg)
+!IMAGE[rb4fqb83.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/rb4fqb83.jpg)
 
 ### 3rd party apps delegations
 
@@ -415,7 +415,7 @@ or possible data exfiltration.
 We will monitor when an uncommon app is granted medium or high
 permission level:
 
-!IMAGE[mszki5q9.jpg](mszki5q9.jpg)
+!IMAGE[mszki5q9.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/mszki5q9.jpg)
 
 ### Investigation in MCAS
 
@@ -457,7 +457,7 @@ complications.
 
     1.  In Salesforce, go to **Setup**, search for **My Domain** and
         register a new domain, e.g., ems123456-dev-ed.salesforce.com
-        !IMAGE[f7idpipy.jpg](f7idpipy.jpg)
+        !IMAGE[f7idpipy.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/f7idpipy.jpg)
 
     5.  Save **full Salesforce domain name**, including https:// for the
         next step, e.g., <https://ems123456-dev-ed.salesforce.com>
@@ -502,7 +502,7 @@ complications.
 
     13. Go back to Salesforce, under **Setup** go to **Single Sign-On
         Settings**
-        !IMAGE[ao0yrpx8.jpg](ao0yrpx8.jpg)
+        !IMAGE[ao0yrpx8.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ao0yrpx8.jpg)
 
     14. Click on **Edit**, Select **SAML Enabled**, and click on
         **Save**
@@ -546,7 +546,7 @@ complications.
     20. Go back to the Azure AD portal, within the **SalesforceCAS**
         app, choose **Users and groups**
         
-		!IMAGE[kscnoob4.jpg](kscnoob4.jpg)
+		!IMAGE[kscnoob4.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/kscnoob4.jpg)
 
     21. Click on **+ Add user**, choose the admin as the user (e.g.,
         <admin@ems123456.onmicrosoft.com>), choose **System
@@ -562,7 +562,7 @@ complications.
 
     1. In Azure Active Directory, under **Security**, click
         on **Conditional access**.
-        !IMAGE[b62lha77.jpg](b62lha77.jpg)
+        !IMAGE[b62lha77.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/b62lha77.jpg)
 
     24. Click on **New policy** and create a new policy:
 
@@ -581,7 +581,7 @@ complications.
         1. Click on **Create**
 
         1. It should look like this:
-            !IMAGE[qti7w9u6.jpg](qti7w9u6.jpg)
+            !IMAGE[qti7w9u6.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/qti7w9u6.jpg)
 
     25. After the policy was created successfully, open a new browser,
         [make sure you are logged out]{.underline}, and log in to
@@ -594,11 +594,11 @@ complications.
 
     26. Go to the Cloud App Security portal, and under the settings cog
         choose **Conditional Access App Control
-        !IMAGE[dfmwyegm.jpg](dfmwyegm.jpg)
+        !IMAGE[dfmwyegm.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/dfmwyegm.jpg)
 
     27. You should see a message letting you know that new Azure AD apps
         were discovered. Click on the **View new apps** link.
-        !IMAGE[qz9mx11x.jpg](qz9mx11x.jpg)
+        !IMAGE[qz9mx11x.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/qz9mx11x.jpg)
 
         1. If the message does not appear, go back to step c. (After
             the policy was created...) this time, close the browser and
@@ -606,7 +606,7 @@ complications.
 
     28. In the dialog that opens, you should see Salesforce. Click on
         the + sign, and then click **Add**.
-        !IMAGE[iy3f8gro.jpg](iy3f8gro.jpg)
+        !IMAGE[iy3f8gro.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/iy3f8gro.jpg)
 
 ### Configure device authentication
 
@@ -616,7 +616,7 @@ complications.
      folder within the **E:\Demofiles.zip** file you've received as the
      certificate authority root certificate
 
-	!IMAGE[rlkp1xvp.jpg](rlkp1xvp.jpg)
+	!IMAGE[rlkp1xvp.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/rlkp1xvp.jpg)
 ### Create a session policy
 
 1.  In the Cloud App Security portal, select **Control** followed
@@ -624,16 +624,16 @@ complications.
 
 2.  In the **Policies** page, click **Create policy** and
      select **Session policy**.
-     !IMAGE[6lh61nkl.jpg](6lh61nkl.jpg)
+     !IMAGE[6lh61nkl.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6lh61nkl.jpg)
 
 3.  In the **Session policy** window, assign a name for your policy,
      such as *Block download of sensitive documents to unmanaged
      devices.*
-     !IMAGE[a6i9js1x.jpg](a6i9js1x.jpg)
+     !IMAGE[a6i9js1x.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/a6i9js1x.jpg)
 
 4.  In the **Session control type** field Select **Control file download
      (with DLP)** 
-	 !IMAGE[j9pxy1lm.jpg](j9pxy1lm.jpg)
+	 !IMAGE[j9pxy1lm.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/j9pxy1lm.jpg)
 
 5.  Under **Activity source** in the **Activities matching all of the
      following** section, select the following activity filters to
@@ -642,7 +642,7 @@ complications.
     1. **Device tags** does not equal **Valid client certificate**
 
     1. **App** equals **Salesforce**
-    !IMAGE[6wwuqlcz.jpg](6wwuqlcz.jpg)
+    !IMAGE[6wwuqlcz.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6wwuqlcz.jpg)
 
 6.  Check the **Enabled** checkbox near **Content inspection**
 
@@ -655,14 +655,14 @@ complications.
 9.  Check the **Don't require relevant context** checkbox, just below
      the dropdown
      menu
-	 !IMAGE[10uz9qp1.jpg](10uz9qp1.jpg)
+	 !IMAGE[10uz9qp1.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/10uz9qp1.jpg)
 
 10. Under **Actions**, select **Block**
 
 11. Check the **Customize block message** checkbox, and add a custom
      message in the textbox that has opened, e.g.: "This file is
      sensitive"
-    !IMAGE[dzdsku3w.jpg](dzdsku3w.jpg)
+    !IMAGE[dzdsku3w.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/dzdsku3w.jpg)
 
 12. Click on **Create**
 
@@ -672,7 +672,7 @@ complications.
 14. In the **Session control type** field Select **Control file download
      (with DLP)** 
 
-	 !IMAGE[xsznq6n8.jpg](xsznq6n8.jpg)
+	 !IMAGE[xsznq6n8.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/xsznq6n8.jpg)
 
 15. Under **Activity source** in the **Activities matching all of the
      following** section, select the following activity filters to
@@ -682,13 +682,13 @@ complications.
 
  **App** equals **Salesforce**
 
- !IMAGE[8s4bu84k.jpg](8s4bu84k.jpg)
+ !IMAGE[8s4bu84k.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/8s4bu84k.jpg)
 
 16. Clear the **Enabled** checkbox near **Content inspection**
 
 17. Under **Actions**, select **Protect**
 
-    !IMAGE[c5xhnr87.jpg](c5xhnr87.jpg)
+    !IMAGE[c5xhnr87.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/c5xhnr87.jpg)
 
 18. Click on **Create**
 
@@ -715,16 +715,16 @@ complications.
      unmanaged device by clicking on **OK** in one browser and
      **Cancel** in the other.
 
-   !IMAGE[2mj216sm.jpg](2mj216sm.jpg)
+   !IMAGE[2mj216sm.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/2mj216sm.jpg)
 
 7.  You should then see a Monitored access message, click on **Continue
      to Salesforce** to continue.
 
-    !IMAGE[h2oyt9fw.jpg](h2oyt9fw.jpg)
+    !IMAGE[h2oyt9fw.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/h2oyt9fw.jpg)
 
 8.  Now you are logged in to Salesforce. Click on + and go to Files
 
-    !IMAGE[d0ik67yl.jpg](d0ik67yl.jpg)
+    !IMAGE[d0ik67yl.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/d0ik67yl.jpg)
 
 9.  Upload the files **Personal employees information.docx** and
      **Protect with Microsoft Cloud App Security proxy.pdf** from the
@@ -737,7 +737,7 @@ complications.
      that you get a blocking message and instead of the file, you get a
      Blocked...txt file.
 
-   !IMAGE[wvk16zl2.jpg](wvk16zl2.jpg)
+   !IMAGE[wvk16zl2.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/wvk16zl2.jpg)
 
 ### Test the admin experience
 
@@ -748,7 +748,7 @@ complications.
     the file download that was not blocked, and the file download that
     was blocked because it matched the policy.
 
-    !IMAGE[j0vuo06k.jpg](j0vuo06k.jpg)
+    !IMAGE[j0vuo06k.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/j0vuo06k.jpg)
 ===
 # Management
 [🔙](#microsoft-365-cloud-app-security)
@@ -800,12 +800,12 @@ the available cmdlets.
 Note: the module relies on the Cloud App Security API. You can find its
 documentation in the MCAS portal.
 
-!IMAGE[f847xhzx.jpg](f847xhzx.jpg)
+!IMAGE[f847xhzx.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/f847xhzx.jpg)
 
 The module is available in the PowerShell gallery and can be installed
 using the *Install-Module mcas* command.
 
-!IMAGE[6j16dgs2.jpg](6j16dgs2.jpg)
+!IMAGE[6j16dgs2.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6j16dgs2.jpg)
 
 More information on the module is available on GitHub:
 <https://github.com/powershellshock/MCAS-Powershell>
@@ -815,7 +815,7 @@ PowerShell help and start exploring the cmdlets.
 
 Hint: you'll have to create an API token in Cloud App Security.
 
-!IMAGE[0x2tzeqd.jpg](0x2tzeqd.jpg)
+!IMAGE[0x2tzeqd.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/0x2tzeqd.jpg)
 
 Using PowerShell:
 
@@ -857,7 +857,7 @@ After completing this lab, you will be able to:
 
 Even before configuring an AIP classification taxonomy, customers can scan and identify files containing sensitive information based on the built-in sensitive information types included in the Microsoft Classification Engine.  
 
-!IMAGE[ahwj80dw.jpg](ahwj80dw.jpg)
+!IMAGE[ahwj80dw.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ahwj80dw.jpg)
 
 Often, this can help drive an appropriate level of urgency and attention to the risk customers face if they delay rolling out AIP classification and protection.  
 
@@ -879,7 +879,7 @@ In order to collect log data from Azure Information Protection clients and servi
 
 1. [] Right-click on **Edge** in the taskbar and click on **New InPrivate window**.
 	>
-	>!IMAGE[jnblioyn.jpg](jnblioyn.jpg)
+	>!IMAGE[jnblioyn.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/jnblioyn.jpg)
 	>
 1. [] In the InPrivate window, navigate to +++https://portal.azure.com/+++
 	>
@@ -895,13 +895,13 @@ In order to collect log data from Azure Information Protection clients and servi
 
 1. [] After logging into the portal, type the word +++info+++ into the **search bar** and press **Enter**, then click on **Azure Information Protection**. 
 
-	!IMAGE[2598c48n.jpg](2598c48n.jpg)
+	!IMAGE[2598c48n.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/2598c48n.jpg)
 	
 	> [!HINT] If you do not see the search bar at the top of the portal, click on the **Magnifying Glass** icon to expand it.
 	>
-	> !IMAGE[ny3fd3da.jpg](ny3fd3da.jpg)
+	> !IMAGE[ny3fd3da.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ny3fd3da.jpg)
 
-	>!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+	>!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 ===
 
 # Connecting to Azure AD and Creating Service Account
@@ -917,7 +917,7 @@ In this task, we will connect to Azure AD Powershell using the provided tenant c
 
 1. [] Right-click on the **PowerShell** icon in the taskbar and click on **Run as Administrator**.
 
-	!IMAGE[7to6p334.jpg](7to6p334.jpg)
+	!IMAGE[7to6p334.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/7to6p334.jpg)
 1. [] In PowerShell, run +++Connect-AzureAD+++ and use the username and password below. 
 	
 	+++@lab.CloudCredential(81).Username+++
@@ -955,7 +955,7 @@ The first step in configuring the AIP Scanner is to install the service and conn
 
 	> [!knowledge] You should see a success message like the one below. 
 	>
-	>!IMAGE[w7goqgop.jpg](w7goqgop.jpg)
+	>!IMAGE[w7goqgop.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/w7goqgop.jpg)
 	>
 
 1. [] Right-click on the **Windows** button in the lower left-hand corner and click on **Run**.
@@ -1011,7 +1011,7 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 1. [] Copy the command to the clipboard.
 1. [] Click on the Start menu and type +++PowerShell+++, right-click on the PowerShell program, and click **Run as a different user**.
 
-	!IMAGE[zgt5ikxl.jpg](zgt5ikxl.jpg)
+	!IMAGE[zgt5ikxl.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/zgt5ikxl.jpg)
 
 1. [] When prompted, enter the username and password below and click **OK**.
 
@@ -1030,11 +1030,11 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 
 1. [] In the Permissions requested window, click **Accept**.
 
-   !IMAGE[nucv27wb.jpg](nucv27wb.jpg)
+   !IMAGE[nucv27wb.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/nucv27wb.jpg)
    
 	>[!knowledge] You will a message like the one below in the PowerShell window once complete.
 	>
-	>!IMAGE[y2bgsabe.jpg](y2bgsabe.jpg)
+	>!IMAGE[y2bgsabe.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/y2bgsabe.jpg)
 1. [] In the PowerShell window, type the command below and press **Enter**.
 
 	+++Restart-Service AIPScanner+++
@@ -1093,23 +1093,23 @@ The next task is to configure repositories to scan.  These can be on-premises Sh
  
 	>[!NOTE] You will see an event like the one below when the scanner completes the cycle.
 	>
-	>!IMAGE[o46iabfu.jpg](o46iabfu.jpg)
+	>!IMAGE[o46iabfu.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/o46iabfu.jpg)
  
 1. [] Next, switch to @lab.VirtualMachine(AdminPC).SelectLink browse to +++\\\Scanner01\c$\users\aipscanner\AppData\Local\Microsoft\MSIP\Scanner\Reports+++ and review the summary txt and detailed csv files available there.  
 
 	>[!Hint] Since there are no Automatic conditions configured yet, the scanner found no matches for the 100 files scanned despite 96 of them having sensitive data.
 	>
-	>!IMAGE[m79emvr8.jpg](m79emvr8.jpg)
+	>!IMAGE[m79emvr8.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/m79emvr8.jpg)
 	>
 	>The details contained in the DetailedReport.csv can be used to identify the types of sensitive data you need to create AIP rules for in the Azure Portal.
 	>
-	>!IMAGE[9y52ab7u.jpg](9y52ab7u.jpg)
+	>!IMAGE[9y52ab7u.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/9y52ab7u.jpg)
 
 1. [] Next, back in the Azure portal, under **Dashboards**, click on Data discovery (preview) and review the data collected in the report.  
 
 	>[!NOTE] It may take several minutes for all data to display in the report.  You can see the various types of sensitive data that was discovered in the repositories that we configured.  We have not actively configured any policies at this point, so no files will be labeled or protected. We will do that in a later exercise in the lab.
 
-	>!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+	>!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 
 ===
 
@@ -1135,7 +1135,7 @@ In this task, we will configure a label protected for internal audiences that ca
 
 1. [] Right-click on **Edge** in the taskbar and click on **New InPrivate window**.
 	
-	!IMAGE[jnblioyn.jpg](jnblioyn.jpg)
+	!IMAGE[jnblioyn.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/jnblioyn.jpg)
 	
 1. [] In the InPrivate window, navigate to +++https://portal.azure.com/+++
 	
@@ -1151,11 +1151,11 @@ In this task, we will configure a label protected for internal audiences that ca
 
 1. [] After logging into the portal, type the word +++info+++ into the **search bar** and press **Enter**, then click on **Azure Information Protection**. 
 
-	!IMAGE[2598c48n.jpg](2598c48n.jpg)
+	!IMAGE[2598c48n.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/2598c48n.jpg)
 	
 	> [!HINT] If you do not see the search bar at the top of the portal, click on the **Magnifying Glass** icon to expand it.
 	>
-	> !IMAGE[ny3fd3da.jpg](ny3fd3da.jpg)
+	> !IMAGE[ny3fd3da.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ny3fd3da.jpg)
 
 
 1. [] Under **classifications** in the left pane, click on **Labels** to load the Azure Information Protection – Labels blade.
@@ -1246,7 +1246,7 @@ In this task, we will assign the new sub-label to the Global policy and configur
 
 1. [] In the Policy: Add or remove labels blade, check the boxes next to **All Labels except the last 3** and click **OK**.
 
-	!IMAGE[d0pxo2m6.jpg](d0pxo2m6.jpg)
+	!IMAGE[d0pxo2m6.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/d0pxo2m6.jpg)
 
 1. [] In the Policy: Global blade, under the **Configure settings to display and apply on Information Protection end users** section, configure the policy to match the settings shown in the table and image below.
 
@@ -1293,7 +1293,7 @@ Now that you have learned how to work with global labels and policies, we will c
 
 1. [] In the Protection blade, under **Protection settings**, click the **+ Add permissions** link.
 
-	!IMAGE[ozzumi7l.jpg](ozzumi7l.jpg)
+	!IMAGE[ozzumi7l.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ozzumi7l.jpg)
 
 1. [] In the Add permissions blade, click **+ Browse directory**.
 
@@ -1307,7 +1307,7 @@ Now that you have learned how to work with global labels and policies, we will c
 
 1. [] In the Add permissions blade, click **OK**.
 
-	^IMAGE[Open Screenshot]!IMAGE[stvnaf4f.jpg](stvnaf4f.jpg)
+	^IMAGE[Open Screenshot]!IMAGE[stvnaf4f.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/stvnaf4f.jpg)
 
 1. [] In the Protection blade, under **Allow offline access**, reduce the **Number of days the content is available without an Internet connection** value to +++3+++ and press **OK** .
 
@@ -1325,7 +1325,7 @@ Now that you have learned how to work with global labels and policies, we will c
 
 1. [] In the Policy blade, for Policy name, type +++Legal Scoped Policy+++ and click on **Select which users or groups get this policy. Groups must be email-enabled.**
 
-	!IMAGE[tosu2a6j.jpg](tosu2a6j.jpg)
+	!IMAGE[tosu2a6j.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/tosu2a6j.jpg)
 
 1. [] In the AAD Users and Groups blade, click on **Users/Groups**.  
 1. [] Then in the second AAD Users and Groups blade, **wait for the names to load** and check the boxes next to **Alan Steiner** and **Amy Albers**.
@@ -1336,7 +1336,7 @@ Now that you have learned how to work with global labels and policies, we will c
 
 1. [] In the Policy blade, under the labels, click on **Add or remove labels** to add the scoped label.
 
-	!IMAGE[b6e9nbui.jpg](b6e9nbui.jpg)
+	!IMAGE[b6e9nbui.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/b6e9nbui.jpg)
 
 1. [] In the Policy: Add or remove labels blade, check the box next to **Legal Only** and click **OK**.
 
@@ -1344,7 +1344,7 @@ Now that you have learned how to work with global labels and policies, we will c
 
 1. [] In the Policy blade, under **Configure settings to display and apply on Information Protection end users** section, under **Select the default label**, select **None** as the default label for this scoped policy.
 
-	!IMAGE[6sh1sfz5.jpg](6sh1sfz5.jpg)
+	!IMAGE[6sh1sfz5.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6sh1sfz5.jpg)
 
 1. [] Click **Save**, then **OK** to complete creation of the Legal Scoped Policy.
 
@@ -1365,7 +1365,7 @@ There are many advanced policy settings that are useful to tailor your Azure Inf
 
 1. [] In the Label: General blade, scroll to the bottom and copy the **Label ID** and close the blade using the **X** in the upper right-hand corner.
 
-    !IMAGE[8fi1wr4d.jpg](8fi1wr4d.jpg)
+    !IMAGE[8fi1wr4d.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/8fi1wr4d.jpg)
 
 1. [] In the AIP Portal, under **classifications** on the left, click on **Policies**. Right-click on the **Legal Scoped Policy** and click on **Advanced settings**.
 
@@ -1375,7 +1375,7 @@ There are many advanced policy settings that are useful to tailor your Azure Inf
 
     > [!ALERT] CAUTION: Please check to ensure that there are **no spaces** before or after the **Label ID** when pasting as this will cause the setting to not apply.
 
-    !IMAGE[ezt8sfs3.jpg](ezt8sfs3.jpg)
+    !IMAGE[ezt8sfs3.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ezt8sfs3.jpg)
 
 	> [!HINT] This and additional Advanced Policy Settings can be found at https://docs.microsoft.com/en-us/azure/information-protection/rms-client/client-admin-guide-customizations 
 
@@ -1391,7 +1391,7 @@ One of the most powerful features of Azure Information Protection is the ability
 	^IMAGE[Open Screenshot](jyw5vrit.jpg)
 1. [] In the Label: Contoso Internal blade, scroll down to the **Configure conditions for automatically applying this label** section, and click on **+ Add a new condition**.
 
-	!IMAGE[cws1ptfd.jpg](cws1ptfd.jpg)
+	!IMAGE[cws1ptfd.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/cws1ptfd.jpg)
 1. [] In the Condition blade, in the **Select information types** search box, type +++credit+++ and check the box next to **Credit Card Number**.
 
 	^IMAGE[Open Screenshot](9rozp61b.jpg)
@@ -1401,7 +1401,7 @@ One of the most powerful features of Azure Information Protection is the ability
 
 	> [!Knowledge] By default the condition is set to Recommended and a policy tip is created with standardized text.
 	>
-	>  !IMAGE[qdqjnhki.jpg](qdqjnhki.jpg)
+	>  !IMAGE[qdqjnhki.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/qdqjnhki.jpg)
 
 1. [] Click **Save** in the Label: Contoso Internal blade and **OK** to the Save settings prompt.
 
@@ -1417,13 +1417,13 @@ One of the most powerful features of Azure Information Protection is the ability
 	^IMAGE[Open Screenshot](8cdmltcj.jpg)
 1. [] In the Condition blade, click on **Custom** and enter +++Password+++ for the **Name** and in the textbox below **Match exact phrase or pattern**, type +++pass@word1+++.
 
-	!IMAGE[ra7dnyg6.jpg](ra7dnyg6.jpg)
+	!IMAGE[ra7dnyg6.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ra7dnyg6.jpg)
 1. [] Click **Save** in the Condition blade and **OK** to the Save settings prompt.
 
 	^IMAGE[Open Screenshot](ie6g5kta.jpg)
 1. [] In the Labels: All Employees blade, in the **Configure conditions for automatically applying this label** section, click **Automatic**.
 
-	!IMAGE[245lpjvk.jpg](245lpjvk.jpg)
+	!IMAGE[245lpjvk.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/245lpjvk.jpg)
 	> [!HINT] The policy tip is automatically updated when you switch the condition to Automatic.
 1. [] Click **Save** in the Label: All Employees blade and **OK** to the Save settings prompt.
 
@@ -1445,18 +1445,18 @@ We will also be disabling a mail flow rule in the Exchange Admin Center to allow
 ===
 # Configuring Applications
 [🔙](#azure-information-protection)
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 In this task, we will configure Word and Outlook for 3 test users.  These users are Alan Steiner (AlanS) and Amy Alberts (AmyA) who we have defined as members of the Legal group, and Eric Grimes (EricG).  This will allow us to demonstrate the differences between the global and scoped policy and demonstrate some of the protection features of Azure Information Protection in the next exercise.
 
 1. [] On @lab.VirtualMachine(Client01).SelectLink, minimize the Edge window and @[Click here](`"C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\WINWORD.EXE"`) to launch **Microsoft Word** (This may take a few seconds).
 
 	> [!Hint] If the automation does not work, start **Microsoft Word** by clicking on the icon in the taskbar.
 	>
-	>!IMAGE[pxyal6hb.jpg](pxyal6hb.jpg)
+	>!IMAGE[pxyal6hb.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/pxyal6hb.jpg)
 	
 	> [!knowledge] When Word opens, you may see a prompt to log into **Microsoft Azure Information Protection**.  You may **close this** and continue.  Azure Information Protection will automatically inherit the settings from Word after reloading.
 	>
-	> !IMAGE[3gm9oeee.jpg](3gm9oeee.jpg)
+	> !IMAGE[3gm9oeee.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/3gm9oeee.jpg)
 
 1. [] In the Sign in set up Office dialog, click Sign in.
 	
@@ -1473,28 +1473,28 @@ In this task, we will configure Word and Outlook for 3 test users.  These users 
 1. [] Wait for the Getting Office ready for you dialog to close and then **Close Microsoft Word**
 1. [] Next, @[Click here](`"C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE"`) to start **Microsoft Outlook** or click on the icon in the taskbar.
 
-	!IMAGE[vlu3sb64.jpg](vlu3sb64.jpg)
+	!IMAGE[vlu3sb64.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/vlu3sb64.jpg)
 1. [] Click **Connect** and let Outlook configure.  
 
 	> [!KNOWLEDGE] Login details for **AlanS@@lab.CloudCredential(81).TenantName** should be automatically populated. If you still see **Install@Contoso.com**, close Microsoft Outlook and reopen.
 	>
 	> If you receive a prompt to choose an account type, click Office 365.
 	>
-	> !IMAGE[13mp3hbw.jpg](13mp3hbw.jpg)
+	> !IMAGE[13mp3hbw.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/13mp3hbw.jpg)
 
 1. [] **Uncheck** the box to **Set up Outlook Mobile on my phone**, too and click **OK**.
 
-	!IMAGE[hjmvdzvv.jpg](hjmvdzvv.jpg)
+	!IMAGE[hjmvdzvv.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/hjmvdzvv.jpg)
 
 1. [] Switch to **@lab.VirtualMachine(Client02).SelectLink** and and @[Click here](`"C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\WINWORD.EXE"`) to launch **Microsoft Word** (This may take a few seconds).
 
 	> [!Hint] If the automation does not work, start **Microsoft Word** by clicking on the icon in the taskbar.
 	>
-	>!IMAGE[pxyal6hb.jpg](pxyal6hb.jpg)
+	>!IMAGE[pxyal6hb.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/pxyal6hb.jpg)
 	
 	> [!knowledge] When Word opens, you may see a prompt to log into **Microsoft Azure Information Protection**.  You may **close this** and continue.  Azure Information Protection will automatically inherit the settings from Word after reloading.
 	>
-	> !IMAGE[3gm9oeee.jpg](3gm9oeee.jpg)
+	> !IMAGE[3gm9oeee.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/3gm9oeee.jpg)
 
 1. [] In the Sign in set up Office dialog, click Sign in.
 	
@@ -1511,14 +1511,14 @@ In this task, we will configure Word and Outlook for 3 test users.  These users 
 1. [] Wait for the Getting Office ready for you dialog to close and then **Close Microsoft Word**
 1. [] Next, @[Click here](`"C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE"`) to start **Microsoft Outlook** or click on the icon in the taskbar.
 
-	!IMAGE[vlu3sb64.jpg](vlu3sb64.jpg)
+	!IMAGE[vlu3sb64.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/vlu3sb64.jpg)
 1. [] Click **Connect** and let Outlook configure.  
 
 	> [!KNOWLEDGE] Login details for **AmyA@@lab.CloudCredential(81).TenantName** should be automatically populated. If you still see **Install@Contoso.com**, close Microsoft Outlook and reopen.
 	>
 	> If you receive a prompt to choose an account type, click Office 365.
 	>
-	> !IMAGE[13mp3hbw.jpg](13mp3hbw.jpg)
+	> !IMAGE[13mp3hbw.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/13mp3hbw.jpg)
 
 1. [] **Uncheck** the box to **Set up Outlook Mobile on my phone**, too and click **OK**.
 
@@ -1528,11 +1528,11 @@ In this task, we will configure Word and Outlook for 3 test users.  These users 
 
 	> [!Hint] If the automation does not work, start **Microsoft Word** by clicking on the icon in the taskbar.
 	>
-	>!IMAGE[pxyal6hb.jpg](pxyal6hb.jpg)
+	>!IMAGE[pxyal6hb.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/pxyal6hb.jpg)
 	
 	> [!knowledge] When Word opens, you may see a prompt to log into **Microsoft Azure Information Protection**.  You may **close this** and continue.  Azure Information Protection will automatically inherit the settings from Word after reloading.
 	>
-	> !IMAGE[3gm9oeee.jpg](3gm9oeee.jpg)
+	> !IMAGE[3gm9oeee.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/3gm9oeee.jpg)
 
 1. [] In the Sign in set up Office dialog, click Sign in.
 	
@@ -1549,14 +1549,14 @@ In this task, we will configure Word and Outlook for 3 test users.  These users 
 1. [] Wait for the Getting Office ready for you dialog to close and then **Close Microsoft Word**
 1. [] Next, @[Click here](`"C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE"`) to start **Microsoft Outlook** or click on the icon in the taskbar.
 
-	!IMAGE[vlu3sb64.jpg](vlu3sb64.jpg)
+	!IMAGE[vlu3sb64.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/vlu3sb64.jpg)
 1. [] Click **Connect** and let Outlook configure.  
 
 	> [!KNOWLEDGE] Login details for **EricG@@lab.CloudCredential(81).TenantName** should be automatically populated. If you still see **Install@Contoso.com**, close Microsoft Outlook and reopen.
 	>
 	> If you receive a prompt to choose an account type, click Office 365.
 	>
-	> !IMAGE[13mp3hbw.jpg](13mp3hbw.jpg)
+	> !IMAGE[13mp3hbw.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/13mp3hbw.jpg)
 
 1. [] **Uncheck** the box to **Set up Outlook Mobile on my phone**, too and click **OK**.
 
@@ -1573,14 +1573,14 @@ In this task, we will configure Word and Outlook for 3 test users.  These users 
 
 	> [!knowledge] Right-click on **Edge** in the taskbar and click on **New InPrivate window**.
 	>
-	>!IMAGE[jnblioyn.jpg](jnblioyn.jpg)
+	>!IMAGE[jnblioyn.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/jnblioyn.jpg)
 	>In the InPrivate window, navigate to +++https://outlook.office365.com/ecp/+++.
 	
 1. [] Log in using +++@lab.CloudCredential(81).Username+++ and the password +++@lab.CloudCredential(81).Password+++.
 
 1. [] In the Exchange admin center, click on **mail flow** on the left, then uncheck the box next to **Delete if sent outside the organization**.
 
-	!IMAGE[kgoqkfrs.jpg](kgoqkfrs.jpg)
+	!IMAGE[kgoqkfrs.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/kgoqkfrs.jpg)
 1. [] Wait for the view to update showing the disabled rule, then **minimize this window** and save it for when we add new rules in Exercise 4.
 
 ===
@@ -1598,11 +1598,11 @@ One of the most common use cases for AIP is the ability to send emails using Use
 1. [] Switch to @lab.VirtualMachine(Client03).SelectLink.
 1. [] In Microsoft Outlook, click on the **New email** button.
 
-	!IMAGE[6wan9me1.jpg](6wan9me1.jpg)
+	!IMAGE[6wan9me1.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6wan9me1.jpg)
 
 	> [!KNOWLEDGE] Note that the **Sensitivity** is set to **General** by default.
 	>
-	> !IMAGE[5esnhwkw.jpg](5esnhwkw.jpg)
+	> !IMAGE[5esnhwkw.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/5esnhwkw.jpg)
 
 1. [] Send an email to Alan and Amy (+++AlanS;AmyA+++). You may optionally add an external email address (preferably from a major social provider like gmail, yahoo, or outlook.com) to test the external recipient experience. For the **Subject** and **Body** type +++Test Do Not Forward Email+++.
 
@@ -1610,19 +1610,19 @@ One of the most common use cases for AIP is the ability to send emails using Use
 
 1. [] In the Sensitivity Toolbar, click on the **pencil** icon to change the Sensitivity label.
 
-	!IMAGE[901v6vpa.jpg](901v6vpa.jpg)
+	!IMAGE[901v6vpa.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/901v6vpa.jpg)
 
 1. [] Click on **Confidential** and then the **Do Not Forward** sub-label and click **Send**.
 
-	!IMAGE[w8j1w1lm.jpg](w8j1w1lm.jpg)
+	!IMAGE[w8j1w1lm.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/w8j1w1lm.jpg)
 
 	> [!Knowledge] If you receive the error message below, click on the Confidential \ Contoso Internal sub-label to force the download of your AIP identity certificates, then follow the steps above to change the label to Confidential \ Do Not Forward.
 	>
-	> !IMAGE[6v6duzbd.jpg](6v6duzbd.jpg)
+	> !IMAGE[6v6duzbd.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6v6duzbd.jpg)
 
 1. [] Switch over to @lab.VirtualMachine(Client01).SelectLink or @lab.VirtualMachine(Client02).SelectLink and review the email in Alan or Amy’s Outlook.  You will notice that the email is automatically shown in Outlook natively.
 
-	!IMAGE[0xby56qt.jpg](0xby56qt.jpg)
+	!IMAGE[0xby56qt.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/0xby56qt.jpg)
 
 	> [!Hint] The **Do Not Forward** protection template will normally prevent the sharing of the screen and taking screenshots when protected documents or emails are loaded.  However, since this screenshot was taken within a VM, the operating system was unaware of the protected content and could not prevent the capture.  
 	>
@@ -1630,11 +1630,11 @@ One of the most common use cases for AIP is the ability to send emails using Use
 
 	> [!KNOWLEDGE] If you elected to send a Do Not Forward message to an external email, you will have an experience similar to the images below.  These captures are included to demonstrate the functionality for those that chose not to send an external message.
 	>
-	> !IMAGE[tzj04wi9.jpg](tzj04wi9.jpg)
+	> !IMAGE[tzj04wi9.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/tzj04wi9.jpg)
 	> 
 	> Here the user has received an email from Eric Grimes and they can click on the **Read the message** button.
 	>
-	>!IMAGE[wiefwcho.jpg](wiefwcho.jpg)
+	>!IMAGE[wiefwcho.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/wiefwcho.jpg)
 	>
 	>Next, the user is given the option to either log in using the social identity provider (**Sign in with Google**, Yahoo, Microsoft Account), or to **sign in with a one-time passcode**.
 	>
@@ -1642,15 +1642,15 @@ One of the most common use cases for AIP is the ability to send emails using Use
 	>
 	>If they choose one-time passcode, they will receive an email like the one below with the one-time passcode.
 	>
-	>!IMAGE[m6voa9xi.jpg](m6voa9xi.jpg)
+	>!IMAGE[m6voa9xi.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/m6voa9xi.jpg)
 	>
 	>They can then use this code to authenticate to the Office 365 Message Encryption portal.
 	>
-	>!IMAGE[8pllxint.jpg](8pllxint.jpg)
+	>!IMAGE[8pllxint.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/8pllxint.jpg)
 	>
 	>After using either of these authentication methods, the user will see a portal experience like the one shown below.
 	>
-	>!IMAGE[3zi4dlk9.jpg](3zi4dlk9.jpg)
+	>!IMAGE[3zi4dlk9.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/3zi4dlk9.jpg)
 ===
 
 # Testing Global Policy
@@ -1676,11 +1676,11 @@ In this task, we will create a document and send an email to demonstrate the fun
 	^IMAGE[Open Screenshot](yhokhtkv.jpg)
 1. [] On @lab.VirtualMachine(Client01).SelectLink or @lab.VirtualMachine(Client02).SelectLink, observe that you are able to open the email natively in the Outlook client. Also observe the **header text** that was defined in the label settings.
 
-	!IMAGE[bxz190x2.jpg](bxz190x2.jpg)
+	!IMAGE[bxz190x2.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/bxz190x2.jpg)
 	
 1. [] In your email, note that you will be unable to open this message.  This experience will vary depending on the client you use (the image below is from Outlook 2016 for Mac) but they should have similar messages after presenting credentials. Since this is not the best experience for the recipient, in Exercise 4, we will configure Exchange Online Mail Flow Rules to prevent content classified with internal only labels from being sent to external users.
 	
-	!IMAGE[52hpmj51.jpg](52hpmj51.jpg)
+	!IMAGE[52hpmj51.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52hpmj51.jpg)
 
 ===
 
@@ -1700,18 +1700,18 @@ In this task, we will create a document and send an email from one of the users 
 	^IMAGE[Open Screenshot](ny1lwv0h.jpg)
 1. [] Switch to @lab.VirtualMachine(Client02).SelectLink and click on the email.  You should be able to open the message natively in the client as AmyA.
 
-	!IMAGE[qeqtd2yr.jpg](qeqtd2yr.jpg)
+	!IMAGE[qeqtd2yr.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/qeqtd2yr.jpg)
 1. [] Switch to @lab.VirtualMachine(Client03).SelectLink and click on the email. You should be unable to open the message as EricG.
 
-	!IMAGE[6y99u8cl.jpg](6y99u8cl.jpg)
+	!IMAGE[6y99u8cl.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6y99u8cl.jpg)
 
 	> [!Knowledge] You may notice that the Office 365 Message Encryption wrapper message is displayed in the preview pane.  It is important to note that the content of the email is not displayed here.  The content of the message is contained within the encrypted message.rpmsg attachment and only authorized users will be able to decrypt this attachment.
 	>
-	>!IMAGE[w4npbt49.jpg](w4npbt49.jpg)
+	>!IMAGE[w4npbt49.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/w4npbt49.jpg)
 	>
 	>If an unauthorized recipient clicks on **Read the message** to go to the OME portal, they will be presented with the same wrapper message.  Like the external recipient from the previous task, this is not an ideal experience. So, you may want to use a mail flow rule to manage scoped labels as well.
 	>
-	>!IMAGE[htjesqwe.jpg](htjesqwe.jpg)
+	>!IMAGE[htjesqwe.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/htjesqwe.jpg)
 
 ===
 
@@ -1727,15 +1727,15 @@ In this task, we will test the configured recommended and automatic conditions w
 
 1. [] Notice that you are prompted with a recommendation to change the classification to Confidential \ Contoso Internal. Click on **Change now** to set the classification and protect the document.
 
-	!IMAGE[url9875r.jpg](url9875r.jpg)
+	!IMAGE[url9875r.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/url9875r.jpg)
 	> [!Knowledge] Notice that, like the email in Task 2 of this exercise, the header value configured in the label is added to the document.
 	>
-	>!IMAGE[dcq31lz1.jpg](dcq31lz1.jpg)
+	>!IMAGE[dcq31lz1.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/dcq31lz1.jpg)
 1. [] In Microsoft Word, create a new **Blank document** and type +++my password is pass@word1+++ and **save** the document.
 
 	>[!HINT] Notice that the document is automatically classified and protected wioth the Highly Confidential \ All Employees label.
 	>
-	>!IMAGE[6vezzlnj.jpg](6vezzlnj.jpg)
+	>!IMAGE[6vezzlnj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6vezzlnj.jpg)
 1. [] Next, in Microsoft Outlook, click on the **New email** button.
 	
 	^IMAGE[Open Screenshot](ldjugk24.jpg)
@@ -1745,11 +1745,11 @@ In this task, we will test the configured recommended and automatic conditions w
 	^IMAGE[Open Screenshot](4v3wrrop.jpg)
 1. [] Attach the **second document you created** to the email.
 
-	!IMAGE[823tzyfd.jpg](823tzyfd.jpg)
+	!IMAGE[823tzyfd.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/823tzyfd.jpg)
 
 	> [!HINT] Notice that the email was automatically classified as Highly Confidential \ All Employees.  This functionality is highly recommended because matching the email classification to attachments provides a much more cohesive user experience and helps to prevent inadvertent information disclosure in the body of sensitive emails.
 	>
-	>!IMAGE[yv0afeow.jpg](yv0afeow.jpg)
+	>!IMAGE[yv0afeow.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/yv0afeow.jpg)
 
 1. [] In the email, click **Send**.
 ===
@@ -1761,7 +1761,7 @@ Exchange Online can work in conjunction with Azure Information Protection to pro
 
 # Configuring Exchange Online Mail Flow Rules
 [🔙](#azure-information-protection)
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 In this task, we will configure a mail flow rule to detect credit card information traversing the network in the clear and encrypt it using the Encrypt Only RMS Template.  We will also create a mail flow rule to prevent messages classified as Confidential \ Contoso Internal from being sent to external recipients.
 
 1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and restore the **Exchange admin center** browser window.
@@ -1770,90 +1770,90 @@ In this task, we will configure a mail flow rule to detect credit card informati
 
 1. [] Ensure you are under **mail flow** > **rules**, then click on the **plus icon** and click **Create a new rule...**
 
-	!IMAGE[5mfzbjt1.jpg](5mfzbjt1.jpg)
+	!IMAGE[5mfzbjt1.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/5mfzbjt1.jpg)
 1. [] In the new rule window, for **Name** type +++Sensitive Data Encrypt Only+++.
 1. [] Under **\*Apply this rule if...**, in the drop-down, click on **The recipient is located...**.
 1. [] In the select recipient location dialog, in the drop-down, click **Outside the organization**, and click **OK**.
 
-	!IMAGE[x2cj3zor.jpg](x2cj3zor.jpg)
+	!IMAGE[x2cj3zor.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/x2cj3zor.jpg)
 1. [] Next, click on **More options...** to display th option to add additional conditions.
 
-	!IMAGE[rpqtrf8m.jpg](rpqtrf8m.jpg)
+	!IMAGE[rpqtrf8m.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/rpqtrf8m.jpg)
 1. [] Click on **add condition**.
 
-	!IMAGE[mjcrysfj.jpg](mjcrysfj.jpg)
+	!IMAGE[mjcrysfj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/mjcrysfj.jpg)
 1. [] Click the **Select one** drop-down and hover over **The message...**, and click on **contains any of these types of sensitive information**.
 
-	!IMAGE[ezuengms.jpg](ezuengms.jpg)
-	!IMAGE[kq8wxegt.jpg](kq8wxegt.jpg)
+	!IMAGE[ezuengms.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ezuengms.jpg)
+	!IMAGE[kq8wxegt.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/kq8wxegt.jpg)
 1. [] In the Contains any of these sensitive information types dialog, click the **plus sign**.
 
-	!IMAGE[53f6tfbi.jpg](53f6tfbi.jpg)
+	!IMAGE[53f6tfbi.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/53f6tfbi.jpg)
 1. [] In the Sensitive information types window, scroll down and click on **Credit Card Number**, then click **Add** and **OK**.
 
-	!IMAGE[dgmsayk6.jpg](dgmsayk6.jpg)
+	!IMAGE[dgmsayk6.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/dgmsayk6.jpg)
 1. [] In the Contains any of these sensitive information types dialog, click **OK**.
 
-	!IMAGE[dihs4zqr.jpg](dihs4zqr.jpg)
+	!IMAGE[dihs4zqr.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/dihs4zqr.jpg)
 1. [] In the new rule window, under \*Do the following..., in the Select one drop-down, hover over **Modify the message security...** and click on **Apply Office 365 Message Encryption and rights protection**.
 
-	!IMAGE[cu1bgeho.jpg](cu1bgeho.jpg)
-	!IMAGE[rwo2scwt.jpg](rwo2scwt.jpg)
+	!IMAGE[cu1bgeho.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/cu1bgeho.jpg)
+	!IMAGE[rwo2scwt.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/rwo2scwt.jpg)
 1. [] In the select RMS template dialog, in the RMS template drop-down, click on **Encrypt** and click **OK**.
 
-	!IMAGE[c8r08bh7.jpg](c8r08bh7.jpg)
+	!IMAGE[c8r08bh7.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/c8r08bh7.jpg)
 1. [] Review the settings in the new rule window and click **Save**.
 
-	!IMAGE[wwlsz0p2.jpg](wwlsz0p2.jpg)
+	!IMAGE[wwlsz0p2.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/wwlsz0p2.jpg)
 	> [!HINT] Next, we need to capture the **Label ID** for the **Confidential \ Contoso Internal** label. 
 
 1. [] Switch to the Azure Portal and under **classifications** click on Labels, then expand **Confidential** and click on **Contoso Internal**.
 
-	!IMAGE[w2w5c7xc.jpg](w2w5c7xc.jpg)
+	!IMAGE[w2w5c7xc.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/w2w5c7xc.jpg)
 
 	> [!HINT] If you closed the azure portal, @[Click here](`cmd.exe/c start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge -private https://portal.azure.com`) to open an Edge InPrivate window and navigate to +++https://portal.azure.com+++.
 
 1. [] In the Label: Contoso Internal blade, scroll down to the Label ID and **copy** the value.
 
-	!IMAGE[lypurcn5.jpg](lypurcn5.jpg)
+	!IMAGE[lypurcn5.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/lypurcn5.jpg)
 
 	> [!ALERT] Make sure that there are no spaces before or after the Label ID as this will cause the mail flow rule to be ineffective.
 
 1. [] Return the rules section of the Exchange admin center, click on the **plus icon** and click **Create a new rule...**
 
-	!IMAGE[5mfzbjt1.jpg](5mfzbjt1.jpg)
+	!IMAGE[5mfzbjt1.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/5mfzbjt1.jpg)
 1. [] In the new rule window, for **Name** type +++Block Contoso Internal to External Recipient+++.
 1. [] Under **\*Apply this rule if...**, in the drop-down, click on **The recipient is located...**.
 1. [] In the select recipient location dialog, in the drop-down, click **Outside the organization**, and click **OK**.
 
-	!IMAGE[on6fbr0d.jpg](on6fbr0d.jpg)
+	!IMAGE[on6fbr0d.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/on6fbr0d.jpg)
 1. [] Next, click on **More options...** to display th option to add additional conditions.
 
-	!IMAGE[rpqtrf8m.jpg](rpqtrf8m.jpg)
+	!IMAGE[rpqtrf8m.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/rpqtrf8m.jpg)
 1. [] Click on **add condition**.
 
-	!IMAGE[cqlps27h.jpg](cqlps27h.jpg)
+	!IMAGE[cqlps27h.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/cqlps27h.jpg)
 1. [] Click the **Select one** drop-down and hover over **A message header...**, and click on **includes any of these words**.
 
-	!IMAGE[zus8h1mn.jpg](zus8h1mn.jpg)
+	!IMAGE[zus8h1mn.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/zus8h1mn.jpg)
 1. [] Click on **\*Enter text...**, and in the specify header name dialog, type +++msip_labels+++ then click **OK**.
 
-	!IMAGE[jrpy4k02.jpg](jrpy4k02.jpg)
+	!IMAGE[jrpy4k02.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/jrpy4k02.jpg)
 1. [] Next, click on **\*Enter words...**, and in the specify words or phrases dialog, type +++MSIP_LABEL_+++, **paste the Label ID value** for the Confidential \ Contoso Internal label, then type +++_enabled\=True;+++. Next, click the **plus sign**, and then click **OK**.
 
-	!IMAGE[temiq3e1.jpg](temiq3e1.jpg)
+	!IMAGE[temiq3e1.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/temiq3e1.jpg)
 1. [] In the new rule window, under \*Do the following..., in the Select one drop-down, hover over **Block the message...**, and click **reject the message and include an explanation**.
 
-	!IMAGE[04mlyfs3.jpg](04mlyfs3.jpg)
-	!IMAGE[akeykn8a.jpg](akeykn8a.jpg)
+	!IMAGE[04mlyfs3.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/04mlyfs3.jpg)
+	!IMAGE[akeykn8a.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/akeykn8a.jpg)
 
 1. [] In the **specify rejection reason**, type +++Contoso Internal messages cannot be sent to external recipients.+++ and click **OK**.
 
-	!IMAGE[4odbewl3.jpg](4odbewl3.jpg)
+	!IMAGE[4odbewl3.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/4odbewl3.jpg)
 
 1. [] Review the rule and make sure it looks similar to the picture below and click **Save**.
 
-	!IMAGE[lgg2r4se.jpg](lgg2r4se.jpg)
+	!IMAGE[lgg2r4se.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/lgg2r4se.jpg)
 
 ===
 
@@ -1873,28 +1873,28 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 
 1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and review the received email.
 
-	!IMAGE[pidqfaa1.jpg](pidqfaa1.jpg)
+	!IMAGE[pidqfaa1.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/pidqfaa1.jpg)
 
 	> [!Knowledge] Note that there is no encryption applied to the message.  That is because we set up the rule to only apply to external recipients.  If you were to leave that condition out of the mail flow rule, internal recipients would also receive an encrypted copy of the message.  The image below shows the encrypted message that was received externally.
 	>
-	>!IMAGE[c5foyeji.jpg](c5foyeji.jpg)
+	>!IMAGE[c5foyeji.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/c5foyeji.jpg)
 	>
 	>Below is another view of the same message received in Outlook Mobile on an iOS device.
 	>
-	>!IMAGE[599ljwfy.jpg](599ljwfy.jpg)
+	>!IMAGE[599ljwfy.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/599ljwfy.jpg)
 
 	>[!NOTE] Note that you have received a message from your DLP policy stating that the email was not sent to the external recipient because it contained a credit card number.
 
 1. [] On Client 1, @[Click here](`cmd.exe/c start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge -private https://protection.office.com`) to open an Edge InPrivate window to +++https://protection.office.com+++.
 1. [] In the Security and Compliance Center, expand **Data loss prevention** and click on **Policy**.  Then, in the Policy blade, click on the **Default Office 365 DLP Policy**.
 	
-	!IMAGE[a2m7ryn4.jpg](a2m7ryn4.jpg)
+	!IMAGE[a2m7ryn4.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/a2m7ryn4.jpg)
 1. [] In the Default Office 365 DLP Policy blade, next to Policy settings, click **Edit**.
 
-	!IMAGE[jsdej5i4.jpg](jsdej5i4.jpg)
+	!IMAGE[jsdej5i4.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/jsdej5i4.jpg)
 1. [] In the Editing policy settings blade, disable the switch next to **Items containing 1-9 credit card numbers shared externally** and click **Save**.
 
-!IMAGE[5y5gg696.jpg](5y5gg696.jpg)
+!IMAGE[5y5gg696.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/5y5gg696.jpg)
 1. [] Return to @lab.VirtualMachine(Client03).SelectLink.
 1. [] In Microsoft Outlook, click on the **New email** button.
 
@@ -1903,10 +1903,10 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 1. [] Send an new email to Alan, Amy, and yourself (+++AlanS;AmyA;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email 2+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
 1. [] Wait a few moments for the DLP policy to recognize the credit card number and external email and then in the DLP Policy Tip, click **override**.
 
-	!IMAGE[aezwvoir.jpg](aezwvoir.jpg)
+	!IMAGE[aezwvoir.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/aezwvoir.jpg)
 1. [] In the Override dialog, type +++Lab Demo+++ and click **Override**
 
-	!IMAGE[7o8406n7.jpg](7o8406n7.jpg)
+	!IMAGE[7o8406n7.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/7o8406n7.jpg)
 	>[!Knowledge] Notice that you do not receive the error messag this time.  Log into your personal email and you will see that the email has been encrypted in transit by the Exchange Online Mail Flow Rule defined in the previous exercise.
 1. [] Next, in Microsoft Outlook, click on the **New email** button.
 
@@ -1924,7 +1924,7 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 	^IMAGE[Open Screenshot](yhokhtkv.jpg)
 1. [] In about a minute, you should receive an **Undeliverable** message from Exchange with the users that the message did not reach and the message you defined in the previous task.
 
-	!IMAGE[kgjvy7ul.jpg](kgjvy7ul.jpg)
+	!IMAGE[kgjvy7ul.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/kgjvy7ul.jpg)
 
 > [!HINT] There are many other use cases for Exchange Online mail flow rules but this should give you a quick view into what is possible and how easy it is to improve the security of your sensitive data through the use of Exchange Online mail flow rules and Azure Information Protection.
 
@@ -1938,7 +1938,7 @@ In this exercise, you will configure SharePoint Online Information Rights Manage
 ===
 # Enable Information Rights Management in SharePoint Online
 [🔙](#azure-information-protection)
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 In this task, we will enable Information Rights Management in SharePoint Online.
 
 1. [] Switch to **@lab.VirtualMachine(Client03).SelectLink**.
@@ -1949,7 +1949,7 @@ In this task, we will enable Information Rights Management in SharePoint Online.
  
 1. [] Hover over the **Admin centers** section of the bar on the left and choose **SharePoint**.
 
-	!IMAGE[r5a21prc.jpg](r5a21prc.jpg)
+	!IMAGE[r5a21prc.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/r5a21prc.jpg)
  
 1. [] In the SharePoint admin center click on **settings**.
 
@@ -1957,11 +1957,11 @@ In this task, we will enable Information Rights Management in SharePoint Online.
  
 1. [] Click the **Refresh IRM Settings** button.
 
-	!IMAGE[1qv8p13n.jpg](1qv8p13n.jpg)
+	!IMAGE[1qv8p13n.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/1qv8p13n.jpg)
 
 	>[!HINT] After the browser refreshes, you can scroll down to the same section and you will see a message stating **We successfully refreshed your setings.**
 	>
-	>!IMAGE[daeglgk9.jpg](daeglgk9.jpg)
+	>!IMAGE[daeglgk9.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/daeglgk9.jpg)
  
 1. [] Keep the browser open and go to the next task.
  
@@ -1969,18 +1969,18 @@ In this task, we will enable Information Rights Management in SharePoint Online.
 
 # Site Creation and Information Rights Management Integration
 [🔙](#azure-information-protection)
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 In this task, we will create a new SharePoint site and enable Information Rights Management in a document library.
 
 1. [] In the upper left-hand corner of the page, click on the **app launcher** and click on **SharePoint** in the list.
 
-	!IMAGE[ahiylfbv.jpg](ahiylfbv.jpg)
+	!IMAGE[ahiylfbv.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ahiylfbv.jpg)
 
-	!IMAGE[s5wj8fpe.jpg](s5wj8fpe.jpg)
+	!IMAGE[s5wj8fpe.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/s5wj8fpe.jpg)
 
 1. [] Dismiss any introductory screens and, at the top of the page, click **+Create site**.
 
-	!IMAGE[7v8wctu2.jpg](7v8wctu2.jpg)
+	!IMAGE[7v8wctu2.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/7v8wctu2.jpg)
  
 1. [] On the Create a site page, click **Team site**.
 
@@ -1997,27 +1997,27 @@ In this task, we will create a new SharePoint site and enable Information Rights
  
 1. [] In the upper right-hand corner, click the **Settings icon** and click **Library settings**.
 
-	!IMAGE[1qo31rp6.jpg](1qo31rp6.jpg)
+	!IMAGE[1qo31rp6.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/1qo31rp6.jpg)
  
 1. [] On the Documents > Settings page, under **Permissions and Management**, click **Information Rights Management**.
 
-	!IMAGE[ie2rmsk2.jpg](ie2rmsk2.jpg)
+	!IMAGE[ie2rmsk2.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/ie2rmsk2.jpg)
  
 1. [] On the Settings > Information Rights Management Settings page, check the box next to Restrict permissions on this library on download and under **Create a permission policy title** type +++Contoso IRM Policy+++, and under **Add a permission policy description** type +++This content contained within this file is for use by Contoso Corporation employees only.+++
  
 	^IMAGE[Open Screenshot](m9v7v7ln.jpg)
 1. [] Next, click on **SHOW OPTIONS** below the policy description and in the **Set additional IRM library settings** section, check the boxes next to **Do not allow users to upload documents that do not support IRM** and **Prevent opening documents in the browser for this Document Library**.
 
-	!IMAGE[0m2qqtqn.jpg](0m2qqtqn.jpg)
+	!IMAGE[0m2qqtqn.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/0m2qqtqn.jpg)
 	>[!KNOWLEDGE] These setting prevent the upload of documents that cannot be protected using Information Rights Managment (Azure RMS) and forces protected documents to be opened in the appropriate application rather than rendering in the SharePoint Online Viewer.
  
 1. [] Next, under the **Configure document access rights** section, check the box next to **Allow viewers to run script and screen reader to function on downloaded documents**.
 
-	!IMAGE[72fkz2ds.jpg](72fkz2ds.jpg)
+	!IMAGE[72fkz2ds.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/72fkz2ds.jpg)
 	>[!HINT] Although this setting may reduce the security of the document, this is typically provided for accessibility purposes.
 1. [] Finally, in the **Configure document access rights** section, check the box next to  **Users must verify their credentials using this interval (days)** and type +++7+++ in the text box.
 
-	!IMAGE[tt1quq3f.jpg](tt1quq3f.jpg)
+	!IMAGE[tt1quq3f.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/tt1quq3f.jpg)
 1. [] At the bottom of the page, click **OK** to complete the configuration of the protected document library.
 1. [] On the Documents > Settings page, in the left-hand navigation pane, click on **Documents** to return to the document library. section.
  
@@ -2027,7 +2027,7 @@ In this task, we will create a new SharePoint site and enable Information Rights
 
 # Uploading Content to the Document Library
 [🔙](#azure-information-protection)
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 Create an unprotected Word document, label it as Internal, and upload it to the document library. 
 
 1. [] @[Click here](`"C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\WINWORD.EXE"`) to launch **Microsoft Word**.
@@ -2040,55 +2040,55 @@ Create an unprotected Word document, label it as Internal, and upload it to the 
 1. [] **Save** the document and **close Microsoft Word**.
 1. [] Return to the IRM Demo protected document library and click on **Upload > Files**.
 
-	!IMAGE[m95ixvv1.jpg](m95ixvv1.jpg)
+	!IMAGE[m95ixvv1.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/m95ixvv1.jpg)
 1. [] Navigate to the location where you saved the document, select it and click **Open** to upload the file.
  
 	>[!NOTE] Note that despite this document being labeled, the Sensitivity is not listed.
  
 1. [] To resolve this, on the right-hand side of the document library, click on the **+ Add column** header and click on **More...**.
 
-	!IMAGE[y8h1vf7o.jpg](y8h1vf7o.jpg)
+	!IMAGE[y8h1vf7o.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/y8h1vf7o.jpg)
 1. [] In the Settings > Create Column page, under **Column name:**, type +++Sensitivity+++.  Verify that **The type of information in this column is:** is set to **Single line of text**, and click **OK**. 
 
-	!IMAGE[66hzke2b.jpg](66hzke2b.jpg)
+	!IMAGE[66hzke2b.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/66hzke2b.jpg)
 1. [] In the document library, click on the **Show actions** button to the right of the uploaded document and click **Delete**.
 
-	!IMAGE[gt7sjulo.jpg](gt7sjulo.jpg)
+	!IMAGE[gt7sjulo.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/gt7sjulo.jpg)
 	>[!Note] This is only necessary to expedite the appearance of the Sensitivity metadata.  In production, this would be unnecessary.
 1. [] Re-upload the document and you will see that the Sensitivity column is populated.
 
-	!IMAGE[0yr96t56.jpg](0yr96t56.jpg)
+	!IMAGE[0yr96t56.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/0yr96t56.jpg)
 1. [] Next, minimize the browser window and right-click on the desktop. Hover over **New >** and click on **Microsoft Access Database**. Name the database +++BadFile+++.
 
-	!IMAGE[e3nxt4a2.jpg](e3nxt4a2.jpg)
+	!IMAGE[e3nxt4a2.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/e3nxt4a2.jpg)
 1. [] Return to the document library and attempt to upload the file.
 
 	>[!KNOWLEDGE] Notice that you are unable to upload the file because it cannot be protected.
 	>	
-	>!IMAGE[432hu3pi.jpg](432hu3pi.jpg)
+	>!IMAGE[432hu3pi.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/432hu3pi.jpg)
 ===
 
 # SharePoint IRM Functionality
 [🔙](#azure-information-protection)
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 Files that are uploaded to a SharePoint IRM protected document library are protected upon download based on the user's access rights to the document library.  In this task, we will share a document with Amy Alberts and review the access rights provided.
 
 1. [] Select the uploaded document and click **Share** in the action bar.
 
-	!IMAGE[1u2jsod7.jpg](1u2jsod7.jpg)
+	!IMAGE[1u2jsod7.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/1u2jsod7.jpg)
 1. [] In the Send Link dialog, type +++AmyA+++ and click on **Amy Alberts** then **Send**.
 
-	!IMAGE[j6w1v4z9.jpg](j6w1v4z9.jpg)
+	!IMAGE[j6w1v4z9.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/j6w1v4z9.jpg)
 1. [] Switch to @lab.VirtualMachine(Client02).SelectLink.
 1. [] Open Outlook and click on the email from CIE Administrator, then click on the **Open** link.
 
 	^IMAGE[Open Screenshot](v39ez284.jpg)
 1. [] This will launch the IRM Demo document library.  Click on the document to open it in Microsoft Word.
 
-	!IMAGE[xmv9dmvk.jpg](xmv9dmvk.jpg)
+	!IMAGE[xmv9dmvk.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/xmv9dmvk.jpg)
 1. [] After the document opens, you will be able to observer that it is protected.  Click on the View Permissions button to review the restrictions set on the document.
 
-	!IMAGE[4uya6mro.jpg](4uya6mro.jpg)
+	!IMAGE[4uya6mro.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/4uya6mro.jpg)
 	>[!NOTE] These permissions are based on the level of access that they user has to the document library.  In a production environment most users would likely have less rights than shown in this example.
 	
 ===
@@ -2105,7 +2105,7 @@ In this exercise, you will use the information gathered in Exercise 1 to map sen
 
 # Configuring Automatic Conditions
 [🔙](#azure-information-protection)
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 Now that we know what types of sensitive data we need to protect, we will configure some automatic conditions (rules) that the scanner can use to classify and protect content.
 
 1. [] Switch back to @lab.VirtualMachine(Scanner01).SelectLink and open the browser that is logged into the Azure Portal.
@@ -2115,7 +2115,7 @@ Now that we know what types of sensitive data we need to protect, we will config
 	^IMAGE[Open Screenshot](jyw5vrit.jpg)
 1. [] In the Label: Contoso Internal blade, scroll down to the **Configure conditions for automatically applying this label** section, and click on **+ Add a new condition**.
 
-	!IMAGE[cws1ptfd.jpg](cws1ptfd.jpg)
+	!IMAGE[cws1ptfd.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/cws1ptfd.jpg)
 1. [] In the Condition blade, in the **Select information types** search box, type +++SSN+++ and check the box next to the 3 **Social Security Number** entries.
 
 	^IMAGE[Open Screenshot](a6dfnuyz.jpg)
@@ -2135,7 +2135,7 @@ Now that we know what types of sensitive data we need to protect, we will config
 
 # Enforcing Configured Rules
 [🔙](#azure-information-protection)
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 In this task, we will se the AIP scanner to enforce the conditions we set up in the previous task and have it rerun on all files using the Start-AIPScan -Reset command.
 
 1. [] Run the commands below to run an enforced scan using defined policy.
@@ -2149,16 +2149,16 @@ In this task, we will se the AIP scanner to enforce the conditions we set up in 
 
 	> [!HINT] Note that this time we used the DiscoverInformationTypes -PolicyOnly switch before starting the scan. This will have the scanner only evaluate the conditions we have explicitly defined in conditions.  This increases the effeciency of the scanner and thus is much faster.  After reviewing the event log we will see the result of the enforced scan.
 	>
-	>!IMAGE[k3rox8ew.jpg](k3rox8ew.jpg)
+	>!IMAGE[k3rox8ew.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/k3rox8ew.jpg)
 	>
 	>If we switch back to @lab.VirtualMachine(Client03).SelectLink and look in the reports directory we opened previously, you will notice that the old scan reports are zipped in the directory and only the most recent results aare showing.  
 	>
-	>!IMAGE[s8mn092f.jpg](s8mn092f.jpg)
+	>!IMAGE[s8mn092f.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/s8mn092f.jpg)
 	>
 	>Also, the DetailedReport.csv now shows the files that were protected.
 	>
 	>
-	>!IMAGE[6waou5x3.jpg](6waou5x3.jpg)
+	>!IMAGE[6waou5x3.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/6waou5x3.jpg)
 	>
 	>^IMAGE[Open Fullscreen](6waou5x3.jpg)
 
@@ -2180,7 +2180,7 @@ Now that we have Classified and Protected documents using the scanner, we can re
 	
 	> [!NOTE] Observe that the same document is now classified as Confidential \ Contoso Internal. You can also see these same documents on a file share at \\Scanner01\documents in their new protected state.
 	>
-	>!IMAGE[s1okfpwu.jpg](s1okfpwu.jpg)
+	>!IMAGE[s1okfpwu.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/s1okfpwu.jpg)
 
 
 ===
@@ -2188,7 +2188,7 @@ Now that we have Classified and Protected documents using the scanner, we can re
 # CONGRATULATIONS!
 [🔙](#azure-information-protection)
 
-!IMAGE[kt7yaogd.jpg](kt7yaogd.jpg)
+!IMAGE[kt7yaogd.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/kt7yaogd.jpg)
 
 
 ===
@@ -2201,14 +2201,14 @@ Now that we have Classified and Protected documents using the scanner, we can re
 1. [] You may also need to onboard machine to WDATP service.  see details here: https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-atp/onboard-configure-windows-defender-advanced-threat-protection
 1. [] run attack simulation #4 "Automated investigation (fileless attack)" on your selected victim client.  Details can be found here: https://securitycenter.windows.com/tutorials.  Please note that you will need to use your WDATP access credentials to access this link [Note to Kevin:  add username and password if possible]
 
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 ===
 # Azure Advanced Threat Protection
 [🔙](#introduction)
 
 ### Please see externally provided instructions for this lab.
 
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 ===
 # Azure Security Center
 [🔙](#introduction)
@@ -2221,6 +2221,6 @@ Now that we have Classified and Protected documents using the scanner, we can re
 
 ### Please see externally provided instructions for this lab.
 
-!IMAGE[52a7iwuj.jpg](52a7iwuj.jpg)
+!IMAGE[52a7iwuj.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/52a7iwuj.jpg)
 
 
