@@ -66,7 +66,7 @@ There are also Knowledge Items, Notes, and Hints throughout the lab.
 
 	![w11x99oo.jpg](https://github.com/kemckinnmsft/AIPLAB/blob/master/Content/w11x99oo.jpg)
 
-[🔙](#introduction)
+
 ===
 # Lab Environment Configuration
 [🔙](#introduction)
