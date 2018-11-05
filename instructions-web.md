@@ -23,7 +23,7 @@ This lab is designed to be used as a supplement to Instructor Led Training and h
 > WARNING: When stopping each section, please ensure that you SAVE the session in between labs rather than END the lab.  If you end the lab, all VM configuration will be reset to initial state and will hinder the experience during future labs.  We have designed this lab to be a good representation of the interoperability between Microsoft 365 Security Technologies so several of the labs will feed information into future labs.
 
 
-===
+---
 # Tips and Tricks
 [🔙](#introduction)
 
@@ -62,7 +62,7 @@ There are also Knowledge Items, Notes, and Hints throughout the lab.
 
 	![w11x99oo.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/w11x99oo.jpg)
 
-===
+---
 # Lab Environment Configuration
 [🔙](#introduction)
 
@@ -74,7 +74,7 @@ There are a few prerequisites that need to be set up to complete all the section
 
 - [Assign User Licenses](#assign-user-licenses)
 
-===
+---
 # Azure AD Connect Configuration
 [🔙](#lab-environment-configuration)
 
@@ -112,7 +112,7 @@ In this task, we will install Azure AD Connect and configure it using the expres
 > WARNING: **Do not** uncheck the box for initial synchronization
 
 10.  Continue to next task while initial sync is running.
-===
+---
 # Redeem Azure Pass
 [🔙](#lab-environment-configuration)
 
@@ -170,7 +170,7 @@ For several of the exercises in this lab series, you will require an active subs
 	> NOTE: It may take a few minutes to process the request.
 
 1. When you are redirected to the Azure Portal, the process is complete.
-===
+---
 # Assign User Licenses
 [🔙](#lab-environment-configuration)
 
@@ -196,7 +196,7 @@ In this task, we will assign licenses to users that have been synced to the Offi
 	IMAGE[Open Screenshot](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/9xomkr35.jpg)
 	> NOTE: If there are any failures, repeat the process for users that did not get licenses.
 
-===
+---
 # Microsoft 365 Cloud App Security
 [🔙](#introduction)
 
@@ -224,7 +224,7 @@ The main sections covered in this Lab are:
 - [Conditional Access App Control](#conditional-access-app-control)
 - [Management](#management)
 - [Information Protection](#information-protection)
-===
+---
 # Connect MCAS to Office 365 
 [🔙](#microsoft-365-cloud-app-security)
 
@@ -243,7 +243,7 @@ The main sections covered in this Lab are:
  
 	![a4c31yrk.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/a4c31yrk.jpg)
  
-===
+---
 # Cloud Discovery
 [🔙](#microsoft-365-cloud-app-security)
 
@@ -259,7 +259,7 @@ To use this capability, you will perform in this lab the configuration
 and troubleshooting of the Cloud Discovery feature.
 
 > NOTE: The Docker engine has been pre-installed on LinuxVM using the commands at [https://docs.microsoft.com/en-us/cloud-app-security/discovery-docker-ubuntu](https://docs.microsoft.com/en-us/cloud-app-security/discovery-docker-ubuntu)
-===
+---
 ## Configure and test continuous reports
 [🔙](#microsoft-365-cloud-app-security)
 
@@ -368,7 +368,7 @@ and troubleshooting of the Cloud Discovery feature.
     data. Why? (hint: verify the "Set up Cloud Discovery" documentation
     page).
 
-===
+---
 ## How to troubleshoot the Docker log collector
 [🔙](#microsoft-365-cloud-app-security)
 
@@ -531,7 +531,7 @@ connections to MCAS:
 	netstat -a
 	```
 	![rxvauw6e.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/rxvauw6e.jpg)
-===
+---
 # Threat Detection
 [🔙](#microsoft-365-cloud-app-security)
 
@@ -550,7 +550,7 @@ download are detected.
 
 In addition to those policies, you can create your own policies, like
 the ones on the next page, that you must create for this lab.
-===
+---
 ## Policies
 [🔙](#microsoft-365-cloud-app-security)
 
@@ -674,7 +674,7 @@ in the environment provided by your instructor.
 Review the alerts in the environment and investigate to identify the
 users and the malicious activities performed.
 
-===
+---
 # Conditional Access App Control
 [🔙](#microsoft-365-cloud-app-security)
 
@@ -701,36 +701,36 @@ complications.
         verification email, and choose a new password.
 
 2.   Configure Salesforce in Azure AD
-
+    
     1.  In Salesforce, go to **Setup**, search for **My Domain** and
         register a new domain, e.g., ems123456-dev-ed.salesforce.com
 
         ![f7idpipy.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/f7idpipy.jpg)
 
-    5.   Save **full Salesforce domain name**, including **https://** for the
+    1.  Save **full Salesforce domain name**, including **https://** for the
         next step, e.g., <https://ems123456-dev-ed.salesforce.com>
 
-    6.   Go to **https://portal.azure.com** logging in with the credentials below:
+    1.   Go to **https://portal.azure.com** logging in with the credentials below:
 
 		**Global Admin Username**
 
 		**Global Admin Password**
 	
-	7.   Go to **Azure Active
+	1.   Go to **Azure Active
         Directory**, click on **Enterprise applications**, choose **+
         New application**, select All, choose **Salesforce**, call it
         **SalesforceCAS**, and click on **Add**
 
-    7.   Go back to **Enterprise applications**, choose **All
+    1.   Go back to **Enterprise applications**, choose **All
         applications**, and click on **SalesforceCAS**, click on
         **Single sign-on**, and choose **SAML-based Sign-on** under
         **Single Sign-on Mode**
 
-    8.   For both **Sign on URL** and **Identifier** set the full
+    1.   For both **Sign on URL** and **Identifier** set the full
         Salesforce domain name, e.g.,
         <https://ems123456-dev-ed.salesforce.com>
 
-    9.   Under SAML Signing Certificate, make sure that there is a
+    1.   Under SAML Signing Certificate, make sure that there is a
         certificate present and that the **STATUS** is **Active**
 
         1. If there is no certificate, click on the **Create new
@@ -742,27 +742,27 @@ complications.
             certificate rollover is approved, the certificate STATUS
             will become **Active**.
 
-    10.  Click on **Save**
+    1.   Click on **Save**
 
-    11. Click on **Configure Salesforce** which will open a new blade
+    1.  Click on **Configure Salesforce** which will open a new blade
 
-    12.  Scroll down to the **Quick Reference** section
+    1.   Scroll down to the **Quick Reference** section
 
         1. **Download the Azure AD Signing Certificate**
 
         1.  Copy all the other fields in the Quick Reference section for
             the next step in Salesforce
 
-    13.  Go back to Salesforce, under **Setup** go to **Single Sign-On
+    1.   Go back to Salesforce, under **Setup** go to **Single Sign-On
         Settings**
         ![ao0yrpx8.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/ao0yrpx8.jpg)
 
-    14.  Click on **Edit**, Select **SAML Enabled**, and click on
+    1.   Click on **Edit**, Select **SAML Enabled**, and click on
         **Save**
 
-    15.  In the same **Single Sign-On Settings** page, click on **New**
+    1.   In the same **Single Sign-On Settings** page, click on **New**
 
-    16.  Fill in the following fields:
+    1.  Fill in the following fields:
 
         1. **Name**: write "Azure AD"
 
@@ -783,11 +783,11 @@ complications.
         1. **Custom Logout URL**: Copy and paste the **Azure AD Sign
             Out URL** from the Azure AD **Quick Reference** section
 
-    17.  Click **Save**
+    1.  Click **Save**
 
-    18.  Go back to **My Domain** in Salesforce
+    1.  Go back to **My Domain** in Salesforce
 
-    19.  Under **Authentication Configuration** click Edit, (click
+    1.  Under **Authentication Configuration** click Edit, (click
         **Open** if needed), and:
 
         1. Uncheck the **Login Page** checkbox
@@ -796,16 +796,16 @@ complications.
 
         1. Click on **Save**
 
-    20.  Go back to the Azure AD portal, within the **SalesforceCAS**
+    1.  Go back to the Azure AD portal, within the **SalesforceCAS**
         app, choose **Users and groups**
         
 		![kscnoob4.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/kscnoob4.jpg)
 
-    21. Click on **+ Add user**, choose the admin as the user (e.g.,
+    1.  Click on **+ Add user**, choose the admin as the user (e.g.,
         <admin@ems123456.onmicrosoft.com>), choose **System
         Administrator** as the Role, and click on **Assign**
 
-    22.  Test the setup by going to <https://myapps.microsoft.com>,
+    1.   Test the setup by going to <https://myapps.microsoft.com>,
         logging in with the credentials below:
 
 		**Global Admin Username**
@@ -816,13 +816,13 @@ complications.
         **SalesforceCAS**, verifying that this will result in a
         successful login to Salesforce.
 
-3.   Deploy the proxy for Salesforce
+1.   Deploy the proxy for Salesforce
 
     1. In Azure Active Directory, under **Security**, click
         on **Conditional access**.
         ![b62lha77.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/b62lha77.jpg)
 
-    24.  Click on **New policy** and create a new policy:
+    1.   Click on **New policy** and create a new policy:
 
         1. Name the policy: Test Cloud App Security proxy
 
@@ -841,7 +841,7 @@ complications.
         1. It should look like this:
             ![qti7w9u6.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/qti7w9u6.jpg)
 
-    25.  After the policy was created successfully, open a new browser,
+    1.   After the policy was created successfully, open a new browser,
         ***make sure you are logged out***, and log in to
         SalesforceCAS with the admin user
 
@@ -850,11 +850,11 @@ complications.
 
         1.  Make sure you've successfully logged on to Salesforce
 
-    26.  Go to the Cloud App Security portal, and under the settings cog
+    1.   Go to the Cloud App Security portal, and under the settings cog
         choose **Conditional Access App Control
         ![dfmwyegm.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/dfmwyegm.jpg)
 
-    27.  You should see a message letting you know that new Azure AD apps
+    1.   You should see a message letting you know that new Azure AD apps
         were discovered. Click on the **View new apps** link.
         ![qz9mx11x.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/qz9mx11x.jpg)
 
@@ -862,7 +862,7 @@ complications.
             the policy was created...) this time, close the browser and
             open a new browser in Incognito mode.
 
-    28.  In the dialog that opens, you should see Salesforce. Click on
+    1.   In the dialog that opens, you should see Salesforce. Click on
         the + sign, and then click **Add**.
         ![iy3f8gro.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/iy3f8gro.jpg)
 
@@ -899,7 +899,7 @@ complications.
 
     1. **Device tags** does not equal **Valid client certificate**
 
-    1. **App** equals **Salesforce**
+    2. **App** equals **Salesforce**
     ![6wwuqlcz.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/6wwuqlcz.jpg)
 
 6.   Check the **Enabled** checkbox near **Content inspection**
@@ -1007,7 +1007,7 @@ complications.
     was blocked because it matched the policy.
 
     ![j0vuo06k.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/j0vuo06k.jpg)
-===
+---
 # Management
 [🔙](#microsoft-365-cloud-app-security)
 
@@ -1092,7 +1092,7 @@ Using PowerShell:
 5.   You are asked to define corporate IP's in MCAS. Subnets go from
     10.50.50.0/24 to 10.50.80.0/24
 
-===
+---
 # Information protection
 [🔙](#microsoft-365-cloud-app-security)
 
@@ -1149,7 +1149,7 @@ As explained in the [documentation](https://docs.microsoft.com/en-us/cloud-app-s
 		![6wfpj4to.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/6wfpj4to.jpg)
 	1. Click **Create** to finish the policy creation.
 
-===
+---
 # Quarantine sensitive PDF for review
 [🔙](#microsoft-365-cloud-app-security)
 
@@ -1216,7 +1216,7 @@ To test our files policies, perform the following tasks:
 
 	![drm0yj0c.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/drm0yj0c.jpg)
 
-===
+---
 # Azure Information Protection
 [🔙](#introduction)
 ### Objectives
@@ -1234,7 +1234,7 @@ After completing this lab, you will be able to:
 - [Activate Unified Labeling for the Security and Compliance Center (Optional)](#exercise-7-security-and-compliance-center)
 - [Configure SharePoint IRM Libraries (Optional)](#exercise-8-sharepoint-irm-configuration)
 
-===
+---
 
 # Exercise 1: Configuring AIP Scanner for Discovery
 [🔙](#azure-information-protection)
@@ -1247,7 +1247,7 @@ Often, this can help drive an appropriate level of urgency and attention to the 
 
 In this exercise, we will install the AIP scanner and run it against repositories in discovery mode.  Later in this lab (after configuring labels and conditions) we will revisit the scanner to perform automated classification, labeling, and protection of sensitive documents.
 
-===
+---
 # Configuring Azure Log Analytics
 [🔙](#azure-information-protection)
 
@@ -1292,7 +1292,7 @@ In order to collect log data from Azure Information Protection clients and servi
 1. Click **Yes**, in the confirmation dialog.
 
 	![zgvmm4el.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/zgvmm4el.jpg)
-===
+---
 
 
 
@@ -1335,7 +1335,7 @@ The first step in configuring the AIP Scanner is to install the service and conn
 
 	^IMAGE[Open Screenshot](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/ek9jsd0a.jpg)
 
-===
+---
 
 # Creating Azure AD Applications for the AIP Scanner
 [🔙](#azure-information-protection)
@@ -1412,7 +1412,7 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 
 	**Restart-Service AIPScanner**
    
-===
+---
 
 # Configuring Repositories
 [🔙](#azure-information-protection)
@@ -1441,7 +1441,7 @@ The next task is to configure repositories to scan.  These can be on-premises Sh
     ```
 	^IMAGE[Open Screenshot](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/n5hj5e7j.jpg)
 
-===
+---
 
 # Running Sensitive Data Discovery
 [🔙](#azure-information-protection)
@@ -1486,7 +1486,7 @@ The next task is to configure repositories to scan.  These can be on-premises Sh
 
 	>NOTE: We will revisit this information later in the lab to review discovered data and create Sensitive Data Type to Classification mappings.
 
-===
+---
 
 # Exercise 2: Configuring Azure Information Protection Policy
 [🔙](#azure-information-protection)
@@ -1494,7 +1494,7 @@ The next task is to configure repositories to scan.  These can be on-premises Sh
 This exercise demonstrates using the Azure Information Protection blade in the Azure portal to configure policies and sub-labels.  We will create a new sub-label and configure protection and then modify an existing sub-label.  We will also create a label that will be scoped to a specific group.  
 
 Next, we will configure AIP Global Policy to use the General sub-label as default, and finally, we will configure a scoped policy to use the new scoped label by default for Word, Excel, and PowerPoint while still using General as default for Outlook.
-===
+---
 # Creating, Configuring, and Modifying Sub-Labels
 [🔙](#azure-information-protection)
 
@@ -1575,7 +1575,7 @@ However, there are times when external collaboration is required, so we will con
 
 	^IMAGE[Open Screenshot](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/98pvhwdv.jpg)
 
-===
+---
 
 # Configuring Global Policy
 [🔙](#azure-information-protection)
@@ -1612,7 +1612,7 @@ In this task, we will assign the new sub-label to the Global policy and configur
 
 	^IMAGE[Open Screenshot](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/m6e4r2u2.jpg)
 
-===
+---
 
 # Creating a Scoped Label and Policy
 [🔙](#azure-information-protection)
@@ -1698,7 +1698,7 @@ Now that you have learned how to work with global labels and policies, we will c
 
 1. Click on the **X** in the upper right-hand corner to close the policy.
 
-===
+---
 
 # Configuring Advanced Policy Settings
 [🔙](#azure-information-protection)
@@ -1725,7 +1725,7 @@ There are many advanced policy settings that are useful to tailor your Azure Inf
 
 	> NOTE: This and additional Advanced Policy Settings can be found at [https://docs.microsoft.com/en-us/azure/information-protection/rms-client/client-admin-guide-customizations ](https://docs.microsoft.com/en-us/azure/information-protection/rms-client/client-admin-guide-customizations)
 
-===
+---
 
 # Defining Recommended and Automatic Conditions
 [🔙](#azure-information-protection)
@@ -1780,7 +1780,7 @@ However, helping your users to properly classify and protect sensitive data at t
 
 	^IMAGE[Open Screenshot](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/wzwfc1l4.jpg)
 
-===
+---
 
 # Exercise 3: Client Configuration
 [🔙](#azure-information-protection)
@@ -1790,7 +1790,7 @@ Now that we have defined some basic AIP Policies, we need to configure some clie
 Office 365 and the latest GA AIP Client (1.37.19.0) have already been installed on these systems to save time in this lab.  In your production environment, you will need to install the AIP Client manually for testing or using an Enterprise Deployment Tool like System Center Configuration Manager for widespread deployment.
 
 We will also be disabling a mail flow rule in the Exchange Admin Center to allow mail to be sent outside the tenant.  This will allow us to test Do Not Forward and Office 365 Message Encryption scenarios.
-===
+---
 # Configuring Applications
 [🔙](#azure-information-protection)
  
@@ -1909,13 +1909,13 @@ This will allow us to demonstrate the differences between the global and scoped 
 	> ![13mp3hbw.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/13mp3hbw.jpg)
 
 
-===
+---
 
 # Exercise 4: Testing AIP Policies
 [🔙](#azure-information-protection)
 
 Now that you have 3 test systems with users being affected by different policies configured, we can start testing these policies.  This exercise will run through various scenarios to demonstrate the use of AIP global and scoped policies and show the functionality of recommended and automatic labeling.
-===
+---
 # Testing User Defined Permissions
 [🔙](#azure-information-protection)
 
@@ -1979,7 +1979,7 @@ One of the most common use cases for AIP is the ability to send emails using Use
 	>After using either of these authentication methods, the user will see a portal experience like the one shown below.
 	>
 	>![3zi4dlk9.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/3zi4dlk9.jpg)
-===
+---
 
 # Testing Global Policy
 [🔙](#azure-information-protection)
@@ -2010,7 +2010,7 @@ In this task, we will create a document and send an email to demonstrate the fun
 	
 	![52hpmj51.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/52hpmj51.jpg)
 
-===
+---
 
 # Testing Scoped Policy
 [🔙](#azure-information-protection)
@@ -2047,7 +2047,7 @@ In this task, we will create a document and send an email from one of the users 
 	> WARNING: When you click **Save**, you will be prompted to choose a classification.  This is a result of having **None** set as the default label in the scoped policy while requiring all documents to be labeled.  This is a useful for driving **active classification decisions** by specific groups within your organization.  Notice that Outlook still has a default of **General** because of the Advanced setting we added to the scoped policy.  **This is recommended** because user send many more emails each day than they create documents. Actively forcing users to classify each email would be an unpleasant user experience whereas they are typically more understanding of having to classify each document if they are in a sensitive department or role.
 
 1. Choose a classification to save the document.
-===
+---
 
 # Testing Recommended and Automatic Classification
 [🔙](#azure-information-protection)
@@ -2086,7 +2086,7 @@ In this task, we will test the configured recommended and automatic conditions w
 	>![yv0afeow.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/yv0afeow.jpg)
 
 1. In the email, click **Send**.
-===
+---
 
 # Exercise 5: Exchange Online IRM Capabilities
 [🔙](#azure-information-protection)
@@ -2150,7 +2150,7 @@ In this task, we will configure a mail flow rule to detect sensitive information
 
 	>[!KNOWLEDGE] This mail flow rule can be used to prevent inter only communications from being sent to an external audience.
 
-===
+---
 
 # Demonstrating Exchange Online Mail Flow Rules
 [🔙](#azure-information-protection)
@@ -2219,7 +2219,7 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 
 > NOTE: There are many other use cases for Exchange Online mail flow rules but this should give you a quick view into what is possible and how easy it is to improve the security of your sensitive data through the use of Exchange Online mail flow rules and Azure Information Protection.
 
-===
+---
 
 
 # Exercise 6: Classification, Labeling, and Protection with the Azure Information Protection Scanner
@@ -2229,7 +2229,7 @@ The Azure Information Protection scanner allows you to  classify and protect sen
 
 In this exercise, you will use the information gathered in Exercise 1 to map sensitive data types discovered to automatic classification rules.  After that, we will run the AIP Scanner in enforce mode to classify and protect the identified sensitive data.
 
-===
+---
 
 # Configuring Automatic Conditions
 [🔙](#azure-information-protection)
@@ -2271,7 +2271,7 @@ Now that we know what types of sensitive data we need to protect, we will config
 
 1. Press the **X** in the upper right-hand corner to close the Label: Contoso Internal blade.
 
-===
+---
 
 # Enforcing Configured Rules
 [🔙](#azure-information-protection)
@@ -2303,7 +2303,7 @@ In this task, we will set the AIP scanner to enforce the conditions we set up in
 	>
 	>^IMAGE[Open Fullscreen](6waou5x3.jpg)
 
-===
+---
 
 # Reviewing Protected Documents
 [🔙](#azure-information-protection)
@@ -2324,7 +2324,7 @@ Now that we have Classified and Protected documents using the scanner, we can re
 	>![s1okfpwu.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/s1okfpwu.jpg)
 
 
-===
+---
 
 # Exercise 7: Security and Compliance Center
 [🔙](#azure-information-protection)
@@ -2334,7 +2334,7 @@ In this exercise, we will migrate your AIP Labels and activate them in the Secur
 Although we will not be demonstrating these capabilities in this lab, you can use the tenant information provided to test on your own devices.
  
 
-===
+---
 # Activating Unified Labeling
 [🔙](#azure-information-protection)
  
@@ -2346,13 +2346,13 @@ In this task, we will activate the labels from the Azure Portal for use in the S
 
 	![o0ahpimw.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/o0ahpimw.jpg)
 	>NOTE: If Activation fails it is likely because of network latency in the lab environment. Browse to **https://protection.office.com/#/tagslibrary** to check if the migration succeeded. In a full demo tenant this should complete successfully.  More detail is available at [https://aka.ms/aipmigration](https://aka.ms/aipmigration).
-===
+---
 # Exercise 8: SharePoint IRM Configuration
 [🔙](#azure-information-protection)
 
 In this exercise, you will configure SharePoint Online Information Rights Management (IRM) and configure a document library with an IRM policy to protect documents that are downloaded from that library.
 
-===
+---
 # Enable Information Rights Management in SharePoint Online
 [🔙](#azure-information-protection)
  
@@ -2398,7 +2398,7 @@ In this task, we will enable Information Rights Management in SharePoint Online.
 1. **Close the Edge InPrivate browser** window to **clear the credentials**.
 
  
-===
+---
 
 # Site Creation and Information Rights Management Integration
 [🔙](#azure-information-protection)
@@ -2460,7 +2460,7 @@ In this task, we will create a new SharePoint site and enable Information Rights
  
 1. Leave the browser open and continue to the next task.
  
-===
+---
 
 # Uploading Content to the Document Library
 [🔙](#azure-information-protection)
@@ -2503,7 +2503,7 @@ Create an unprotected Word document, label it as Internal, and upload it to the 
 	>[!KNOWLEDGE] Notice that you are unable to upload the file because it cannot be protected.
 	>	
 	>![432hu3pi.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/432hu3pi.jpg)
-===
+---
 
 # SharePoint IRM Functionality
 [🔙](#azure-information-protection)
@@ -2528,7 +2528,7 @@ Files that are uploaded to a SharePoint IRM protected document library are prote
 	![4uya6mro.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/4uya6mro.jpg)
 	>NOTE: These permissions are based on the level of access that they user has to the document library.  In a production environment most users would likely have less rights than shown in this example.
 
-===
+---
 # Windows Defender Advanced Threat Protection
 [🔙](#introduction)
 
@@ -2573,7 +2573,7 @@ In this task, we will link Windows Defender ATP licenses to your demo tenant.
 
 	![6crecugz.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/6crecugz.jpg)
 	> NOTE: This license allows up to 100 systems to connect to the WD ATP service.
-===
+---
 # Windows Defender ATP Onboarding
 [🔙](#introduction)
 
@@ -2632,7 +2632,7 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 1. In the Windows Defender Security Center, click on **Settings > Advanced Features** and toggle the switches on for **Azure ATP integration** and **Microsoft Cloud App Security**.
 	![g47p8c30.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/g47p8c30.jpg)
 
-===
+---
 # Azure Advanced Threat Protection
 [🔙](#introduction)
 
@@ -2665,7 +2665,7 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 		|Domain|**contoso.azure**|
 
 
-===
+---
 ## Deploy the Azure ATP Sensor 
 [🔙](#azure-advanced-threat-protection)
 
@@ -2695,7 +2695,7 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 ## Configure Domain Synchronizer
 1.	In the Azure ATP console **click on the deployed Sensor** and **toggle the Domain synchronizer candidate switch** to **On** and click **Save**.
 
-===
+---
 ## Adding Guest User access to Azure ATP Console. 
 [🔙](#azure-advanced-threat-protection)
 
@@ -2721,18 +2721,18 @@ To allow users not in the companies Azure Active Directory to access the Azure A
 
 > NOTE:	After the user accepts the invitation the user will be able to access the Azure ATP console for this workspace using their email account. 
 
-===
+---
 ## Azure ATP Immersion Lab
 [🔙](#azure-advanced-threat-protection)
 
 The rest of the lab will be instructor led via PowerPoint. 
-===
+---
 # Azure Security Center
 [🔙](#introduction)
 
 ### Please see externally provided instructions for this lab.
 
-===
+---
 # Azure Active Directory
 [🔙](#introduction)
 
@@ -2749,7 +2749,7 @@ The rest of the lab will be instructor led via PowerPoint.
 |Amy		|YES								|YES 
 |Eric		|NO									|NO
 
-===
+---
 # Prerequisites
 [🔙](#azure-active-directory)
 
@@ -2786,7 +2786,7 @@ The rest of the lab will be instructor led via PowerPoint.
 3. 	Under Users can use preview features for registering and managing security info, you can choose to enable for a Selected group of users or for All users.
 
 ------
-===
+---
 # Configure MFA registration policy
 [🔙](#azure-active-directory)
 
@@ -2816,7 +2816,7 @@ The rest of the lab will be instructor led via PowerPoint.
 2. 	Amy will be prompted to register for MFA.
 3.    Close the InPrivate window.
 
-===
+---
 # Configure risk policies
 [🔙](#azure-active-directory)
 
@@ -2838,7 +2838,7 @@ The rest of the lab will be instructor led via PowerPoint.
 5. 	Under **Controls**, ensure that access is set to **require password change**
 6. 	Set **Enforce Policy** to **On**
 
-===
+---
 # Simulate risky sign-ins experience
 [🔙](#azure-active-directory)
 
@@ -2873,7 +2873,7 @@ Let’s see what happens when users try to sign in from the Tor Browser, which a
 	1.	Notice how you are blocked because the user has not registered for MFA yet and is thus unable to beat the MFA challenge prompted by the risky sign-ins policy
 6. 	So that Ben can respond to future MFA attempts, open an Edge browser window and now navigate to portal.office.com and log-in as Ben
 	1.	You will be prompted to register for MFA
-===
+---
 # Pull data from APIs
 [🔙](#azure-active-directory)
 
@@ -2904,7 +2904,7 @@ There are four steps to accessing Identity Protection data through Microsoft Gra
 4. 	To open the Settings page, in the applications list, click your newly created app registration. 
 5. 	Copy the Application ID and paste it into a new text document. This will be needed later in the lab.
 
-===
+---
 ## Grant your application permission to use the API
 [🔙](#azure-active-directory)
 
@@ -2930,7 +2930,7 @@ There are four steps to accessing Identity Protection data through Microsoft Gra
 8. 	On the Required Permissions page, click Grant Permissions, and then click Yes.
 
 	![3i07c4dz.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/3i07c4dz.jpg)
-===
+---
 ## Get an access key
 [🔙](#azure-active-directory)
 
@@ -2948,7 +2948,7 @@ There are four steps to accessing Identity Protection data through Microsoft Gra
 	Since we will use this value later on, copy the Client Secret into the text file where you stored the client id.
 
 	> NOTE: If you lose this key, you will have to return to this section and create a new key. Keep this key a secret: anyone who has it can access your data.
-===
+---
 ## Authenticate to Microsoft Graph and query the Identity Risk Events API
 [🔙](#azure-active-directory)
 
@@ -3028,7 +3028,7 @@ Since we know that Alan had some risky-sign ins, let’s query their risk events
 	Write-Host "ERROR: No Access Token"
 	} 
 	```
-===
+---
 # Simulate risky user experience
 [🔙](#azure-active-directory)
 
