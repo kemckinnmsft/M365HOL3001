@@ -33,7 +33,7 @@ There are a few extras throughout this lab that are designed to make your lab ex
 
 - Each task contains a series of steps required for successful completion of the lab.  To track your progress throughout the lab, check the box to the left of the numbered series.  
 
-	![6mfi1ekm.jpg](6mfi1ekm.jpg)
+	!IMAGE[6mfi1ekm.jpg](6mfi1ekm.jpg)
 - After you check each box, you will see your lab progress at the bottom of the instruction pane.
 
 	![0ggu265u.jpg](0ggu265u.jpg)
@@ -193,7 +193,7 @@ In this task, we will assign licenses to users that have been synced to the Offi
 	![nzzweacz.jpg](nzzweacz.jpg)
 1. [] On the Replace existing products page, turn on licenses for **Enterprise Mobility + Security E5** and **Office 365 Enterprise E5** and click **Replace**.
 
-	IMAGE[Open Screenshot](9xomkr35.jpg)
+	^IMAGE[Open Screenshot](9xomkr35.jpg)
 	> [!NOTE] If there are any failures, repeat the process for users that did not get licenses.
 
 ===
