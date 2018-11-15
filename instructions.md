@@ -33,13 +33,13 @@ There are a few extras throughout this lab that are designed to make your lab ex
 
 - Each task contains a series of steps required for successful completion of the lab.  To track your progress throughout the lab, check the box to the left of the numbered series.  
 
-	!IMAGE[6mfi1ekm.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/6mfi1ekm.jpg)
+	![6mfi1ekm.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/6mfi1ekm.jpg)
 - After you check each box, you will see your lab progress at the bottom of the instruction pane.
 
-	!IMAGE[0ggu265u.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/0ggu265u.jpg)
+	![0ggu265u.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/0ggu265u.jpg)
 - When you see an instruction for switching computers, click on the **blue link** in the text to have that VM loaded automatically.
 
-	!IMAGE[12i85vgl.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/12i85vgl.jpg)
+	![12i85vgl.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/12i85vgl.jpg)
 - Throughout the lab, you will see text with a letter **T** in a square to the left.  This indicates that you can **click on the text** and it will **type it for you** in the VM.  **This will save you lots of time**.
 
 	!IMAGE[cnyu1tdi.jpg](https://github.com/kemckinnmsft/M365HOL3001/blob/master/Content/cnyu1tdi.jpg)
