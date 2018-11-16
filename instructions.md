@@ -33,10 +33,10 @@ There are a few extras throughout this lab that are designed to make your lab ex
 
 - Each task contains a series of steps required for successful completion of the lab.  To track your progress throughout the lab, check the box to the left of the numbered series.  
 
-	!IMAGE[6mfi1ekm.jpg](6mfi1ekm.jpg)
+	![6mfi1ekm.jpg](6mfi1ekm.jpg)
 - After you check each box, you will see your lab progress at the bottom of the instruction pane.
 
-	!IMAGE[0ggu265u.jpg](0ggu265u.jpg)
+	!IMAGE[0ggu265u.jpg](\Media\0ggu265u.jpg)
 - When you see an instruction for switching computers, click on the **blue link** in the text to have that VM loaded automatically.
 
 	!IMAGE[12i85vgl.jpg](12i85vgl.jpg)
