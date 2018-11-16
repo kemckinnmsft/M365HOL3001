@@ -36,7 +36,7 @@ There are a few extras throughout this lab that are designed to make your lab ex
 	!IMAGE[6mfi1ekm.jpg](\Media\6mfi1ekm.jpg)
 - After you check each box, you will see your lab progress at the bottom of the instruction pane.
 
-	!IMAGE[0ggu265u.jpg](\Media\\Media\0ggu265u.jpg)
+	!IMAGE[0ggu265u.jpg](\Media\0ggu265u.jpg)
 - When you see an instruction for switching computers, click on the **blue link** in the text to have that VM loaded automatically.
 
 	!IMAGE[12i85vgl.jpg](\Media\12i85vgl.jpg)
