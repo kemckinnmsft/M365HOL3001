@@ -12,9 +12,9 @@ This lab is designed to be used as a supplement to Instructor Led Training and h
 
 ## [Lab 2: Azure Information Protection](#azure-information-protection)
 
-## [Lab 3: Windows Defender Advanced Threat Protection](#windows-defender-advanced-threat-protection)
+## [Lab 3: Azure Advanced Threat Protection](#azure-advanced-threat-protection)
 
-## [Lab 4: Azure Advanced Threat Protection](#azure-advanced-threat-protection)
+## [Lab 4: Windows Defender Advanced Threat Protection](#windows-defender-advanced-threat-protection)
 
 ## [Lab 5: Azure Security Center](#azure-security-center)
 
@@ -73,6 +73,10 @@ There are a few prerequisites that need to be set up to complete all the section
 - [Redeem Azure Pass](#redeem-azure-pass)
 
 - [Assign User Licenses](#assign-user-licenses)
+
+- [Link Windows Defender ATP Licenses](#link-windows-defender-atp-licenses)
+
+- [Windows Defender ATP Onboarding](#windows-defender-atp-onboarding)
 
 ===
 # Azure AD Connect Configuration
@@ -196,6 +200,106 @@ In this task, we will assign licenses to users that have been synced to the Offi
 	^IMAGE[Open Screenshot](\Media\9xomkr35.jpg)
 	> [!NOTE] If there are any failures, repeat the process for users that did not get licenses.
 
+===
+# Link Windows Defender ATP Licenses
+
+In this task, we will link Windows Defender ATP licenses to your demo tenant.
+
+1. [] Log into @lab.VirtualMachine(Client01).SelectLink using the credentials below:
+
+	+++LabUser+++
+
+	+++Pa$$w0rd+++
+1. [] Right-click on **Edge** in the taskbar and click on **New InPrivate window**.
+
+1. [] In the InPrivate window, use the provided Windows Defender Advanced Threat Protection Trial Sign up link.
+
+1. [] Click **Sign in** and use the credentials below:
+
+	+++@lab.CloudCredential(134).Username+++
+
+	+++@lab.CloudCredential(134).Password+++
+
+	> [!KNOWLEDGE] If you were already signed into your tenant with Global Admin credentials, you will see an image like the one below.  Click **Yes, add it to my account**.
+	>
+	> !IMAGE[upx8fn9o.jpg](\Media\upx8fn9o.jpg)
+1. [] On the Check out page, click **Try now**.
+
+	!IMAGE[wlgzkp40.jpg](\Media\wlgzkp40.jpg)
+1. [] On the Order Receipt page, click **Continue**.
+
+1. [] Next, navigate to +++https://admin.microsoft.com/AdminPortal/Home#/users+++.
+
+1. [] If necessary, log in using the credentials below:
+
+	+++@lab.CloudCredential(134).Username+++
+
+	+++@lab.CloudCredential(134).Password+++
+1. [] Click on MOD Administrator, and in the details page, click **Edit** next to Product licenses.
+
+	!IMAGE[fe5k7wwn.jpg](\Media\fe5k7wwn.jpg)
+1. [] Toggle the **WD ATP** license to On and click **Save**.
+
+	!IMAGE[6crecugz.jpg](\Media\6crecugz.jpg)
+	> [!NOTE] This license allows up to 100 systems to connect to the WD ATP service.
+===
+# Windows Defender ATP Onboarding
+[🔙](#introduction)
+
+In this task, we will perform initial setup of WD ATP and onboard 2 machines.
+
+1. [] On @lab.VirtualMachine(Client01).SelectLink, navigate to +++https://securitycenter.windows.com+++.
+
+1. [] If necessary, log in using the credentials below:
+
+	+++@lab.CloudCredential(134).Username+++
+
+	+++@lab.CloudCredential(134).Password+++
+
+1. [] On Step 1, click **Next**.
+1. [] On Step 2, choose a data storage location and click **Next**.
+1. [] On Step 3, click **Next** several times until the Create your cloud instance dialog pops up, then click **Continue**.
+1. [] On Step 4, click the **Download package** button and save the package to your desktop.
+1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
+1. [] In the Windows protected your PC dialog, click the **More info** link and click **Run anyway**.
+1. [] In the UAC prompt, provide the credentials below and press OK.
+
+	+++.\ContosoAdmin+++
+
+	+++Password123!@#+++
+1. [] Press **(Y)** to confirm onboarding.
+1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and copy the onboarding package there.
+1. [] Switch to @lab.VirtualMachine(VictimPC).SelectLink and log in with the credentials below.
+
+	+++.\ContosoAdmin+++
+
+	+++Password123!@#+++
+
+1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and log in using the credentials below.
+
+	+++JeffV+++
+
+	+++Password$fun+++
+
+1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
+1. [] Right-click on the start menu and click on **Windows PowerShell (Admin)**.
+1. [] In the UAC prompt, provide the credentials below and press OK.
+
+	+++.\ContosoAdmin+++
+
+	+++Password123!@#+++
+1. [] Type +++CD ~\\Desktop+++ and press **Enter**.
+1. [] Type +++.\WindowsDefenderATPLocalOnboardingScript.cmd+++ and press **Enter**.
+1. [] Press **(Y)** to confirm onboarding.
+1. [] Open a PowerShell window and run the code below:
+
+	
+	+++[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;$xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');$base64String = (Invoke-WebRequest -URI https://winatpmanagement.windows.com/client/management/static/WinATP-Intro-Fileless.txt -UseBasicParsing).Content;Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) };$i = 0; $decryptedBytes = @();$contentBytes.foreach{ $decryptedBytes += $_ -bxor $xor[$i]; $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))+++
+
+1. [] Sign out of VictimPC
+1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink and click **Start using Windows Defender ATP**.
+1. [] In the Windows Defender Security Center, click on **Settings > Advanced Features** and toggle the switches on for **Azure ATP integration** and **Microsoft Cloud App Security**.
+	!IMAGE[g47p8c30.jpg](\Media\g47p8c30.jpg)
 ===
 # Microsoft 365 Cloud App Security
 [🔙](#introduction)
@@ -2529,110 +2633,6 @@ Files that are uploaded to a SharePoint IRM protected document library are prote
 	>[!NOTE] These permissions are based on the level of access that they user has to the document library.  In a production environment most users would likely have less rights than shown in this example.
 
 ===
-# Windows Defender Advanced Threat Protection
-[🔙](#introduction)
-
-## Link Windows Defender ATP Licenses
-
-In this task, we will link Windows Defender ATP licenses to your demo tenant.
-
-1. [] Log into @lab.VirtualMachine(Client01).SelectLink using the credentials below:
-
-	+++LabUser+++
-
-	+++Pa$$w0rd+++
-1. [] Right-click on **Edge** in the taskbar and click on **New InPrivate window**.
-
-1. [] In the InPrivate window, use the provided Windows Defender Advanced Threat Protection Trial Sign up link.
-
-1. [] Click **Sign in** and use the credentials below:
-
-	+++@lab.CloudCredential(134).Username+++
-
-	+++@lab.CloudCredential(134).Password+++
-
-	> [!KNOWLEDGE] If you were already signed into your tenant with Global Admin credentials, you will see an image like the one below.  Click **Yes, add it to my account**.
-	>
-	> !IMAGE[upx8fn9o.jpg](\Media\upx8fn9o.jpg)
-1. [] On the Check out page, click **Try now**.
-
-	!IMAGE[wlgzkp40.jpg](\Media\wlgzkp40.jpg)
-1. [] On the Order Receipt page, click **Continue**.
-
-1. [] Next, navigate to +++https://admin.microsoft.com/AdminPortal/Home#/users+++.
-
-1. [] If necessary, log in using the credentials below:
-
-	+++@lab.CloudCredential(134).Username+++
-
-	+++@lab.CloudCredential(134).Password+++
-1. [] Click on MOD Administrator, and in the details page, click **Edit** next to Product licenses.
-
-	!IMAGE[fe5k7wwn.jpg](\Media\fe5k7wwn.jpg)
-1. [] Toggle the **WD ATP** license to On and click **Save**.
-
-	!IMAGE[6crecugz.jpg](\Media\6crecugz.jpg)
-	> [!NOTE] This license allows up to 100 systems to connect to the WD ATP service.
-===
-# Windows Defender ATP Onboarding
-[🔙](#introduction)
-
-In this task, we will perform initial setup of WD ATP and onboard 2 machines.
-
-1. [] On @lab.VirtualMachine(Client01).SelectLink, navigate to +++https://securitycenter.windows.com+++.
-
-1. [] If necessary, log in using the credentials below:
-
-	+++@lab.CloudCredential(134).Username+++
-
-	+++@lab.CloudCredential(134).Password+++
-
-1. [] On Step 1, click **Next**.
-1. [] On Step 2, choose a data storage location and click **Next**.
-1. [] On Step 3, click **Next** several times until the Create your cloud instance dialog pops up, then click **Continue**.
-1. [] On Step 4, click the **Download package** button and save the package to your desktop.
-1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
-1. [] In the Windows protected your PC dialog, click the **More info** link and click **Run anyway**.
-1. [] In the UAC prompt, provide the credentials below and press OK.
-
-	+++.\ContosoAdmin+++
-
-	+++Password123!@#+++
-1. [] Press **(Y)** to confirm onboarding.
-1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and copy the onboarding package there.
-1. [] Switch to @lab.VirtualMachine(VictimPC).SelectLink and log in with the credentials below.
-
-	+++.\ContosoAdmin+++
-
-	+++Password123!@#+++
-
-1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and log in using the credentials below.
-
-	+++JeffV+++
-
-	+++Password$fun+++
-
-1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
-1. [] Right-click on the start menu and click on **Windows PowerShell (Admin)**.
-1. [] In the UAC prompt, provide the credentials below and press OK.
-
-	+++.\ContosoAdmin+++
-
-	+++Password123!@#+++
-1. [] Type +++CD ~\\Desktop+++ and press **Enter**.
-1. [] Type +++.\WindowsDefenderATPLocalOnboardingScript.cmd+++ and press **Enter**.
-1. [] Press **(Y)** to confirm onboarding.
-1. [] Open a PowerShell window and run the code below:
-
-	
-	+++[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;$xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');$base64String = (Invoke-WebRequest -URI https://winatpmanagement.windows.com/client/management/static/WinATP-Intro-Fileless.txt -UseBasicParsing).Content;Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) };$i = 0; $decryptedBytes = @();$contentBytes.foreach{ $decryptedBytes += $_ -bxor $xor[$i]; $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))+++
-
-1. [] Sign out of VictimPC
-1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink and click **Start using Windows Defender ATP**.
-1. [] In the Windows Defender Security Center, click on **Settings > Advanced Features** and toggle the switches on for **Azure ATP integration** and **Microsoft Cloud App Security**.
-	!IMAGE[g47p8c30.jpg](\Media\g47p8c30.jpg)
-
-===
 # Azure Advanced Threat Protection
 [🔙](#introduction)
 
@@ -2726,6 +2726,11 @@ To allow users not in the companies Azure Active Directory to access the Azure A
 [🔙](#azure-advanced-threat-protection)
 
 The rest of the lab will be instructor led via PowerPoint. 
+===
+# Windows Defender Advanced Threat Protection
+[🔙](#introduction)
+
+
 ===
 # Azure Security Center
 [🔙](#introduction)
