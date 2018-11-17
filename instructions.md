@@ -78,6 +78,8 @@ There are a few prerequisites that need to be set up to complete all the section
 
 - [Windows Defender ATP Onboarding](#windows-defender-atp-onboarding)
 
+- [Workplace Join Clients](#workplace-join-clients)
+
 ===
 # Azure AD Connect Configuration
 [🔙](#lab-environment-configuration)
@@ -285,6 +287,56 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 1. [] In the Windows Defender Security Center, click on **Settings > Advanced Features** and toggle the switches on for **Azure ATP integration** and **Microsoft Cloud App Security**.
 	!IMAGE[g47p8c30.jpg](\Media\g47p8c30.jpg)
 ===
+# Workplace Join Clients
+
+In this task, we will join 3 systems to the Azure AD tenant to provide SSO capabilities in Office.
+
+1. [] On @lab.VirtualMachine(Client01).SelectLink, right-click on the start menu and click **Run**.
+1. [] In the Run dialog, type +++ms-settings:workplace+++ and click **OK**.
+
+	>!IMAGE[mssettings.png](\Media\mssettings.png)
+
+1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
+
+	+++AlanS@@lab.CloudCredential(17).TenantName+++
+
+	+++@lab.CloudCredential(17).Password+++
+1. [] Click **Done**.
+1. [] Log into @lab.VirtualMachine(Client02).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
+
+	+++LabUser+++
+
+	+++Pa$$w0rd+++
+1. [] Right-click on the start menu and click **Run**.
+1. [] In the Run dialog, type +++ms-settings:workplace+++ and click **OK**.
+
+	>!IMAGE[mssettings.png](\Media\mssettings.png)
+
+1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
+
+	+++AmyA@@lab.CloudCredential(17).TenantName+++
+
+	+++@lab.CloudCredential(17).Password+++
+1. [] Click **Done**.
+1. [] Log into @lab.VirtualMachine(Client03).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
+
+	+++LabUser+++
+
+	+++Pa$$w0rd+++
+1. [] Right-click on the start menu and click **Run**.
+1. [] In the Run dialog, type +++ms-settings:workplace+++ and click **OK**.
+
+	>!IMAGE[mssettings.png](\Media\mssettings.png)
+
+1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
+
+	+++EricG@@lab.CloudCredential(17).TenantName+++
+
+	+++@lab.CloudCredential(17).Password+++
+1. [] Click **Done**.
+
+===
+
 # Azure Information Protection
 [🔙](#introduction)
 ### Objectives
@@ -297,10 +349,10 @@ After completing this lab, you will be able to:
 - [Configure Azure Information Protection labels](#creating-configuring-and-modifying-sub-labels)
 - [Configure Azure Information Protection policies](#configuring-global-policy)
 - [Classify and protect content with Azure Information Protection in Office applications](#configuring-applications)
-- [Configure Exchange Online Mail Flow Rules for AIP](#configuring-exchange-online-mail-flow-rules)
+- [Activate Unified Labeling for the Security and Compliance Center](#exercise-3-security-and-compliance-center)
 - [Classify and protect sensitive data discovered by the AIP Scanner](#configuring-automatic-conditions)
-- [Activate Unified Labeling for the Security and Compliance Center (Optional)](#exercise-7-security-and-compliance-center)
-- [Configure SharePoint IRM Libraries (Optional)](#exercise-8-sharepoint-irm-configuration)
+- [Configure Exchange Online Mail Flow Rules for AIP](#configuring-exchange-online-mail-flow-rules)
+- [Configure SharePoint IRM Libraries (Optional)](#exercise-7-sharepoint-irm-configuration)
 
 ===
 
@@ -328,9 +380,9 @@ In order to collect log data from Azure Information Protection clients and servi
 
 	> [!KNOWLEDGE] If necessary, log in using the username and password below:
 	>
-	>+++@lab.CloudCredential(134).Username+++ 
+	>+++@lab.CloudCredential(17).Username+++ 
 	>
-	>+++@lab.CloudCredential(134).Password+++
+	>+++@lab.CloudCredential(17).Password+++
 	
 1. [] After logging into the portal, type the word +++info+++ into the **search bar** and press **Enter**, then click on **Azure Information Protection**. 
 
@@ -361,11 +413,11 @@ In order to collect log data from Azure Information Protection clients and servi
 
 	!IMAGE[zgvmm4el.jpg](\Media\zgvmm4el.jpg)
 ===
-
-
-
-# Installing the AIP Scanner Service
+# AIP Scanner Setup
+In this task we will install the AIP scanner binaries and create the Azure AD Applications necessary for authentication.
 [🔙](#azure-information-protection)
+
+## Installing the AIP Scanner Service
 
 The first step in configuring the AIP Scanner is to install the service and connect the database.  This is done with the Install-AIPScanner cmdlet that is provided by the AIP Client software.  The AIPScanner service account has been pre-staged in Active Directory for convenience.
 
@@ -394,28 +446,22 @@ The first step in configuring the AIP Scanner is to install the service and conn
 	>!IMAGE[w7goqgop.jpg](\Media\w7goqgop.jpg)
 	>
 
-1. [] Right-click on the **Windows** button in the lower left-hand corner and click on **Run**.
-1. [] In the Run dialog, type +++Services.msc+++ and click **OK**.
+## Creating Azure AD Applications for the AIP Scanner
 
-	^IMAGE[Open Screenshot](\Media\h0ys0h4u.jpg)
-1. [] In the Services console, double-click on the **Azure Information Protection Scanner** service.
-1. [] On the **Log On** tab of the Azure Information Protection Scanner Service Properties, verify that **Log on as:** is set to the **Contoso\AIPScanner** service account.
-
-	^IMAGE[Open Screenshot](\Media\ek9jsd0a.jpg)
-
-===
-
-# Creating Azure AD Applications for the AIP Scanner
 [🔙](#azure-information-protection)
 
 Now that you have installed the scanner bits, you need to get an Azure AD token for the scanner service account to authenticate so that it can run unattended. This requires registering both a Web app and a Native app in Azure Active Directory.  The commands below will do this in an automated fashion rather than needing to go into the Azure portal directly.
 
 1. [] In PowerShell, run +++Connect-AzureAD+++ and use the username and password below. 
 	
-	+++@lab.CloudCredential(134).Username+++
+	+++@lab.CloudCredential(17).Username+++
 	
-	+++@lab.CloudCredential(134).Password+++
-1. [] Next, **type the commands below** and press **Enter** to create a new Web App Registration and Service Principal in Azure AD.
+	+++@lab.CloudCredential(17).Password+++
+1. [] Next, click the **T** to **type the commands below** in the PowerShell window. 
+
+	> [!ALERT] Press Enter only after you see **-CustomKeyIdentifier "AIPClient"**.
+
+	> [!NOTE] This will create a new Web App Registration and Service Principal in Azure AD.
 
    ```
    New-AzureADApplication -DisplayName AIPOnBehalfOf -ReplyUrls http://localhost
@@ -425,8 +471,11 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
    $Date = Get-Date
    New-AzureADApplicationPasswordCredential -ObjectId $WebApp.ObjectID -startDate $Date -endDate $Date.AddYears(1) -Value $WebAppKey.Guid -CustomKeyIdentifier "AIPClient"
 	```
+
 1. [] Next, we must build the permissions object for the Native App Registration.  This is done using the commands below.
    
+   	> [!ALERT] Press Enter only after you see **$Access.ResourceAccess = $Scope**.
+
    ```
    $AIPServicePrincipal = Get-AzureADServicePrincipal -All $true | ? {$_.DisplayName -eq 'AIPOnBehalfOf'}
    $AIPPermissions = $AIPServicePrincipal | select -expand Oauth2Permissions
@@ -437,19 +486,23 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 	```
 1. [] Next, we will use the object created above to create the Native App Registration.
    
+  	> [!ALERT] Press Enter only after you see **-AppId $NativeApp.AppId**.
+
    ```
    New-AzureADApplication -DisplayName AIPClient -ReplyURLs http://localhost -RequiredResourceAccess $Access -PublicClient $true
    $NativeApp = Get-AzureADApplication -Filter "DisplayName eq 'AIPClient'"
    New-AzureADServicePrincipal -AppId $NativeApp.AppId
 	```
    
-1. [] Finally, we will output the Set-AIPAuthentication command by running the commands below.
+1. [] Finally, we will output the Set-AIPAuthentication command by running the commands below and pressing **Enter**.
+   
+  	> [!ALERT] Press Enter only after you see **Start ~\Desktop\Set-AIPAuthentication.txt**.
    
    ```
    "Set-AIPAuthentication -WebAppID " + $WebApp.AppId + " -WebAppKey " + $WebAppKey.Guid + " -NativeAppID " + $NativeApp.AppId | Out-File ~\Desktop\Set-AIPAuthentication.txt
 	Start ~\Desktop\Set-AIPAuthentication.txt
 	```
-1. [] Copy the command to the clipboard.
+1. [] In the new notepad window, copy the command to the clipboard.
 1. [] Click on the Start menu and type +++PowerShell+++, right-click on the PowerShell program, and click **Run as a different user**.
 
 	!IMAGE[zgt5ikxl.jpg](\Media\zgt5ikxl.jpg)
@@ -463,7 +516,7 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 1. [] Paste the copied **Set-AIPAuthentication** command into this window and run it.
 1. [] When prompted, enter the username and password below:
 
-	+++AIPScanner@@lab.CloudCredential(134).TenantName+++
+	+++AIPScanner@@lab.CloudCredential(17).TenantName+++
 
 	+++Somepass1+++
 
@@ -476,7 +529,8 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 	>[!knowledge] You will a message like the one below in the PowerShell window once complete.
 	>
 	>!IMAGE[y2bgsabe.jpg](\Media\y2bgsabe.jpg)
-1. [] **Return to the admin PowerShell window** and type the command below and press **Enter**.
+1. [] **Close the current PowerShell window**.
+1. [] **In the admin PowerShell window** and type the command below and press **Enter**.
 
 	+++Restart-Service AIPScanner+++
    
@@ -711,7 +765,7 @@ Now that you have learned how to work with global labels and policies, we will c
 
 	^IMAGE[Open Screenshot](\Media\2lvwim24.jpg)
 
-1. [] In the AAD Users and Groups blade, **wait for the names to load**, then check the boxes next to **Alan Steiner** and **Amy Albers**, and click the **Select** button.
+1. [] In the AAD Users and Groups blade, **wait for the names to load**, then check the boxes next to **Alan Steiner** and **Amy Alberts**, and click the **Select** button.
 
 	^IMAGE[Open Screenshot](\Media\uishk9yh.jpg)
 
@@ -740,7 +794,7 @@ Now that you have learned how to work with global labels and policies, we will c
 	!IMAGE[1sjw3mc7.jpg](\Media\1sjw3mc7.jpg)
 
 1. [] In the AAD Users and Groups blade, click on **Users/Groups**.  
-1. [] Then in the second AAD Users and Groups blade, **wait for the names to load** and check the boxes next to **Alan Steiner**, **Amy Albers**, and **AIPScanner**.
+1. [] Then in the second AAD Users and Groups blade, **wait for the names to load** and check the boxes next to **Alan Steiner**, **Amy Alberts**, and **AIPScanner**.
 
 	>[!NOTE] The **AIPScanner** account is added here to prevent all scanned documents from being labeled with a default label.
 1. [] Click the **Select** button.
@@ -850,132 +904,33 @@ However, helping your users to properly classify and protect sensitive data at t
 
 ===
 
-# Exercise 3: Client Configuration
+# Exercise 3: Security and Compliance Center
 [🔙](#azure-information-protection)
 
-Now that we have defined some basic AIP Policies, we need to configure some clients to demonstrate the Discovery, Classification, and Protection capabilities of Azure Information Protection.  In this exercise, we will configure Office 365 Applications for 3 test users to demonstrate these policy actions.  
+In this exercise, we will migrate your AIP Labels and activate them in the Security and Compliance Center.  This will allow you to see the labels in Microsoft Information Protection based clients such as Office 365 for Mac and Mobile Devices.
 
-Office 365 and the latest GA AIP Client (1.37.19.0) have already been installed on these systems to save time in this lab.  In your production environment, you will need to install the AIP Client manually for testing or using an Enterprise Deployment Tool like System Center Configuration Manager for widespread deployment.
+Although we will not be demonstrating these capabilities in this lab, you can use the tenant information provided to test on your own devices.
+ 
 
-We will also be disabling a mail flow rule in the Exchange Admin Center to allow mail to be sent outside the tenant.  This will allow us to test Do Not Forward and Office 365 Message Encryption scenarios.
 ===
-# Configuring Applications
+# Activating Unified Labeling
 [🔙](#azure-information-protection)
  
-In this task, we will configure Word and Outlook for 3 test users.  These users are Alan Steiner (Alan) and Amy Alberts (Amy) who we have defined as members of the Legal group, and Eric Grimes (Eric).  
+In this task, we will activate the labels from the Azure Portal for use in the Security and Compliance Center.
 
-This will allow us to demonstrate the differences between the global and scoped policy and demonstrate some of the protection features of Azure Information Protection in the next exercise.
+1. [] On @lab.VirtualMachine(Client01).SelectLink, navigate to +++https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade+++
 
-1. [] On @lab.VirtualMachine(Client01).SelectLink, minimize the Edge window and launch **Microsoft Word**.
+1. [] Click **Activate** and **Yes**.
 
-	!IMAGE[pxyal6hb.jpg](\Media\pxyal6hb.jpg)
-	
-	> [!knowledge] When Word opens, you may see a prompt to log into **Microsoft Azure Information Protection**.  You may **close this** and continue.  Azure Information Protection will automatically inherit the settings from Word after reloading.
+	!IMAGE[o0ahpimw.jpg](\Media\o0ahpimw.jpg)
+
+	>[!NOTE] You should see a message similar to the one below.
 	>
-	> !IMAGE[3gm9oeee.jpg](\Media\3gm9oeee.jpg)
+	> !IMAGE[SCCMigration.png](\Media\SCCMigration.png) 
 
-1. [] In the upper right, click on **Sign in to get the most out of Office**.
-	
-	^IMAGE[Open Screenshot](\Media\elavdbu1.jpg)
-1. [] In the Sign in dialog, enter +++Alan@@lab.CloudCredential(134).TenantName+++ and press **Next**. 
+1. [] In a new tab, browse to +++https://protection.office.com/#/tagslibrary+++ to review the migrated labels. 
 
-1. [] In the Enter password dialog, enter +++pass@word1+++ and click **Sign in**.
-
-1. [] In the Use this account everywhere on your device dialog, click **Yes**.
-
-	^IMAGE[Open Screenshot](\Media\m1e7l6ei.jpg)
-
-1. [] Finally, click **Done** to complete the setup.
-1. [] **Close Microsoft Word**
-1. [] Next, start **Microsoft Outlook** by clicking on the icon in the taskbar.
-
-	!IMAGE[vlu3sb64.jpg](\Media\vlu3sb64.jpg)
-1. [] Click **Connect** and let Outlook configure.  
-
-	> [!KNOWLEDGE] Login details for **Alan@@lab.CloudCredential(134).TenantName** should be automatically populated. If you still see **LabUser@Contoso.com**, close Microsoft Outlook and reopen.
-	>
-	> If you receive a prompt to choose an account type, click Office 365.
-	>
-	> !IMAGE[13mp3hbw.jpg](\Media\13mp3hbw.jpg)
-
-1. [] Continue to the next step while Outlook configures.
-1. [] Switch to **@lab.VirtualMachine(Client02).SelectLink**, press @lab.CtrlAltDelete, and log in using the username and password below:
-
-	+++LabUser+++
-	
-	+++Pa$$w0rd+++
-
-1. [] Launch **Microsoft Word**.
-
-	!IMAGE[pxyal6hb.jpg](\Media\pxyal6hb.jpg)
-	
-	> [!knowledge] When Word opens, you may see a prompt to log into **Microsoft Azure Information Protection**.  You may **close this** and continue.  Azure Information Protection will automatically inherit the settings from Word after reloading.
-	>
-	> !IMAGE[3gm9oeee.jpg](\Media\3gm9oeee.jpg)
-
-1. [] In the upper right, click on **Sign in to get the most out of Office**.
-	
-	^IMAGE[Open Screenshot](\Media\elavdbu1.jpg)
-1. [] In the Sign in dialog, enter +++Amy@@lab.CloudCredential(134).TenantName+++ and press **Next**. 
-
-1. [] In the Enter password dialog, enter +++pass@word1+++ and click **Sign in**.
-
-1. [] In the Use this account everywhere on your device dialog, click **Yes**.
-
-	^IMAGE[Open Screenshot](\Media\m1e7l6ei.jpg)
-
-1. [] Finally, click **Done** to complete the setup.
-1. [] **Close Microsoft Word**
-1. [] Next, start **Microsoft Outlook** by clicking on the icon in the taskbar.
-
-	!IMAGE[vlu3sb64.jpg](\Media\vlu3sb64.jpg)
-1. [] Click **Connect** and let Outlook configure.  
-
-	> [!KNOWLEDGE] Login details for **Amy@@lab.CloudCredential(134).TenantName** should be automatically populated. If you still see **Install@Contoso.com**, close Microsoft Outlook and reopen.
-	>
-	> If you receive a prompt to choose an account type, click Office 365.
-	>
-	> !IMAGE[13mp3hbw.jpg](\Media\13mp3hbw.jpg)
-
-1. [] Continue to the next step while Outlook configures.
-1. [] Switch to **@lab.VirtualMachine(Client03).SelectLink**, press @lab.CtrlAltDelete, and log in using the username and password below:
-
-	+++LabUser+++
-	
-	+++Pa$$w0rd+++
-
-1. [] Launch **Microsoft Word**.
-
-	!IMAGE[pxyal6hb.jpg](\Media\pxyal6hb.jpg)
-	
-	> [!knowledge] When Word opens, you may see a prompt to log into **Microsoft Azure Information Protection**.  You may **close this** and continue.  Azure Information Protection will automatically inherit the settings from Word after reloading.
-	>
-	> !IMAGE[3gm9oeee.jpg](\Media\3gm9oeee.jpg)
-
-1. [] In the upper right, click on **Sign in to get the most out of Office**.
-	
-	^IMAGE[Open Screenshot](\Media\elavdbu1.jpg)
-1. [] In the Sign in dialog, enter +++Eric@@lab.CloudCredential(134).TenantName+++ and press **Next**. 
-
-1. [] In the Enter password dialog, enter +++pass@word1+++ and click **Sign in**.
-
-1. [] In the Use this account everywhere on your device dialog, click **Yes**.
-
-	^IMAGE[Open Screenshot](\Media\m1e7l6ei.jpg)
-
-1. [] Finally, click **Done** to complete the setup.
-1. [] Wait for the Getting Office ready for you dialog to close and then **Close Microsoft Word**
-1. [] Next, start **Microsoft Outlook** by clicking on the icon in the taskbar.
-
-	!IMAGE[vlu3sb64.jpg](\Media\vlu3sb64.jpg)
-1. [] Click **Connect** and let Outlook configure.  
-
-	> [!KNOWLEDGE] Login details for **Eric@@lab.CloudCredential(134).TenantName** should be automatically populated. If you still see **Install@Contoso.com**, close Microsoft Outlook and reopen.
-	>
-	> If you receive a prompt to choose an account type, click Office 365.
-	>
-	> !IMAGE[13mp3hbw.jpg](\Media\13mp3hbw.jpg)
-
+	>[!NOTE] Keep in mind that now that the SCC Sensitivity Labels have been activated, any modifications, additions, or deletions will be syncronised to Azure Information Protection in the Azure Portal. There are some functional differences between the two sections (DLP in SCC, HYOK & Custom Permissions in AIP), so please be aware of this when modifying policies to ensure a consistent experience on clients. 
 
 ===
 
@@ -998,7 +953,7 @@ One of the most common use cases for AIP is the ability to send emails using Use
 	>
 	> !IMAGE[5esnhwkw.jpg](\Media\5esnhwkw.jpg)
 
-1. [] Send an email to **Alan** and **Amy** (+++Alan;Amy+++). You may **optionally add an external email address** (preferably from a major social provider like gmail, yahoo, or outlook.com) to test the external recipient experience. For the **Subject** and **Body** type +++Test Do Not Forward Email+++.
+1. [] Send an email to **Alan** and **Amy** (+++AlanS;AmyA+++). You may **optionally add an external email address** (preferably from a major social provider like gmail, yahoo, or outlook.com) to test the external recipient experience. For the **Subject** and **Body** type +++Test Do Not Forward Email+++.
 
 	^IMAGE[Open Screenshot](\Media\h0eh40nk.jpg)
 
@@ -1028,7 +983,7 @@ One of the most common use cases for AIP is the ability to send emails using Use
 	>
 	> !IMAGE[tzj04wi9.jpg](\Media\tzj04wi9.jpg)
 	> 
-	> Here the user has received an email from Eric Grimes and they can click on the **Read the message** button.
+	> Here the user has received an email from Eric Gruber and they can click on the **Read the message** button.
 	>
 	>!IMAGE[wiefwcho.jpg](\Media\wiefwcho.jpg)
 	>
@@ -1059,7 +1014,7 @@ In this task, we will create a document and send an email to demonstrate the fun
 
 	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
 
-1. [] Send an email to Alan, Amy, and yourself (+++Alan;Amy;@lab.User.Email+++).  For the **Subject** and **Body** type +++Test Contoso Internal Email+++.
+1. [] Send an email to Alan, Amy, and yourself (+++AlanS;AmyA;@lab.User.Email+++).  For the **Subject** and **Body** type +++Test Contoso Internal Email+++.
 
 	^IMAGE[Open Screenshot](\Media\9gkqc9uy.jpg)
 
@@ -1090,7 +1045,7 @@ In this task, we will create a document and send an email from one of the users 
 	
 	^IMAGE[Open Screenshot](\Media\ldjugk24.jpg)
 	
-1. [] Send an email to Amy and Eric (+++Amy Albers;Eric Gruber+++).  For the **Subject** and **Body** type +++Test Highly Confidential Legal Email+++.
+1. [] Send an email to Amy and Eric (+++Amy Alberts;Eric Gruber+++).  For the **Subject** and **Body** type +++Test Highly Confidential Legal Email+++.
 1. [] In the Sensitivity Toolbar, click on **Highly Confidential** and the **Legal Only** sub-label, then click **Send**.
 
 	^IMAGE[Open Screenshot](\Media\ny1lwv0h.jpg)
@@ -1142,7 +1097,7 @@ In this task, we will test the configured recommended and automatic conditions w
 	
 	^IMAGE[Open Screenshot](\Media\ldjugk24.jpg)
 	
-1. [] Draft an email to Amy and Alan (+++Amy;Alan+++).  For the **Subject** and **Body** type +++Test Highly Confidential All Employees Automation+++.
+1. [] Draft an email to Amy and Alan (+++AmyA;AlanS+++).  For the **Subject** and **Body** type +++Test Highly Confidential All Employees Automation+++.
 
 	^IMAGE[Open Screenshot](\Media\4v3wrrop.jpg)
 1. [] Attach the **second document you created** to the email.
@@ -1155,142 +1110,7 @@ In this task, we will test the configured recommended and automatic conditions w
 
 1. [] In the email, click **Send**.
 ===
-
-# Exercise 5: Exchange Online IRM Capabilities
-[🔙](#azure-information-protection)
-
-Exchange Online can work in conjunction with Azure Information Protection to provide advanced capabilities for protecting sensitive data being sent over email.  You can also manage the flow of classified content to ensure that it is not sent to unintended recipients.  
-
-## Configuring Exchange Online Mail Flow Rules
-
-In this task, we will configure a mail flow rule to detect sensitive information traversing the network in the clear and encrypt it using the Encrypt Only RMS Template.  We will also create a mail flow rule to prevent messages classified as Confidential \ Contoso Internal from being sent to external recipients.
-
-1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and open an **Admin PowerShell Prompt**.
-
-1. [] Type the commands below to connect to an Exchange Online PowerShell session.  Use the credentials provided when prompted.
-
-	```
-	Set-ExecutionPolicy RemoteSigned
-	```
-
-	```
-	$UserCredential = Get-Credential
-	```
-
-	+++@lab.CloudCredential(134).Username+++
-
-	+++@lab.CloudCredential(134).Password+++
-
-	```
-	$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-	Import-PSSession $Session
-	```
-
-1. [] Create a new Exchange Online Mail Flow Rule using the code below:
-
-	```
-	New-TransportRule -Name "Encrypt external mails with sensitive content" -SentToScope NotInOrganization -ApplyRightsProtectionTemplate "Encrypt" -MessageContainsDataClassifications @(@{Name="ABA Routing Number"; minCount="1"},@{Name="Credit Card Number"; minCount="1"},@{Name="Drug Enforcement Agency (DEA) Number"; minCount="1"},@{Name="International Classification of Diseases (ICD-10-CM)"; minCount="1"},@{Name="International Classification of Diseases (ICD-9-CM)"; minCount="1"},@{Name="U.S. / U.K. Passport Number"; minCount="1"},@{Name="U.S. Bank Account Number"; minCount="1"},@{Name="U.S. Individual Taxpayer Identification Number (ITIN)"; minCount="1"},@{Name="U.S. Social Security Number (SSN)"; minCount="1"})
-	```
-
-	>[!KNOWLEDGE] This mail flow rule can be used to encrypt sensitive data leaving via email.  This can be customized to add additional sensitive data types.
-	
-	> [!HINT] Next, we need to capture the **Label ID** for the **Confidential \ Contoso Internal** label. 
-
-1. [] Switch to the Azure Portal and under **classifications** click on Labels, then expand **Confidential** and click on **Contoso Internal**.
-
-	!IMAGE[w2w5c7xc.jpg](\Media\w2w5c7xc.jpg)
-
-	> [!HINT] If you closed the azure portal, open an Edge InPrivate window and navigate to +++https://portal.azure.com+++.
-
-1. [] In the Label: Contoso Internal blade, scroll down to the Label ID and **copy** the value.
-
-	!IMAGE[lypurcn5.jpg](\Media\lypurcn5.jpg)
-
-	> [!ALERT] Make sure that there are no spaces before or after the Label ID as this will cause the mail flow rule to be ineffective.
-
-1. [] Next, return to the PowerShell window and type ```$labelid = "``` then paste the **LabelID** for the **Contoso Internal** label, type +++"+++, and press **Enter**.
-1. [] Now, create another Exchange Online Mail Flow Rule using the code below:
-
-	```
-	$labeltext = "MSIP_Label_"+$labelid+"_enabled=true"
-	New-TransportRule -name "Block Confidential Contoso Internal" -SentToScope notinorganization -HeaderContainsMessageHeader  "msip_labels" -HeaderContainsWord $labeltext -RejectMessageReasonText “Contoso internal messages cannot be sent to external recipients.”
-	```
-
-	>[!KNOWLEDGE] This mail flow rule can be used to prevent inter only communications from being sent to an external audience.
-
-===
-
-# Demonstrating Exchange Online Mail Flow Rules
-[🔙](#azure-information-protection)
-
-In this task, we will send emails to demonstrate the results of the Exchange Online mail flow rules we configured in the previous task.  This will demonstrate some ways to protect your sensitive data and ensure a positive user experience with the product.
-
-1. [] Switch to @lab.VirtualMachine(Client03).SelectLink.
-1. [] In Microsoft Outlook, click on the **New email** button.
-
-	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
-
-1. [] Send an email to Alan, Amy, and yourself (+++Alan;Amy;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
-
-	> [!KNOWLEDGE] Notice that there is a policy tip that has popped up to inform you that there is a credit card number in the email and it is being shared outside the organization.  This type of policy tip can be defined with the Office 365 Security and Compliance center and was pre-staged in the demo tenants we are using.  
-
-1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and review the received email.
-
-	!IMAGE[pidqfaa1.jpg](\Media\pidqfaa1.jpg)
-
-	> [!Knowledge] Note that there is no encryption applied to the message.  That is because we set up the rule to only apply to external recipients.  If you were to leave that condition out of the mail flow rule, internal recipients would also receive an encrypted copy of the message.  The image below shows the encrypted message that was received externally.
-	>
-	>!IMAGE[c5foyeji.jpg](\Media\c5foyeji.jpg)
-	>
-	>Below is another view of the same message received in Outlook Mobile on an iOS device.
-	>
-	>!IMAGE[599ljwfy.jpg](\Media\599ljwfy.jpg)
-
-	>[!NOTE] Note that you have received a message from your DLP policy stating that the email was not sent to the external recipient because it contained a credit card number.
-
-1. [] On Client 1, @[Click here](`cmd.exe/c start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge -private https://protection.office.com`) to open an Edge InPrivate window to +++https://protection.office.com+++.
-1. [] In the Security and Compliance Center, expand **Data loss prevention** and click on **Policy**.  Then, in the Policy blade, click on the **Default Office 365 DLP Policy**.
-	
-	!IMAGE[a2m7ryn4.jpg](\Media\a2m7ryn4.jpg)
-1. [] In the Default Office 365 DLP Policy blade, next to Policy settings, click **Edit**.
-
-	!IMAGE[jsdej5i4.jpg](\Media\jsdej5i4.jpg)
-1. [] In the Editing policy settings blade, disable the switch next to **Items containing 1-9 credit card numbers shared externally** and click **Save**.
-
-!IMAGE[5y5gg696.jpg](\Media\5y5gg696.jpg)
-1. [] Return to @lab.VirtualMachine(Client03).SelectLink.
-1. [] In Microsoft Outlook, click on the **New email** button.
-
-	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
-
-1. [] Send an new email to Alan, Amy, and yourself (+++Alan;Amy;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email 2+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
-	>[!NOTE] If you still receive a rejection, please wait a few minutes and try again.
-
-	>[!Knowledge] Notice that you do not receive the error messag this time.  Log into your personal email and you will see that the email has been encrypted in transit by the Exchange Online Mail Flow Rule defined in the previous exercise.
-1. [] Next, in Microsoft Outlook, click on the **New email** button.
-
-	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
-1. [] Send an email to Alan, Amy, and yourself (+++Alan;Amy;@lab.User.Email+++).  For the **Subject** and **Body** type +++Another Test Contoso Internal Email+++.
-
-	^IMAGE[Open Screenshot](\Media\d476fmpg.jpg)
-
-1. [] In the Sensitivity Toolbar, click on the **pencil** icon to change the Sensitivity label.
-
-	^IMAGE[Open Screenshot](\Media\901v6vpa.jpg)
-
-1. [] Click on **Confidential** and then **Contoso Internal** and click **Send**.
-
-	^IMAGE[Open Screenshot](\Media\yhokhtkv.jpg)
-1. [] In about a minute, you should receive an **Undeliverable** message from Exchange with the users that the message did not reach and the message you defined in the previous task.
-
-	!IMAGE[kgjvy7ul.jpg](\Media\kgjvy7ul.jpg)
-
-> [!HINT] There are many other use cases for Exchange Online mail flow rules but this should give you a quick view into what is possible and how easy it is to improve the security of your sensitive data through the use of Exchange Online mail flow rules and Azure Information Protection.
-
-===
-
-
-# Exercise 6: Classification, Labeling, and Protection with the Azure Information Protection Scanner
+# Exercise 5: Classification, Labeling, and Protection with the Azure Information Protection Scanner
 [🔙](#azure-information-protection)
 
 The Azure Information Protection scanner allows you to  classify and protect sensitive information stored in on-premises CIFS file shares and SharePoint sites.  
@@ -1360,7 +1180,7 @@ In this task, we will set the AIP scanner to enforce the conditions we set up in
 	>
 	>!IMAGE[k3rox8ew.jpg](\Media\k3rox8ew.jpg)
 	>
-	>If we switch back to @lab.VirtualMachine(Client03).SelectLink and look in the reports directory we opened previously at +++\\\Scanner01\c$\users\aipscanner\AppData\Local\Microsoft\MSIP\Scanner\Reports+++, you will notice that the old scan reports are zipped in the directory and only the most recent results aare showing.  
+	>If we switch back to @lab.VirtualMachine(Client01).SelectLink and look in the reports directory we opened previously at +++\\\Scanner01\c$\users\aipscanner\AppData\Local\Microsoft\MSIP\Scanner\Reports+++, you will notice that the old scan reports are zipped in the directory and only the most recent results aare showing.  
 	>
 	>!IMAGE[s8mn092f.jpg](\Media\s8mn092f.jpg)
 	>
@@ -1391,31 +1211,162 @@ Now that we have Classified and Protected documents using the scanner, we can re
 	>
 	>!IMAGE[s1okfpwu.jpg](\Media\s1okfpwu.jpg)
 
-
 ===
-
-# Exercise 7: Security and Compliance Center
+# Exercise 6: Exchange Online IRM Capabilities
 [🔙](#azure-information-protection)
 
-In this exercise, we will migrate your AIP Labels and activate them in the Security and Compliance Center.  This will allow you to see the labels in Microsoft Information Protection based clients such as Office 365 for Mac and Mobile Devices.
+Exchange Online can work in conjunction with Azure Information Protection to provide advanced capabilities for protecting sensitive data being sent over email.  You can also manage the flow of classified content to ensure that it is not sent to unintended recipients.  
 
-Although we will not be demonstrating these capabilities in this lab, you can use the tenant information provided to test on your own devices.
- 
+## Configuring Exchange Online Mail Flow Rules
+
+In this task, we will configure a mail flow rule to detect sensitive information traversing the network in the clear and encrypt it using the Encrypt Only RMS Template.  We will also create a mail flow rule to prevent messages classified as Confidential \ Contoso Internal from being sent to external recipients.
+
+1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and open an **Admin PowerShell Prompt**.
+
+1. [] Type the commands below to connect to an Exchange Online PowerShell session.  Use the credentials provided when prompted.
+
+	```
+	Set-ExecutionPolicy RemoteSigned
+	```
+
+	```
+	$UserCredential = Get-Credential
+	```
+
+	+++@lab.CloudCredential(17).Username+++
+
+	+++@lab.CloudCredential(17).Password+++
+
+	```
+	$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+	Import-PSSession $Session
+	```
+
+1. [] Create a new Exchange Online Mail Flow Rule using the code below:
+
+	```
+	New-TransportRule -Name "Encrypt external mails with sensitive content" -SentToScope NotInOrganization -ApplyRightsProtectionTemplate "Encrypt" -MessageContainsDataClassifications @(@{Name="ABA Routing Number"; minCount="1"},@{Name="Credit Card Number"; minCount="1"},@{Name="Drug Enforcement Agency (DEA) Number"; minCount="1"},@{Name="International Classification of Diseases (ICD-10-CM)"; minCount="1"},@{Name="International Classification of Diseases (ICD-9-CM)"; minCount="1"},@{Name="U.S. / U.K. Passport Number"; minCount="1"},@{Name="U.S. Bank Account Number"; minCount="1"},@{Name="U.S. Individual Taxpayer Identification Number (ITIN)"; minCount="1"},@{Name="U.S. Social Security Number (SSN)"; minCount="1"})
+	```
+
+	>[!KNOWLEDGE] This mail flow rule can be used to encrypt sensitive data leaving via email.  This can be customized to add additional sensitive data types. A breakdown of the command is listed below.
+	>
+	>New-TransportRule 
+	>
+	>-Name "Encrypt external mails with sensitive content" 
+	>
+	>-SentToScope NotInOrganization 
+	>
+	>-ApplyRightsProtectionTemplate "Encrypt" 
+	>
+	>-MessageContainsDataClassifications @(@{Name="ABA Routing Number"; minCount="1"},@{Name="Credit Card Number"; minCount="1"},@{Name="Drug Enforcement Agency (DEA) Number"; minCount="1"},@{Name="International Classification of Diseases (ICD-10-CM)"; minCount="1"},@{Name="International Classification of Diseases (ICD-9-CM)"; minCount="1"},@{Name="U.S. / U.K. Passport Number"; minCount="1"},@{Name="U.S. Bank Account Number"; minCount="1"},@{Name="U.S. Individual Taxpayer Identification Number (ITIN)"; minCount="1"},@{Name="U.S. Social Security Number (SSN)"; minCount="1"})
+	
+	> [!HINT] Next, we need to capture the **Label ID** for the **Confidential \ Contoso Internal** label. 
+
+1. [] Switch to the Azure Portal and under **classifications** click on Labels, then expand **Confidential** and click on **Contoso Internal**.
+
+	!IMAGE[w2w5c7xc.jpg](\Media\w2w5c7xc.jpg)
+
+	> [!HINT] If you closed the azure portal, open an Edge InPrivate window and navigate to +++https://portal.azure.com+++.
+
+1. [] In the Label: Contoso Internal blade, scroll down to the Label ID and **copy** the value.
+
+	!IMAGE[lypurcn5.jpg](\Media\lypurcn5.jpg)
+
+	> [!ALERT] Make sure that there are no spaces before or after the Label ID as this will cause the mail flow rule to be ineffective.
+
+1. [] Next, return to the PowerShell window and type ```$labelid = "``` then paste the **LabelID** for the **Contoso Internal** label, type +++"+++, and press **Enter**.
+1. [] Now, create another Exchange Online Mail Flow Rule using the code below:
+
+	```
+	$labeltext = "MSIP_Label_"+$labelid+"_enabled=true"
+	New-TransportRule -name "Block Confidential Contoso Internal" -SentToScope notinorganization -HeaderContainsMessageHeader  "msip_labels" -HeaderContainsWord $labeltext -RejectMessageReasonText “Contoso internal messages cannot be sent to external recipients.”
+	```
+
+	>[!KNOWLEDGE] This mail flow rule can be used to prevent internal only communications from being sent to an external audience.
+	>
+	>New-TransportRule 
+	>
+	>-name "Block Confidential Contoso Internal" 
+	>
+	>-SentToScope notinorganization 
+	>
+	>-HeaderContainsMessageHeader "msip_labels" 
+	>
+	>-HeaderContainsWord $labeltext 
+	>
+	>-RejectMessageReasonText “Contoso internal messages cannot be sent to external recipients.”
 
 ===
-# Activating Unified Labeling
+
+# Demonstrating Exchange Online Mail Flow Rules
 [🔙](#azure-information-protection)
- 
-In this task, we will activate the labels from the Azure Portal for use in the Security and Compliance Center.
 
-1. [] On @lab.VirtualMachine(Client01).SelectLink, navigate to +++https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade+++
+In this task, we will send emails to demonstrate the results of the Exchange Online mail flow rules we configured in the previous task.  This will demonstrate some ways to protect your sensitive data and ensure a positive user experience with the product.
 
-1. [] Click **Activate** and **Yes**.
+1. [] Switch to @lab.VirtualMachine(Client03).SelectLink.
+1. [] In Microsoft Outlook, click on the **New email** button.
 
-	!IMAGE[o0ahpimw.jpg](\Media\o0ahpimw.jpg)
-	>[!NOTE] If Activation fails it is likely because of network latency in the lab environment. Browse to +++https://protection.office.com/#/tagslibrary+++ to check if the migration succeeded. In a full demo tenant this should complete successfully.  More detail is available at [https://aka.ms/aipmigration](https://aka.ms/aipmigration).
+	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
+
+1. [] Send an email to Alan, Amy, and yourself (+++AlanS;AmyA;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
+
+	> [!KNOWLEDGE] Notice that there is a policy tip that has popped up to inform you that there is a credit card number in the email and it is being shared outside the organization.  This type of policy tip can be defined with the Office 365 Security and Compliance center and was pre-staged in the demo tenants we are using.  
+
+1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and review the received email.
+
+	!IMAGE[pidqfaa1.jpg](\Media\pidqfaa1.jpg)
+
+	> [!Knowledge] Note that there is no encryption applied to the message.  That is because we set up the rule to only apply to external recipients.  If you were to leave that condition out of the mail flow rule, internal recipients would also receive an encrypted copy of the message.  The image below shows the encrypted message that was received externally.
+	>
+	>!IMAGE[c5foyeji.jpg](\Media\c5foyeji.jpg)
+	>
+	>Below is another view of the same message received in Outlook Mobile on an iOS device.
+	>
+	>!IMAGE[599ljwfy.jpg](\Media\599ljwfy.jpg)
+
+	>[!NOTE] Note that you have received a message from your DLP policy stating that the email was not sent to the external recipient because it contained a credit card number.
+
+1. [] On Client 1, open an Edge InPrivate window to +++https://protection.office.com+++.
+1. [] In the Security and Compliance Center, expand **Data loss prevention** and click on **Policy**.  Then, in the Policy blade, click on the **Default Office 365 DLP Policy**.
+	
+	!IMAGE[a2m7ryn4.jpg](\Media\a2m7ryn4.jpg)
+1. [] In the Default Office 365 DLP Policy blade, next to Policy settings, click **Edit**.
+
+	!IMAGE[jsdej5i4.jpg](\Media\jsdej5i4.jpg)
+1. [] In the Editing policy settings blade, disable the switch next to **Items containing 1-9 credit card numbers shared externally** and click **Save**.
+
+!IMAGE[5y5gg696.jpg](\Media\5y5gg696.jpg)
+1. [] Return to @lab.VirtualMachine(Client03).SelectLink.
+1. [] In Microsoft Outlook, click on the **New email** button.
+
+	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
+
+1. [] Send an new email to Alan, Amy, and yourself (+++AlanS;AmyA;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email 2+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
+	>[!NOTE] If you still receive a rejection, please wait a few minutes and try again.
+
+	>[!Knowledge] Notice that you do not receive the error messag this time.  Log into your personal email and you will see that the email has been encrypted in transit by the Exchange Online Mail Flow Rule defined in the previous exercise.
+1. [] Next, in Microsoft Outlook, click on the **New email** button.
+
+	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
+1. [] Send an email to Alan, Amy, and yourself (+++AlanS;AmyA;@lab.User.Email+++).  For the **Subject** and **Body** type +++Another Test Contoso Internal Email+++.
+
+	^IMAGE[Open Screenshot](\Media\d476fmpg.jpg)
+
+1. [] In the Sensitivity Toolbar, click on the **pencil** icon to change the Sensitivity label.
+
+	^IMAGE[Open Screenshot](\Media\901v6vpa.jpg)
+
+1. [] Click on **Confidential** and then **Contoso Internal** and click **Send**.
+
+	^IMAGE[Open Screenshot](\Media\yhokhtkv.jpg)
+1. [] In about a minute, you should receive an **Undeliverable** message from Exchange with the users that the message did not reach and the message you defined in the previous task.
+
+	!IMAGE[kgjvy7ul.jpg](\Media\kgjvy7ul.jpg)
+
+> [!HINT] There are many other use cases for Exchange Online mail flow rules but this should give you a quick view into what is possible and how easy it is to improve the security of your sensitive data through the use of Exchange Online mail flow rules and Azure Information Protection.
+
 ===
-# Exercise 8: SharePoint IRM Configuration
+# Exercise 7: SharePoint IRM Configuration
 [🔙](#azure-information-protection)
 
 In this exercise, you will configure SharePoint Online Information Rights Management (IRM) and configure a document library with an IRM policy to protect documents that are downloaded from that library.
@@ -1436,9 +1387,9 @@ In this task, we will enable Information Rights Management in SharePoint Online.
  
 1. [] If needed, log in using the credentials below:
 
-	 +++@lab.CloudCredential(134).Username+++
+	 +++@lab.CloudCredential(17).Username+++
 	 
-	 +++@lab.CloudCredential(134).Password+++
+	 +++@lab.CloudCredential(17).Password+++
  
 1. [] Hover over the **Admin centers** section of the bar on the left and choose **SharePoint**.
 
@@ -1476,7 +1427,7 @@ In this task, we will create a new SharePoint site and enable Information Rights
 1. [] Launch a new Edge InPrivate session to +++https://portal.office.com+++.
 1. [] Log in using the credentials below:
 
-	+++NuckC@@lab.CloudCredential(134).TenantName+++
+	+++NuckC@@lab.CloudCredential(17).TenantName+++
 
 	+++NinjaCat123+++
 1. [] Click on **SharePoint** in the list.
@@ -1581,7 +1532,7 @@ Files that are uploaded to a SharePoint IRM protected document library are prote
 1. [] Select the uploaded document and click **Share** in the action bar.
 
 	!IMAGE[1u2jsod7.jpg](\Media\1u2jsod7.jpg)
-1. [] In the Send Link dialog, type +++Amy+++ and click on **Amy Alberts** then **Send**.
+1. [] In the Send Link dialog, type +++AmyA+++ and click on **Amy Alberts** then **Send**.
 
 	!IMAGE[j6w1v4z9.jpg](\Media\j6w1v4z9.jpg)
 1. [] Switch to @lab.VirtualMachine(Client02).SelectLink.
@@ -1595,6 +1546,7 @@ Files that are uploaded to a SharePoint IRM protected document library are prote
 
 	!IMAGE[4uya6mro.jpg](\Media\4uya6mro.jpg)
 	>[!NOTE] These permissions are based on the level of access that they user has to the document library.  In a production environment most users would likely have less rights than shown in this example.
+
 
 ===
 # Microsoft 365 Cloud App Security
