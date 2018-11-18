@@ -222,7 +222,7 @@ In this task, we will assign licenses to users that have been synced to the Offi
 # Azure Security Center Setup
 
 ## VM and Workspace Deployment
-#### Estimated lab time: 15 minutes
+
 This section is intended to deploy dependency Azure resources in an automated way to get you started quickly or in case you need to re-provision your environment.
 
 ***Additional notes**:*
@@ -233,7 +233,7 @@ This section is intended to deploy dependency Azure resources in an automated wa
 - Click on **Start Trial**, if you are prompted for a Security Center trial
 
 ### Deploy VMs and Create a Workspace
-Use the **Deploy to Azure** button below to deploy the following:
+Use the link below to deploy the following:
 - A Log Analytics workspace (ASC-Workspace-xxxx)
 - Security Center OMS solution
 - 2 Windows VM's (*Win-x*, connected to the workspace)
@@ -243,7 +243,7 @@ Use the **Deploy to Azure** button below to deploy the following:
 
 Because we are deploying the Security Center solution in the workspace, the VM's will become security managed by Security Center.
 
-<[![Deploy Button](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftianderturpijn%2FAzure-Security-Center%2Fmaster%2FLabs%2F01%2520-%2520VM%2520and%2520Workspace%2520Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json)
+1. [] On @lab.VirtualMachine(Client01).SelectLink, open a new tab and navigate to +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftianderturpijn%2FAzure-Security-Center%2Fmaster%2FLabs%2F01%2520-%2520VM%2520and%2520Workspace%2520Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json+++
 
 The deployment takes about 13 minutes.<br><br>
 After the deployment of the template, you can check the progress of your deployment if you click on your created resource group details, then click on **Deployments** (1 deploying). <br>
