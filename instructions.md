@@ -872,7 +872,9 @@ However, helping your users to properly classify and protect sensitive data at t
 
 	!IMAGE[Dashboard.png](\Media\Dashboard.png)
 
-	[!NOTE] Notice that there are no labeled or protected files shown at this time.  This uses the AIP P1 discovery functionality available with the AIP Scanner. Only the predefined Office 365 Sensitive Information Types are available with AIP P1 as Custom Sensitive Information Types require automatic conditions to be defined, which is an AIP P2 feature.
+	[!KNOWLEDGE] Notice that there are no labeled or protected files shown at this time.  This uses the AIP P1 discovery functionality available with the AIP Scanner. Only the predefined Office 365 Sensitive Information Types are available with AIP P1 as Custom Sensitive Information Types require automatic conditions to be defined, which is an AIP P2 feature.
+
+	[!NOTE] Now that we know the sensitive information types that are most common in this environment, we can use that information to create **Recommended** conditions that will help guide user behavior when they encounter this type of data.
 
 1. [] Under **Classifications** on the left, click **Labels** then expand **Confidential**, and click on **Contoso Internal**.
 
@@ -880,7 +882,13 @@ However, helping your users to properly classify and protect sensitive data at t
 1. [] In the Label: Contoso Internal blade, scroll down to the **Configure conditions for automatically applying this label** section, and click on **+ Add a new condition**.
 
 	!IMAGE[cws1ptfd.jpg](\Media\cws1ptfd.jpg)
-1. [] In the Condition blade, in the **Select information types** search box, type +++credit+++ and check the box next to **Credit Card Number**.
+1. [] In the Condition blade, in the **Select information types** search box, type +++International+++ and check the box next to the **International Classification of Diseases (ICD-10-CM)** entry.
+
+	^IMAGE[Open Screenshot](\Media\j163rbh7.jpg)
+1. [] Next, before saving, replace International in the search bar with +++EU+++ and check the boxes next to the **items shown below**.
+
+	!IMAGE[xaj5hupc.jpg](\Media\xaj5hupc.jpg)
+1. [] Finally, type +++credit+++ and check the box next to **Credit Card Number**.
 
 	^IMAGE[Open Screenshot](\Media\9rozp61b.jpg)
 1. [] Click **Save** in the Condition blade and **OK** to the Save settings prompt.
@@ -1133,7 +1141,7 @@ In this task, we will test the configured recommended and automatic conditions w
 
 The Azure Information Protection scanner allows you to  classify and protect sensitive information stored in on-premises CIFS file shares and SharePoint sites.  
 
-In this exercise, you will use the information gathered in Exercise 1 to map sensitive data types discovered to automatic classification rules.  After that, we will run the AIP Scanner in enforce mode to classify and protect the identified sensitive data.
+In this exercise, you will change the condition we created previously from a recommended to an automatic classification rule.  After that, we will run the AIP Scanner in enforce mode to classify and protect the identified sensitive data.
 
 ===
 
@@ -1144,29 +1152,8 @@ Now that we know what types of sensitive data we need to protect, we will config
 
 1. [] Switch back to @lab.VirtualMachine(Client01).SelectLink and open the browser that is logged into the Azure Portal.
 
-1. [] Under **Dashboards** on the left, click on **Data discovery (Preview)** to view the data collected by the AIP scanner discovery mode run.
-
-	>[!ALERT] Due to lab environment infrastructure constraints, it is possible that the data will not fully populate by the time you reach this point in the lab. Please continue through the steps using the provided information.  If you set this up in an external lab environment, these steps will work as described.
-
-1. [] In the Information Types panel, you will see the types of sensitive data that was found during the initial discovery run. We will use a few of these to create Automatic Conditions.
-
-	!IMAGE[x4w16p5g.jpg](\Media\x4w16p5g.jpg)
-
 1. [] Under **Classifications** on the left, click **Labels** then expand **Confidential**, and click on **Contoso Internal**.
 
-	^IMAGE[Open Screenshot](\Media\jyw5vrit.jpg)
-1. [] In the Label: Contoso Internal blade, scroll down to the **Configure conditions for automatically applying this label** section, and click on **+ Add a new condition**.
-
-	!IMAGE[cws1ptfd.jpg](\Media\cws1ptfd.jpg)
-1. [] In the Condition blade, in the **Select information types** search box, type +++International+++ and check the box next to the **International Classification of Diseases (ICD-10-CM)** entry.
-
-	^IMAGE[Open Screenshot](\Media\j163rbh7.jpg)
-1. [] Next, before saving, replace International in the search bar with +++EU+++ and check the boxes next to the **items shown below**.
-
-	!IMAGE[xaj5hupc.jpg](\Media\xaj5hupc.jpg)
-1. [] Click **Save** in the Condition blade and **OK** to the Save settings prompt.
-
-	^IMAGE[Open Screenshot](\Media\41o5ql2y.jpg)
 1. [] In the Label : Contoso Internal blade, under **Select how this label is applied: automatically or recommended to user**, click **Automatic**.
 
 	^IMAGE[Open Screenshot](\Media\1ifaer4l.jpg)
