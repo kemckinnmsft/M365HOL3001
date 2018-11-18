@@ -253,6 +253,7 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink, and log in using the details below:
 
 	+++NuckC+++
+	
 	+++NinjaCat123+++
 
 1. [] Open an Edge InPrivate window and navigate to +++https://securitycenter.windows.com+++.
