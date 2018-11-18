@@ -805,7 +805,7 @@ Now that you have learned how to work with global labels and policies, we will c
 	!IMAGE[1sjw3mc7.jpg](\Media\1sjw3mc7.jpg)
 
 1. [] In the AAD Users and Groups blade, click on **Users/Groups**.  
-1. [] Then in the second AAD Users and Groups blade, **wait for the names to load** and check the boxes next to **Alan Steiner**, **Amy Alberts**, and **AIPScanner**.
+1. [] Then in the second AAD Users and Groups blade, **wait for the names to load** and check the boxes next to **AIPScanner**, **Alan Steiner**, and **Amy Alberts**.
 
 	>[!NOTE] The **AIPScanner** account is added here to prevent all scanned documents from being labeled with a default label.
 1. [] Click the **Select** button.
@@ -846,7 +846,8 @@ There are many advanced policy settings that are useful to tailor your Azure Inf
 
     !IMAGE[8fi1wr4d.jpg](\Media\8fi1wr4d.jpg)
 
-1. [] In the AIP Portal, under **Classifications** on the left, click on **Policies**. Right-click on the **No Default Label Scoped Policy** and click on **Advanced settings**.
+1. [] In the AIP Portal, under **Classifications** on the left, click on **Policies**. 
+1. [] **Right-click** on the **No Default Label Scoped Policy** and click on **Advanced settings**.
 
     ^IMAGE[Open Screenshot](\Media\2jo71ugb.jpg)
 
@@ -866,6 +867,12 @@ There are many advanced policy settings that are useful to tailor your Azure Inf
 One of the most powerful features of Azure Information Protection is the ability to guide your users in making sound decisions around safeguarding sensitive data.  This can be achieved in many ways through user education or reactive events such as blocking emails containing sensitive data. 
 
 However, helping your users to properly classify and protect sensitive data at the time of creation is a more organic user experience that will achieve better results long term.  In this task, we will define some basic recommended and automatic conditions that will trigger based on certain types of sensitive data.
+
+1. [] Under **Dashboards** on the left, click on **Data discovery (Preview)** to view the results of the discovery scan we performed previously.
+
+	!IMAGE[Dashboard.png](\Media\Dashboard.png)
+
+	[!NOTE] Notice that there are no labeled or protected files shown at this time.  This uses the AIP P1 discovery functionality available with the AIP Scanner. Only the predefined Office 365 Sensitive Information Types are available with AIP P1 as Custom Sensitive Information Types require automatic conditions to be defined, which is an AIP P2 feature.
 
 1. [] Under **Classifications** on the left, click **Labels** then expand **Confidential**, and click on **Contoso Internal**.
 
