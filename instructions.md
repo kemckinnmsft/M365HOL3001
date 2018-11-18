@@ -1238,6 +1238,8 @@ We can now go back and look at the dashboards and observe how they have changed.
 	> [!NOTE] This dashboard takes longer to receive all data (we are working on optimizing this), but you should start seeing protection data in the portal.  Label data takes more time, so please check back throughout the lab to see the full report from the AIP scanner.
 	>
 	> !IMAGE[Discovery.png](\Media\Discovery.png)
+	> 
+	> !IMAGE[discovery2.png](\Media\discovery2.png)
 	
 ===
 # Exercise 6: Exchange Online IRM Capabilities
@@ -1251,7 +1253,7 @@ In this task, we will configure a mail flow rule to detect sensitive information
 
 1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and open an **Admin PowerShell Prompt**.
 
-1. [] Type the commands below to connect to an Exchange Online PowerShell session.  Use the credentials provided when prompted.
+2. [] Type the commands below to connect to an Exchange Online PowerShell session.  Use the credentials provided when prompted.
 
 	```
 	Set-ExecutionPolicy RemoteSigned
