@@ -324,7 +324,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++AmyA@@lab.CloudCredential(134).TenantName+++
+	+++Amy@@lab.CloudCredential(134).TenantName+++
 
 	+++@lab.CloudCredential(134).Password+++
 1. [] Click **Done**.
@@ -340,7 +340,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++EricG@@lab.CloudCredential(134).TenantName+++
+	+++Eric@@lab.CloudCredential(134).TenantName+++
 
 	+++@lab.CloudCredential(134).Password+++
 1. [] Click **Done**.
