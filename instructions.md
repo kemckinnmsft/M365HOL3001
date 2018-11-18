@@ -954,10 +954,11 @@ In this task, we will activate the labels from the Azure Portal for use in the S
 	>
 	> !IMAGE[SCCMigration.png](\Media\SCCMigration.png) 
 
-1. [] In a new tab, browse to +++https://protection.office.com/#/tagslibrary+++ to review the migrated labels. 
+1. [] In a new tab, browse to +++https://protection.office.com/+++ and click on **Classifications** and **Labels** to review the migrated labels. 
 
 	>[!NOTE] Keep in mind that now that the SCC Sensitivity Labels have been activated, any modifications, additions, or deletions will be syncronised to Azure Information Protection in the Azure Portal. There are some functional differences between the two sections (DLP in SCC, HYOK & Custom Permissions in AIP), so please be aware of this when modifying policies to ensure a consistent experience on clients. 
 
+	>[!KNOWLEDGE] If you have a Mac with you and would like to test the Insider Fast Ring classification functionality, instructions will be provided at the end of this lab.  We will not do this configuration in the main lab as this functionality is still in preview and not all attendees will have access to Mac systems.
 ===
 
 # Exercise 4: Testing AIP Policies
