@@ -1554,21 +1554,6 @@ Create an unprotected Word document, label it as Internal, and upload it to the 
 	!IMAGE[m95ixvv1.jpg](\Media\m95ixvv1.jpg)
 1. [] Navigate to the location where you saved the document, select it and click **Open** to upload the file.
  
-	>[!NOTE] Note that despite this document being labeled, the Sensitivity is not listed.
- 
-1. [] To resolve this, on the right-hand side of the document library, click on the **+ Add column** header and click on **More...**.
-
-	!IMAGE[y8h1vf7o.jpg](\Media\y8h1vf7o.jpg)
-1. [] In the Settings > Create Column page, under **Column name:**, type +++Sensitivity+++.  Verify that **The type of information in this column is:** is set to **Single line of text**, and click **OK**. 
-
-	!IMAGE[66hzke2b.jpg](\Media\66hzke2b.jpg)
-1. [] In the document library, click on the **Show actions** button to the right of the uploaded document and click **Delete**.
-
-	!IMAGE[gt7sjulo.jpg](\Media\gt7sjulo.jpg)
-	>[!Note] This is only necessary to expedite the appearance of the Sensitivity metadata.  In production, this would be unnecessary.
-1. [] Re-upload the document and you will see that the Sensitivity column is populated.
-
-	!IMAGE[0yr96t56.jpg](\Media\0yr96t56.jpg)
 1. [] Next, minimize the browser window and right-click on the desktop. Hover over **New >** and click on **Microsoft Access Database**. Name the database +++BadFile+++.
 
 	!IMAGE[e3nxt4a2.jpg](\Media\e3nxt4a2.jpg)
@@ -1591,7 +1576,7 @@ Files that are uploaded to a SharePoint IRM protected document library are prote
 
 	!IMAGE[j6w1v4z9.jpg](\Media\j6w1v4z9.jpg)
 1. [] Switch to @lab.VirtualMachine(Client02).SelectLink.
-1. [] Open Outlook and click on the email from CIE Administrator, then click on the **Open** link.
+1. [] Open Outlook and click on the email from Nuck Chorris, then click on the **Open** link.
 
 	^IMAGE[Open Screenshot](\Media\v39ez284.jpg)
 1. [] This will launch the IRM Demo document library.  Click on the document to open it in Microsoft Word.
