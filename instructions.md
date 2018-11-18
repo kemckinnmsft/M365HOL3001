@@ -271,13 +271,12 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
 1. [] In the Windows protected your PC dialog, click the **More info** link and click **Run anyway**.
 1. [] In the UAC window, click on **More choices** and select use a different account.
-1. [] Enter the credentials below:
+1. [] Enter the credentials below and click **Yes**:
 
 	+++LabUser+++
 
 	+++Pa$$w0rd+++
 
-1. [] In the Windows protected your PC dialog, click the **More info** link and click **Run anyway**.
 1. [] Press **(Y)** to confirm onboarding.
 1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and copy the onboarding package there.
 1. [] Switch to @lab.VirtualMachine(VictimPC).SelectLink and log in with the credentials below.
@@ -289,14 +288,11 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++
 1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
 1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
-1. [] In the Windows protected your PC dialog, click the **More info** link and click **Run anyway**.
 1. [] Press **(Y)** to confirm onboarding.
 1. [] Open a PowerShell window and click on the code below to type it in the window (please wait until you see **($decryptedBytes))** before pressing **Enter**):
-
 	
 	+++[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;$xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');$base64String = (Invoke-WebRequest -URI https://winatpmanagement.windows.com/client/management/static/WinATP-Intro-Fileless.txt -UseBasicParsing).Content;Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) };$i = 0; $decryptedBytes = @();$contentBytes.foreach{ $decryptedBytes += $_ -bxor $xor[$i]; $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))+++
 
-1. [] Sign out of VictimPC
 1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink and click **Start using Windows Defender ATP**.
 1. [] In the Windows Defender Security Center, click on **Settings > Advanced Features** and toggle the switches on for **Azure ATP integration** and **Microsoft Cloud App Security**.
 	!IMAGE[g47p8c30.jpg](\Media\g47p8c30.jpg)
@@ -312,9 +308,9 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++AlanS@@lab.CloudCredential(17).TenantName+++
+	+++Alan@@lab.CloudCredential(134).TenantName+++
 
-	+++@lab.CloudCredential(17).Password+++
+	+++@lab.CloudCredential(134).Password+++
 1. [] Click **Done**.
 1. [] Log into @lab.VirtualMachine(Client02).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
 
@@ -328,9 +324,9 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++AmyA@@lab.CloudCredential(17).TenantName+++
+	+++AmyA@@lab.CloudCredential(134).TenantName+++
 
-	+++@lab.CloudCredential(17).Password+++
+	+++@lab.CloudCredential(134).Password+++
 1. [] Click **Done**.
 1. [] Log into @lab.VirtualMachine(Client03).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
 
@@ -344,9 +340,9 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++EricG@@lab.CloudCredential(17).TenantName+++
+	+++EricG@@lab.CloudCredential(134).TenantName+++
 
-	+++@lab.CloudCredential(17).Password+++
+	+++@lab.CloudCredential(134).Password+++
 1. [] Click **Done**.
 
 ===
@@ -394,9 +390,9 @@ In order to collect log data from Azure Information Protection clients and servi
 
 	> [!KNOWLEDGE] If necessary, log in using the username and password below:
 	>
-	>+++@lab.CloudCredential(17).Username+++ 
+	>+++@lab.CloudCredential(134).Username+++ 
 	>
-	>+++@lab.CloudCredential(17).Password+++
+	>+++@lab.CloudCredential(134).Password+++
 	
 1. [] After logging into the portal, type the word +++info+++ into the **search bar** and press **Enter**, then click on **Azure Information Protection**. 
 
@@ -468,9 +464,9 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 
 1. [] In PowerShell, run +++Connect-AzureAD+++ and use the username and password below. 
 	
-	+++@lab.CloudCredential(17).Username+++
+	+++@lab.CloudCredential(134).Username+++
 	
-	+++@lab.CloudCredential(17).Password+++
+	+++@lab.CloudCredential(134).Password+++
 1. [] Next, click the **T** to **type the commands below** in the PowerShell window. 
 
 	> [!ALERT] Press Enter only after you see **-CustomKeyIdentifier "AIPClient"**.
@@ -530,7 +526,7 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 1. [] Paste the copied **Set-AIPAuthentication** command into this window and run it.
 1. [] When prompted, enter the username and password below:
 
-	+++AIPScanner@@lab.CloudCredential(17).TenantName+++
+	+++AIPScanner@@lab.CloudCredential(134).TenantName+++
 
 	+++Somepass1+++
 
@@ -1247,9 +1243,9 @@ In this task, we will configure a mail flow rule to detect sensitive information
 	$UserCredential = Get-Credential
 	```
 
-	+++@lab.CloudCredential(17).Username+++
+	+++@lab.CloudCredential(134).Username+++
 
-	+++@lab.CloudCredential(17).Password+++
+	+++@lab.CloudCredential(134).Password+++
 
 	```
 	$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
@@ -1401,9 +1397,9 @@ In this task, we will enable Information Rights Management in SharePoint Online.
  
 1. [] If needed, log in using the credentials below:
 
-	 +++@lab.CloudCredential(17).Username+++
+	 +++@lab.CloudCredential(134).Username+++
 	 
-	 +++@lab.CloudCredential(17).Password+++
+	 +++@lab.CloudCredential(134).Password+++
  
 1. [] Hover over the **Admin centers** section of the bar on the left and choose **SharePoint**.
 
@@ -1441,7 +1437,7 @@ In this task, we will create a new SharePoint site and enable Information Rights
 1. [] Launch a new Edge InPrivate session to +++https://portal.office.com+++.
 1. [] Log in using the credentials below:
 
-	+++NuckC@@lab.CloudCredential(17).TenantName+++
+	+++NuckC@@lab.CloudCredential(134).TenantName+++
 
 	+++NinjaCat123+++
 1. [] Click on **SharePoint** in the list.
