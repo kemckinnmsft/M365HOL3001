@@ -408,7 +408,7 @@ Use the **Deploy to Azure** button below to deploy the following:
 
 Because we are deploying the Security Center solution in the workspace, the VM's will become security managed by Security Center.
 
-[![Deploy Button](http://azuredeploy.net/deploybutton.png)](<https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftianderturpijn%2FAzure-Security-Center%2Fmaster%2FLabs%2F01%2520-%2520VM%2520and%2520Workspace%2520Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json)
+<[![Deploy Button](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftianderturpijn%2FAzure-Security-Center%2Fmaster%2FLabs%2F01%2520-%2520VM%2520and%2520Workspace%2520Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json)
 
 The deployment takes about 13 minutes.<br><br>
 After the deployment of the template, you can check the progress of your deployment if you click on your created resource group details, then click on **Deployments** (1 deploying). <br>
