@@ -956,7 +956,7 @@ In this task, we will activate the labels from the Azure Portal for use in the S
 
 1. [] In a new tab, browse to +++https://protection.office.com/+++ and click on **Classifications** and **Labels** to review the migrated labels. 
 
-	>[!NOTE] Keep in mind that now that the SCC Sensitivity Labels have been activated, any modifications, additions, or deletions will be syncronised to Azure Information Protection in the Azure Portal. There are some functional differences between the two sections (DLP in SCC, HYOK & Custom Permissions in AIP), so please be aware of this when modifying policies to ensure a consistent experience on clients. 
+	>[!NOTE] Keep in mind that now the SCC Sensitivity Labels have been activated, so any modifications, additions, or deletions will be syncronised to Azure Information Protection in the Azure Portal. There are some functional differences between the two sections (DLP in SCC, HYOK & Custom Permissions in AIP), so please be aware of this when modifying policies to ensure a consistent experience on clients. 
 
 	>[!KNOWLEDGE] If you have a Mac with you and would like to test the Insider Fast Ring classification functionality, instructions will be provided at the end of this lab.  We will not do this configuration in the main lab as this functionality is still in preview and not all attendees will have access to Mac systems.
 ===
@@ -972,7 +972,10 @@ Now that you have 3 test systems with users being affected by different policies
 One of the most common use cases for AIP is the ability to send emails using User Defined Permissions (Do Not Forward). In this task, we will send an email using the Do Not Forward label to test that functionality.
 
 
-1. [] On @lab.VirtualMachine(Client03).SelectLink, in Microsoft Outlook, click on the **New email** button.
+1. [] On @lab.VirtualMachine(Client03).SelectLink, launch Microsoft Outlook, and click **Accept and start Outlook**.
+1. [] The username should auto-populate based on the workplace join we performed earlier.  Click **Connect**.
+1. [] Once configuration completes, **uncheck the box** to **Set up Outlook Mobile** and click **OK**.
+1. [] Once Outlook opens, click on the **New email** button.
 
 	!IMAGE[6wan9me1.jpg](\Media\6wan9me1.jpg)
 
@@ -998,7 +1001,7 @@ One of the most common use cases for AIP is the ability to send emails using Use
 	>
 	> !IMAGE[6v6duzbd.jpg](\Media\6v6duzbd.jpg)
 
-1. [] Switch over to @lab.VirtualMachine(Client01).SelectLink or @lab.VirtualMachine(Client02).SelectLink and review the email in Alan or Amy’s Outlook.  You will notice that the email is automatically shown in Outlook natively.
+1. [] Switch over to @lab.VirtualMachine(Client01).SelectLink or @lab.VirtualMachine(Client02).SelectLink and open Outlook, run through setup, and review the email in Alan or Amy’s Outlook.  You will notice that the email is automatically shown in Outlook natively.
 
 	!IMAGE[0xby56qt.jpg](\Media\0xby56qt.jpg)
 
