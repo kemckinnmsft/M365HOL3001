@@ -310,7 +310,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++Alan@@lab.CloudCredential(134).TenantName+++
 
-	+++@lab.CloudCredential(134).Password+++
+	+++pass@word1+++
 1. [] Click **Done**.
 1. [] Log into @lab.VirtualMachine(Client02).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
 
@@ -326,7 +326,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++Amy@@lab.CloudCredential(134).TenantName+++
 
-	+++@lab.CloudCredential(134).Password+++
+	+++pass@word1+++
 1. [] Click **Done**.
 1. [] Log into @lab.VirtualMachine(Client03).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
 
@@ -342,7 +342,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++Eric@@lab.CloudCredential(134).TenantName+++
 
-	+++@lab.CloudCredential(134).Password+++
+	+++pass@word1+++
 1. [] Click **Done**.
 
 ===
