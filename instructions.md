@@ -311,6 +311,9 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 	+++Alan@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
+
+	[!NOTE] If the Next button does not light up on the username screen, press **Backspace** and the letter **m**.
+
 1. [] Click **Done**.
 1. [] Log into @lab.VirtualMachine(Client02).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
 
@@ -458,8 +461,6 @@ The first step in configuring the AIP Scanner is to install the service and conn
 
 ## Creating Azure AD Applications for the AIP Scanner
 
-[🔙](#azure-information-protection)
-
 Now that you have installed the scanner bits, you need to get an Azure AD token for the scanner service account to authenticate so that it can run unattended. This requires registering both a Web app and a Native app in Azure Active Directory.  The commands below will do this in an automated fashion rather than needing to go into the Azure portal directly.
 
 1. [] In PowerShell, run +++Connect-AzureAD+++ and use the username and password below. 
@@ -484,7 +485,7 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 
 1. [] Next, we must build the permissions object for the Native App Registration.  This is done using the commands below.
    
-   	> [!ALERT] Press Enter only after you see **$Access.ResourceAccess = $Scope**.
+	> [!ALERT] Press Enter only after you see **$Access.ResourceAccess = $Scope**.
 
    ```
    $AIPServicePrincipal = Get-AzureADServicePrincipal -All $true | ? {$_.DisplayName -eq 'AIPOnBehalfOf'}
@@ -496,7 +497,7 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 	```
 1. [] Next, we will use the object created above to create the Native App Registration.
    
-  	> [!ALERT] Press Enter only after you see **-AppId $NativeApp.AppId**.
+	> [!ALERT] Press Enter only after you see **-AppId $NativeApp.AppId**.
 
    ```
    New-AzureADApplication -DisplayName AIPClient -ReplyURLs http://localhost -RequiredResourceAccess $Access -PublicClient $true
@@ -506,7 +507,7 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
    
 1. [] Finally, we will output the Set-AIPAuthentication command by running the commands below and pressing **Enter**.
    
-  	> [!ALERT] Press Enter only after you see **Start ~\Desktop\Set-AIPAuthentication.txt**.
+	> [!ALERT] Press Enter only after you see **Start ~\Desktop\Set-AIPAuthentication.txt**.
    
    ```
    "Set-AIPAuthentication -WebAppID " + $WebApp.AppId + " -WebAppKey " + $WebAppKey.Guid + " -NativeAppID " + $NativeApp.AppId | Out-File ~\Desktop\Set-AIPAuthentication.txt
@@ -634,7 +635,7 @@ In this task, we will configure a label protected for internal audiences that ca
 
 However, there are times when external collaboration is required, so we will configure a label to match the name and functionality of the Do Not Forward button in Outlook.  This will allow users to more securely share sensitive information outside the company to any recipient.  By using the name Do Not Forward, the functionality will also be familiar to what previous users of AD RMS or Azure RMS may have used in the past.
 
-1. [] In the Azure Information Protection blade, under **classifications** in the left pane, click on **Labels** to load the Azure Information Protection – Labels blade.
+1. [] On @lab.VirtualMachine(Client01).SelectLink, in the Azure Information Protection blade, under **Classifications** in the left pane, click on **Labels** to load the Azure Information Protection – Labels blade.
 
 	^IMAGE[Open Screenshot](\Media\mhocvtih.jpg)
 
@@ -714,7 +715,7 @@ However, there are times when external collaboration is required, so we will con
 
 In this task, we will assign the new sub-label to the Global policy and configure several global policy settings that will increase Azure Information Protection adoption among your users and reduce ambiguity in the user interface.
 
-1. [] In the Azure Information Protection blade, under **classifications** on the left, click **Policies** then click the **Global** policy.
+1. [] In the Azure Information Protection blade, under **Classifications** on the left, click **Policies** then click the **Global** policy.
 
 	^IMAGE[Open Screenshot](\Media\24qjajs5.jpg)
 
@@ -751,7 +752,7 @@ In this task, we will assign the new sub-label to the Global policy and configur
 
 Now that you have learned how to work with global labels and policies, we will create a new scoped label and policy for the Legal team at Contoso.  
 
-1. [] Under **classifications** on the left, click **Labels**.
+1. [] Under **Classifications** on the left, click **Labels**.
 
 	^IMAGE[Open Screenshot](\Media\50joijwb.jpg)
 
@@ -837,7 +838,7 @@ Now that you have learned how to work with global labels and policies, we will c
 
 There are many advanced policy settings that are useful to tailor your Azure Information Protection deployment to the needs of your environment.  In this task, we will cover one of the settings that is very complimentary when using scoped policies that have no default label or a protected default label.  Because the No Default Label Scoped Policy we created in the previous task uses a protected default label, we will be adding an alternate default label for Outlook to provide a more palatable user experience for those users.
 
-1. [] In the Azure Information Protection blade, under **classifications** on the left, click on **Labels** and then click on the **General** label.
+1. [] In the Azure Information Protection blade, under **Classifications** on the left, click on **Labels** and then click on the **General** label.
 
     ^IMAGE[Open Screenshot](\Media\rvn4xorx.jpg)
 
@@ -845,7 +846,7 @@ There are many advanced policy settings that are useful to tailor your Azure Inf
 
     !IMAGE[8fi1wr4d.jpg](\Media\8fi1wr4d.jpg)
 
-1. [] In the AIP Portal, under **classifications** on the left, click on **Policies**. Right-click on the **No Default Label Scoped Policy** and click on **Advanced settings**.
+1. [] In the AIP Portal, under **Classifications** on the left, click on **Policies**. Right-click on the **No Default Label Scoped Policy** and click on **Advanced settings**.
 
     ^IMAGE[Open Screenshot](\Media\2jo71ugb.jpg)
 
@@ -866,7 +867,7 @@ One of the most powerful features of Azure Information Protection is the ability
 
 However, helping your users to properly classify and protect sensitive data at the time of creation is a more organic user experience that will achieve better results long term.  In this task, we will define some basic recommended and automatic conditions that will trigger based on certain types of sensitive data.
 
-1. [] Under **classifications** on the left, click **Labels** then expand **Confidential**, and click on **Contoso Internal**.
+1. [] Under **Classifications** on the left, click **Labels** then expand **Confidential**, and click on **Contoso Internal**.
 
 	^IMAGE[Open Screenshot](\Media\jyw5vrit.jpg)
 1. [] In the Label: Contoso Internal blade, scroll down to the **Configure conditions for automatically applying this label** section, and click on **+ Add a new condition**.
@@ -1272,7 +1273,7 @@ In this task, we will configure a mail flow rule to detect sensitive information
 	
 	> [!HINT] Next, we need to capture the **Label ID** for the **Confidential \ Contoso Internal** label. 
 
-1. [] Switch to the Azure Portal and under **classifications** click on Labels, then expand **Confidential** and click on **Contoso Internal**.
+1. [] Switch to the Azure Portal and under **Classifications** click on Labels, then expand **Confidential** and click on **Contoso Internal**.
 
 	!IMAGE[w2w5c7xc.jpg](\Media\w2w5c7xc.jpg)
 
