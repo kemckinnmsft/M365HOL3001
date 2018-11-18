@@ -2,6 +2,7 @@ To Do
 
 ContosoDC
 Rename Amy Albers to Amy Alberts
+Change account names to AmyA, AlanS, EricG, and BenW
 
 AdminPC
 Reenable UAC

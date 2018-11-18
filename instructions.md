@@ -308,7 +308,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++Alan@@lab.CloudCredential(134).TenantName+++
+	+++AlanS@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 
@@ -327,7 +327,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++Amy@@lab.CloudCredential(134).TenantName+++
+	+++AmyA@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 1. [] Click **Done**.
@@ -343,7 +343,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++Eric@@lab.CloudCredential(134).TenantName+++
+	+++EricG@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 1. [] Click **Done**.
@@ -2749,7 +2749,7 @@ The rest of the lab will be instructor led via PowerPoint.
 
 1. []	In a **new InPrivate window**, log in to +++https://portal.office.com+++ using the credentials below
 
-	+++Alan@@lab.CloudCredential(134).TenantName+++
+	+++AlanS@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 
@@ -2760,7 +2760,7 @@ The rest of the lab will be instructor led via PowerPoint.
 
 1. []	In a **new InPrivate window**, log in to +++https://portal.office.com+++ using the credentials below
 
-	+++Amy@@lab.CloudCredential(134).TenantName+++
+	+++AmyA@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 
@@ -2798,26 +2798,26 @@ Let’s see what happens when users try to sign in from the Tor Browser, which a
 1. []	Log in to @lab.VirtualMachine(Client03).SelectLink and launch Tor Browser
 2. []	Navigate to +++https://portal.office.com+++ and log-in with the credentials below:
 
-	+++Eric@@lab.CloudCredential(134).TenantName+++
+	+++EricG@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 
 	1. []	Notice how they are not blocked because they are not targeted by the risky sign-ins policies
 3. []	Now, open a new Tor window and log-in to +++https://portal.office.com with the credentials below
 		
-		+++Alan@@lab.CloudCredential(134).TenantName+++
+		+++AlanS@@lab.CloudCredential(134).TenantName+++
 
 		+++pass@word1+++
 
 	1. []	Notice how you are prompted for MFA due to the risky sign-ins policy
-4. []	To generate an additional risky sign-in, open a new Tor window and log-in to +++https://portal.office.com++ with +++Amy@@lab.CloudCredential(134).TenantName+++
+4. []	To generate an additional risky sign-in, open a new Tor window and log-in to +++https://portal.office.com++ with +++AmyA@@lab.CloudCredential(134).TenantName+++
 	1. []	Notice how you are prompted for MFA due to the risky sign-ins policy
 
 ##What happens if a user is targeted by the risky sign-ins policy but has not yet registered for MFA?
 
 1. []	Open a new Tor window and log-in to +++https://portal.office.com+++ with the credentials below:
 
-	+++Ben@@lab.CloudCredential(134).TenantName+++
+	+++BenW@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 	
