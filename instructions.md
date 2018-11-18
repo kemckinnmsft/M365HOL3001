@@ -4,7 +4,7 @@
 
 ### Introduction
 
-This lab is designed to be used as a supplement to Instructor Led Training and has several sections that you will go through over the next few days. Please click the lab below that corresponds to the technology your are working with.  You will have access to this environment for 6 months following the event.
+This lab is designed to be used as a supplement to Instructor Led Training and has several sections that you will go through over the next few days. Please click the lab below that corresponds to the technology your are working with.  
 
 ## [Lab Environment Configuration](#lab-environment-configuration)
 
