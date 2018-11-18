@@ -253,7 +253,7 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink, and log in using the details below:
 
 	+++NuckC+++
-	
+
 	+++NinjaCat123+++
 
 1. [] Open an Edge InPrivate window and navigate to +++https://securitycenter.windows.com+++.
@@ -267,7 +267,16 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 1. [] On Step 2, choose a data storage location and click **Next**.
 1. [] On Step 3, click **Next** several times until the Create your cloud instance dialog pops up, then click **Continue**.
 1. [] On Step 4, click the **Download package** button and save the package to your desktop.
+1. [] Extract the zip file to your desktop.
 1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
+1. [] In the Windows protected your PC dialog, click the **More info** link and click **Run anyway**.
+1. [] In the UAC window, click on **More choices** and select use a different account.
+1. [] Enter the credentials below:
+
+	+++LabUser+++
+
+	+++Pa$$w0rd+++
+
 1. [] In the Windows protected your PC dialog, click the **More info** link and click **Run anyway**.
 1. [] Press **(Y)** to confirm onboarding.
 1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and copy the onboarding package there.
