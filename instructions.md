@@ -250,13 +250,18 @@ In this task, we will link Windows Defender ATP licenses to your demo tenant.
 
 In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 
-1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink, and log in using the credentials below:
+1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink, and log in using the details below:
+
+	+++NuckC+++
+	+++NinjaCat123+++
+
+1. [] Open an Edge InPrivate window and navigate to +++https://securitycenter.windows.com+++.
+1. [] Log in using the credentials below:
 
 	+++@lab.CloudCredential(134).Username+++
 
 	+++@lab.CloudCredential(134).Password+++
 
-1. [] Navigate to +++https://securitycenter.windows.com+++.
 1. [] On Step 1, click **Next**.
 1. [] On Step 2, choose a data storage location and click **Next**.
 1. [] On Step 3, click **Next** several times until the Create your cloud instance dialog pops up, then click **Continue**.
