@@ -199,8 +199,21 @@ In this task, we will assign licenses to users that have been synced to the Offi
 1. [] On the Replace existing products page, turn on licenses for **Enterprise Mobility + Security E5** and **Office 365 Enterprise E5** and click **Replace**.
 
 	^IMAGE[Open Screenshot](\Media\9xomkr35.jpg)
-	> [!NOTE] If there are any failures, repeat the process for users that did not get licenses.
-
+	> [!NOTE] If there are no licenses available for Office 365 Enterprise E5, check the box next to Remove all product licenses... and click Replace. Wait for that to complete, then check the boxes next to only the accounts listed in the table below and repeat the steps above to assign the licenses.
+	>
+	> 
+	> |Users|
+	> |-----|
+	> |AatpService|
+	> |Adam Smith|
+	> |AIPScanner|
+	> |Alice Anderson|
+	> |Bob Winkler|
+	> |Evan Green|
+	> |Jeff Victim|
+	> |Nuck Chorris|
+	> |Ron Helpdesk|
+		
 ===
 # Link Windows Defender ATP Licenses
 
@@ -314,7 +327,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++AlanS@@lab.CloudCredential(134).TenantName+++
+	+++AdamS@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 
@@ -333,7 +346,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++AmyA@@lab.CloudCredential(134).TenantName+++
+	+++AliceA@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 1. [] Click **Done**.
@@ -349,7 +362,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
-	+++EricG@@lab.CloudCredential(134).TenantName+++
+	+++EvanG@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 1. [] Click **Done**.
@@ -800,7 +813,7 @@ Now that you have learned how to work with global labels and policies, we will c
 
 	^IMAGE[Open Screenshot](\Media\2lvwim24.jpg)
 
-1. [] In the AAD Users and Groups blade, **wait for the names to load**, then check the boxes next to **Alan Steiner** and **Amy Alberts**, and click the **Select** button.
+1. [] In the AAD Users and Groups blade, **wait for the names to load**, then check the boxes next to **Adam Smith** and **Alice Anderson**, and click the **Select** button.
 
 	^IMAGE[Open Screenshot](\Media\uishk9yh.jpg)
 
@@ -829,7 +842,7 @@ Now that you have learned how to work with global labels and policies, we will c
 	!IMAGE[1sjw3mc7.jpg](\Media\1sjw3mc7.jpg)
 
 1. [] In the AAD Users and Groups blade, click on **Users/Groups**.  
-1. [] Then in the second AAD Users and Groups blade, **wait for the names to load** and check the boxes next to **AIPScanner**, **Alan Steiner**, and **Amy Alberts**.
+1. [] Then in the second AAD Users and Groups blade, **wait for the names to load** and check the boxes next to **AIPScanner**, **Adam Smith**, and **Alice Anderson**.
 
 	>[!NOTE] The **AIPScanner** account is added here to prevent all scanned documents from being labeled with a default label.
 1. [] Click the **Select** button.
@@ -1008,7 +1021,7 @@ One of the most common use cases for AIP is the ability to send emails using Use
 	>
 	> !IMAGE[5esnhwkw.jpg](\Media\5esnhwkw.jpg)
 
-1. [] Send an email to **Alan Steiner** and **Amy Alberts** (+++Alan Steiner;Amy Alberts+++). You may **optionally add an external email address** (preferably from a major social provider like gmail, yahoo, or outlook.com) to test the external recipient experience. For the **Subject** and **Body** type +++Test Do Not Forward Email+++.
+1. [] Send an email to **Adam Smith** and **Alice Anderson** (+++Adam Smith;Alice Anderson+++). You may **optionally add an external email address** (preferably from a major social provider like gmail, yahoo, or outlook.com) to test the external recipient experience. For the **Subject** and **Body** type +++Test Do Not Forward Email+++.
 
 	^IMAGE[Open Screenshot](\Media\h0eh40nk.jpg)
 
@@ -1026,7 +1039,7 @@ One of the most common use cases for AIP is the ability to send emails using Use
 	>
 	> !IMAGE[6v6duzbd.jpg](\Media\6v6duzbd.jpg)
 
-1. [] Switch over to @lab.VirtualMachine(Client01).SelectLink or @lab.VirtualMachine(Client02).SelectLink and open Outlook, run through setup, and review the email in Alan Steiner or Amy Alberts’s Outlook.  You will notice that the email is automatically shown in Outlook natively.
+1. [] Switch over to @lab.VirtualMachine(Client01).SelectLink or @lab.VirtualMachine(Client02).SelectLink and open Outlook, run through setup, and review the email in Adam Smith or Alice Anderson’s Outlook.  You will notice that the email is automatically shown in Outlook natively.
 
 	!IMAGE[0xby56qt.jpg](\Media\0xby56qt.jpg)
 
@@ -1038,7 +1051,7 @@ One of the most common use cases for AIP is the ability to send emails using Use
 	>
 	> !IMAGE[tzj04wi9.jpg](\Media\tzj04wi9.jpg)
 	> 
-	> Here the user has received an email from Eric Gruber and they can click on the **Read the message** button.
+	> Here the user has received an email from Evan Green and they can click on the **Read the message** button.
 	>
 	>!IMAGE[wiefwcho.jpg](\Media\wiefwcho.jpg)
 	>
@@ -1069,7 +1082,7 @@ In this task, we will create a document and send an email to demonstrate the fun
 
 	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
 
-1. [] Send an email to Alan Steiner, Amy Alberts, and yourself (+++Alan Steiner;Amy Alberts;@lab.User.Email+++).  For the **Subject** and **Body** type +++Test Contoso Internal Email+++.
+1. [] Send an email to Adam Smith, Alice Anderson, and yourself (+++Adam Smith;Alice Anderson;@lab.User.Email+++).  For the **Subject** and **Body** type +++Test Contoso Internal Email+++.
 
 	^IMAGE[Open Screenshot](\Media\9gkqc9uy.jpg)
 
@@ -1100,14 +1113,14 @@ In this task, we will create a document and send an email from one of the users 
 	
 	^IMAGE[Open Screenshot](\Media\ldjugk24.jpg)
 	
-1. [] Send an email to Amy Alberts and Eric Gruber (+++Amy Alberts;Eric Gruber+++).  For the **Subject** and **Body** type +++Test Highly Confidential Legal Email+++.
+1. [] Send an email to Alice Anderson and Evan Green (+++Alice Anderson;Evan Green+++).  For the **Subject** and **Body** type +++Test Highly Confidential Legal Email+++.
 1. [] In the Sensitivity Toolbar, click on **Highly Confidential** and the **Legal Only** sub-label, then click **Send**.
 
 	^IMAGE[Open Screenshot](\Media\ny1lwv0h.jpg)
-1. [] Switch to @lab.VirtualMachine(Client02).SelectLink and click on the email.  You should be able to open the message natively in the client as Amy.
+1. [] Switch to @lab.VirtualMachine(Client02).SelectLink and click on the email.  You should be able to open the message natively in the client as Alice.
 
 	!IMAGE[qeqtd2yr.jpg](\Media\qeqtd2yr.jpg)
-1. [] Switch to @lab.VirtualMachine(Client03).SelectLink and click on the email. You should be unable to open the message as Eric.
+1. [] Switch to @lab.VirtualMachine(Client03).SelectLink and click on the email. You should be unable to open the message as Evan.
 
 	!IMAGE[6y99u8cl.jpg](\Media\6y99u8cl.jpg)
 
@@ -1152,7 +1165,7 @@ In this task, we will test the configured recommended and automatic conditions w
 	
 	^IMAGE[Open Screenshot](\Media\ldjugk24.jpg)
 	
-1. [] Draft an email to Amy Alberts and Alan Steiner (+++Amy Alberts;Alan Steiner+++).  For the **Subject** and **Body** type +++Test Highly Confidential All Employees Automation+++.
+1. [] Draft an email to Alice Anderson and Adam Smith (+++Alice Anderson;Adam Smith+++).  For the **Subject** and **Body** type +++Test Highly Confidential All Employees Automation+++.
 
 	^IMAGE[Open Screenshot](\Media\4v3wrrop.jpg)
 1. [] Attach the **second document you created** to the email.
@@ -1384,7 +1397,7 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 
 	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
 
-1. [] Send an email to Alan Steiner, Amy Alberts, and yourself (+++Alan Steiner;Amy Alberts;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
+1. [] Send an email to Adam Smith, Alice Anderson, and yourself (+++Adam Smith;Alice Anderson;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
 
 1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and review the received email.
 
@@ -1401,7 +1414,7 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 1. [] Next, in Microsoft Outlook, click on the **New email** button.
 
 	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
-1. [] Send an email to Alan Steiner, Amy Alberts, and yourself (+++Alan Steiner;Amy Alberts;@lab.User.Email+++).  For the **Subject** and **Body** type +++Another Test Contoso Internal Email+++.
+1. [] Send an email to Adam Smith, Alice Anderson, and yourself (+++Adam Smith;Alice Anderson;@lab.User.Email+++).  For the **Subject** and **Body** type +++Another Test Contoso Internal Email+++.
 
 	^IMAGE[Open Screenshot](\Media\d476fmpg.jpg)
 
@@ -1567,12 +1580,12 @@ Create an unprotected Word document, label it as Internal, and upload it to the 
 # SharePoint IRM Functionality
 [🔙](#azure-information-protection)
  
-Files that are uploaded to a SharePoint IRM protected document library are protected upon download based on the user's access rights to the document library.  In this task, we will share a document with Amy Alberts and review the access rights provided.
+Files that are uploaded to a SharePoint IRM protected document library are protected upon download based on the user's access rights to the document library.  In this task, we will share a document with Alice Anderson and review the access rights provided.
 
 1. [] Select the uploaded document and click **Share** in the action bar.
 
 	!IMAGE[1u2jsod7.jpg](\Media\1u2jsod7.jpg)
-1. [] In the Send Link dialog, type +++Amy+++ and click on **Amy Alberts** then **Send**.
+1. [] In the Send Link dialog, type +++Alice+++ and click on **Alice Anderson** then **Send**.
 
 	!IMAGE[j6w1v4z9.jpg](\Media\j6w1v4z9.jpg)
 1. [] Switch to @lab.VirtualMachine(Client02).SelectLink.
@@ -2707,10 +2720,10 @@ The rest of the lab will be instructor led via PowerPoint.
 
 |User		|Are they in **IP Users** Group?	|Registered for MFA/SSPR during setup?
 |-------	|-------							|-------
-|Alan		|YES								|YES
-|Ben		|YES								|NO
-|Amy		|YES								|YES 
-|Eric		|NO									|NO
+|Adam		|YES								|YES
+|Bob		|YES								|NO
+|Alice		|YES								|YES 
+|Evan		|NO									|NO
 
 ===
 # Prerequisites
@@ -2728,7 +2741,7 @@ The rest of the lab will be instructor led via PowerPoint.
 
 2. []	Browse to **Azure Active Directory > Groups > New group**.
 3. []	Create a Security group named **Identity Protection Users** with assigned membership type.
-4. []	Click **Create**, then add Alan, Ben, and Amy to the group.
+4. []	Click **Create**, then add Adam, Bob, and Alice to the group.
 
 ### Enable Self Service Password Reset (SSPR)
 
@@ -2757,26 +2770,26 @@ The rest of the lab will be instructor led via PowerPoint.
 2. []	Under Assignments, select **Identity Protection Users**.
 3. []	Set **Enforce Policy** to **On**.
 
-### Register Alan for MFA
+### Register Adam for MFA
 
 1. []	In a **new InPrivate window**, log in to +++https://portal.office.com+++ using the credentials below
 
-	+++AlanS@@lab.CloudCredential(134).TenantName+++
+	+++AdamS@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 
-2. []	Alan will be prompted to register for MFA.
+2. []	Adam will be prompted to register for MFA.
 3. []   Close the InPrivate window.
 
-### Register Amy for MFA
+### Register Alice for MFA
 
 1. []	In a **new InPrivate window**, log in to +++https://portal.office.com+++ using the credentials below
 
-	+++AmyA@@lab.CloudCredential(134).TenantName+++
+	+++AliceA@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 
-2. []	Amy will be prompted to register for MFA.
+2. []	Alice will be prompted to register for MFA.
 3. []   Close the InPrivate window.
 
 ===
@@ -2810,31 +2823,31 @@ Let’s see what happens when users try to sign in from the Tor Browser, which a
 1. []	Log in to @lab.VirtualMachine(Client03).SelectLink and launch Tor Browser
 2. []	Navigate to +++https://portal.office.com+++ and log-in with the credentials below:
 
-	+++EricG@@lab.CloudCredential(134).TenantName+++
+	+++EvanG@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 
 	1. []	Notice how they are not blocked because they are not targeted by the risky sign-ins policies
 3. []	Now, open a new Tor window and log-in to +++https://portal.office.com with the credentials below
 		
-		+++AlanS@@lab.CloudCredential(134).TenantName+++
+		+++AdamS@@lab.CloudCredential(134).TenantName+++
 
 		+++pass@word1+++
 
 	1. []	Notice how you are prompted for MFA due to the risky sign-ins policy
-4. []	To generate an additional risky sign-in, open a new Tor window and log-in to +++https://portal.office.com++ with +++AmyA@@lab.CloudCredential(134).TenantName+++
+4. []	To generate an additional risky sign-in, open a new Tor window and log-in to +++https://portal.office.com++ with +++AliceA@@lab.CloudCredential(134).TenantName+++
 	1. []	Notice how you are prompted for MFA due to the risky sign-ins policy
 
 ##What happens if a user is targeted by the risky sign-ins policy but has not yet registered for MFA?
 
 1. []	Open a new Tor window and log-in to +++https://portal.office.com+++ with the credentials below:
 
-	+++BenW@@lab.CloudCredential(134).TenantName+++
+	+++BobW@@lab.CloudCredential(134).TenantName+++
 
 	+++pass@word1+++
 	
 	1. []	Notice how you are blocked because the user has not registered for MFA yet and is thus unable to beat the MFA challenge prompted by the risky sign-ins policy
-6. []	So that Ben can respond to future MFA attempts, open an Edge browser window and now navigate to portal.office.com and log-in as Ben
+6. []	So that Bob can respond to future MFA attempts, open an Edge browser window and now navigate to portal.office.com and log-in as Bob
 	1. []	You will be prompted to register for MFA
 ===
 # Pull data from APIs
@@ -2961,7 +2974,7 @@ First, let’s assess how many risk events we have that are medium or high risk.
 ## Investigate a specific user
 When you believe a user may have been compromised, you can better understand the state of their risk by getting all of their risk events. Similarly, if you have users that you believe may be more likely targets of compromise, you can proactively retrieve their risky events.
 
-Since we know that Alan had some risky-sign ins, let’s query their risk events.
+Since we know that Adam had some risky-sign ins, let’s query their risk events.
 
 1. [] In the **PowerShell ISE**, open a new file and, in the **script pane**, type the PowerShell code below.
 
@@ -2981,7 +2994,7 @@ Since we know that Alan had some risky-sign ins, let’s query their risk events
 	Write-Output $oauth
 	if ($oauth.access_token -ne $null) {
 	$headerParams = @{'Authorization'="$($oauth.token_type) $($oauth.access_token)"}
-	$url = "https://graph.microsoft.com/beta/identityRiskEvents?`$filter=userID eq '<Alan’s user ID>'"
+	$url = "https://graph.microsoft.com/beta/identityRiskEvents?`$filter=userID eq '<Adam’s user ID>'"
 	Write-Output $url
 	$myReport = (Invoke-WebRequest -UseBasicParsing -Headers $headerParams -Uri $url)
 	foreach ($event in ($myReport.Content | ConvertFrom-Json).value) {
@@ -2999,15 +3012,15 @@ Remember our risky sign-ins from earlier? Let’s take a look at them in the Azu
 
 1. []	Navigate to +++https://portal.azure.com/?Microsoft_AAD_IAM_ipcv2=true&Microsoft_AAD_IAM_securityarea=true#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Security+++
 2. []	Click on the **Security** blade and then select **Risky sign-ins**
-3. []	You should see the Tor sign ins from Alan, Ben, and Eric. To dive deeper, click on a specific sign-in record
+3. []	You should see the Tor sign ins from Adam, Bob, and Evan. To dive deeper, click on a specific sign-in record
 4. []	In the details drawer, you can toggle through the basic info, device info, risk info tabs to learn more about that particular sign-in
 
 Now that we have taken a look at risky sign-ins, let’s find out what happens if Identity Protection detects a high-risk user. For the purposes of this lab, we will force a user to go to **high-risk**
 
 1. []	Navigate to +++https://portal.azure.com/?Microsoft_AAD_IAM_ipcv2=true&Microsoft_AAD_IAM_securityarea=true#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Security+++
 2. []	Click on the **Security** blade and then select **Risky sign-ins**
-3. []	Click on the risky sign-in record for Ben and select **confirmed compromise**
-4. []	Now, open a new InPrivate window and try to log-in to portal.office.com as Ben
-	1. []	You will be prompted to reset Ben’s password
+3. []	Click on the risky sign-in record for Bob and select **confirmed compromise**
+4. []	Now, open a new InPrivate window and try to log-in to portal.office.com as Bob
+	1. []	You will be prompted to reset Bob’s password
 
 
