@@ -984,7 +984,7 @@ One of the most common use cases for AIP is the ability to send emails using Use
 	>
 	> !IMAGE[5esnhwkw.jpg](\Media\5esnhwkw.jpg)
 
-1. [] Send an email to **Alan** and **Amy** (+++Alan;Amy+++). You may **optionally add an external email address** (preferably from a major social provider like gmail, yahoo, or outlook.com) to test the external recipient experience. For the **Subject** and **Body** type +++Test Do Not Forward Email+++.
+1. [] Send an email to **Alan Steiner** and **Amy Alberts** (+++Alan Steiner;Amy Alberts+++). You may **optionally add an external email address** (preferably from a major social provider like gmail, yahoo, or outlook.com) to test the external recipient experience. For the **Subject** and **Body** type +++Test Do Not Forward Email+++.
 
 	^IMAGE[Open Screenshot](\Media\h0eh40nk.jpg)
 
@@ -1002,7 +1002,7 @@ One of the most common use cases for AIP is the ability to send emails using Use
 	>
 	> !IMAGE[6v6duzbd.jpg](\Media\6v6duzbd.jpg)
 
-1. [] Switch over to @lab.VirtualMachine(Client01).SelectLink or @lab.VirtualMachine(Client02).SelectLink and open Outlook, run through setup, and review the email in Alan or Amy’s Outlook.  You will notice that the email is automatically shown in Outlook natively.
+1. [] Switch over to @lab.VirtualMachine(Client01).SelectLink or @lab.VirtualMachine(Client02).SelectLink and open Outlook, run through setup, and review the email in Alan Steiner or Amy Alberts’s Outlook.  You will notice that the email is automatically shown in Outlook natively.
 
 	!IMAGE[0xby56qt.jpg](\Media\0xby56qt.jpg)
 
@@ -1045,7 +1045,7 @@ In this task, we will create a document and send an email to demonstrate the fun
 
 	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
 
-1. [] Send an email to Alan, Amy, and yourself (+++Alan;Amy;@lab.User.Email+++).  For the **Subject** and **Body** type +++Test Contoso Internal Email+++.
+1. [] Send an email to Alan Steiner, Amy Alberts, and yourself (+++Alan Steiner;Amy Alberts;@lab.User.Email+++).  For the **Subject** and **Body** type +++Test Contoso Internal Email+++.
 
 	^IMAGE[Open Screenshot](\Media\9gkqc9uy.jpg)
 
@@ -1076,7 +1076,7 @@ In this task, we will create a document and send an email from one of the users 
 	
 	^IMAGE[Open Screenshot](\Media\ldjugk24.jpg)
 	
-1. [] Send an email to Amy and Eric (+++Amy Alberts;Eric Gruber+++).  For the **Subject** and **Body** type +++Test Highly Confidential Legal Email+++.
+1. [] Send an email to Amy Alberts and Eric Gruber (+++Amy Alberts;Eric Gruber+++).  For the **Subject** and **Body** type +++Test Highly Confidential Legal Email+++.
 1. [] In the Sensitivity Toolbar, click on **Highly Confidential** and the **Legal Only** sub-label, then click **Send**.
 
 	^IMAGE[Open Screenshot](\Media\ny1lwv0h.jpg)
@@ -1128,7 +1128,7 @@ In this task, we will test the configured recommended and automatic conditions w
 	
 	^IMAGE[Open Screenshot](\Media\ldjugk24.jpg)
 	
-1. [] Draft an email to Amy and Alan (+++Amy;Alan+++).  For the **Subject** and **Body** type +++Test Highly Confidential All Employees Automation+++.
+1. [] Draft an email to Amy Alberts and Alan Steiner (+++Amy Alberts;Alan Steiner+++).  For the **Subject** and **Body** type +++Test Highly Confidential All Employees Automation+++.
 
 	^IMAGE[Open Screenshot](\Media\4v3wrrop.jpg)
 1. [] Attach the **second document you created** to the email.
@@ -1318,7 +1318,7 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 
 	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
 
-1. [] Send an email to Alan, Amy, and yourself (+++Alan;Amy;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
+1. [] Send an email to Alan Steiner, Amy Alberts, and yourself (+++Alan Steiner;Amy Alberts;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
 
 	> [!KNOWLEDGE] Notice that there is a policy tip that has popped up to inform you that there is a credit card number in the email and it is being shared outside the organization.  This type of policy tip can be defined with the Office 365 Security and Compliance center and was pre-staged in the demo tenants we are using.  
 
@@ -1351,14 +1351,14 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 
 	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
 
-1. [] Send an new email to Alan, Amy, and yourself (+++Alan;Amy;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email 2+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
+1. [] Send an new email to Alan Steiner, Amy Alberts, and yourself (+++Alan Steiner;Amy Alberts;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email 2+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
 	>[!NOTE] If you still receive a rejection, please wait a few minutes and try again.
 
 	>[!Knowledge] Notice that you do not receive the error messag this time.  Log into your personal email and you will see that the email has been encrypted in transit by the Exchange Online Mail Flow Rule defined in the previous exercise.
 1. [] Next, in Microsoft Outlook, click on the **New email** button.
 
 	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
-1. [] Send an email to Alan, Amy, and yourself (+++Alan;Amy;@lab.User.Email+++).  For the **Subject** and **Body** type +++Another Test Contoso Internal Email+++.
+1. [] Send an email to Alan Steiner, Amy Alberts, and yourself (+++Alan Steiner;Amy Alberts;@lab.User.Email+++).  For the **Subject** and **Body** type +++Another Test Contoso Internal Email+++.
 
 	^IMAGE[Open Screenshot](\Media\d476fmpg.jpg)
 
