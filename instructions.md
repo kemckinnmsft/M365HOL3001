@@ -882,13 +882,10 @@ However, helping your users to properly classify and protect sensitive data at t
 1. [] In the Label: Contoso Internal blade, scroll down to the **Configure conditions for automatically applying this label** section, and click on **+ Add a new condition**.
 
 	!IMAGE[cws1ptfd.jpg](\Media\cws1ptfd.jpg)
-1. [] In the Condition blade, in the **Select information types** search box, type +++International+++ and check the box next to the **International Classification of Diseases (ICD-10-CM)** entry.
-
-	^IMAGE[Open Screenshot](\Media\j163rbh7.jpg)
-1. [] Next, before saving, replace International in the search bar with +++EU+++ and check the boxes next to the **items shown below**.
+1. [] In the Condition blade, in the **Select information types** search box, type +++EU+++ and check the boxes next to the **items shown below**.
 
 	!IMAGE[xaj5hupc.jpg](\Media\xaj5hupc.jpg)
-1. [] Finally, type +++credit+++ and check the box next to **Credit Card Number**.
+1. [] Next, before saving, replace International in the search bar with +++credit+++ and check the box next to **Credit Card Number**.
 
 	^IMAGE[Open Screenshot](\Media\9rozp61b.jpg)
 1. [] Click **Save** in the Condition blade and **OK** to the Save settings prompt.
@@ -911,7 +908,10 @@ However, helping your users to properly classify and protect sensitive data at t
 1. [] In the Label: All Employees blade, scroll down to the **Configure conditions for automatically applying this label** section, and click on **+ Add a new condition**.
 
 	^IMAGE[Open Screenshot](\Media\8cdmltcj.jpg)
-1. [] In the Condition blade, click on **Custom** and enter +++Password+++ for the **Name** and in the textbox below **Match exact phrase or pattern**, type +++pass@word1+++.
+1. [] In the Condition blade, type +++International+++ and check the box next to the **International Classification of Diseases (ICD-10-CM)** entry.
+
+	^IMAGE[Open Screenshot](\Media\j163rbh7.jpg)
+1. [] Next, before saving, click on **Custom** and enter +++Password+++ for the **Name** and in the textbox below **Match exact phrase or pattern**, type +++pass@word1+++.
 
 	!IMAGE[ra7dnyg6.jpg](\Media\ra7dnyg6.jpg)
 1. [] Click **Save** in the Condition blade and **OK** to the Save settings prompt.
@@ -1220,7 +1220,25 @@ Now that we have Classified and Protected documents using the scanner, we can re
 	> [!NOTE] Observe that the same document is now classified as Confidential \ Contoso Internal. 
 	>
 	>!IMAGE[s1okfpwu.jpg](\Media\s1okfpwu.jpg)
+===
+# Reviewing the Dashboards
 
+We can now go back and look at the dashboards and observe how they have changed.
+
+1. [] On @lab.VirtualMachine(Client01).SelectLink, open the browser that is logged into the Azure Portal.
+
+1. [] Under **Dashboards**, click on **Usage report (Preview)**.
+
+	> [!NOTE] Observe that there are now entries from the AIP scanner, Microsoft Outlook, and Microsoft Word based on our activities in this lab.
+	>
+	> !IMAGE[Usage.png](\Media\Usage.png)
+
+1. [] Next, under dashboards, click on **Data discovery (Preview)**.
+
+	> [!NOTE] This dashboard takes longer to receive all data (we are working on optimizing this), but you should start seeing protection data in the portal.  Label data takes more time, so please check back throughout the lab to see the full report from the AIP scanner.
+	>
+	> !IMAGE[Discovery.png](\Media\Discovery.png)
+	
 ===
 # Exercise 6: Exchange Online IRM Capabilities
 [🔙](#azure-information-protection)
