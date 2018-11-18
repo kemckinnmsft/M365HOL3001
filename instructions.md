@@ -1347,6 +1347,7 @@ In this task, we will configure a mail flow rule to detect sensitive information
 	>
 	>-RejectMessageReasonText “Contoso internal messages cannot be sent to external recipients.”
 
+	>[!NOTE] In a production environment, customers would want to create a rule like this for each of their labels that they did not want going externally.
 ===
 
 # Demonstrating Exchange Online Mail Flow Rules
@@ -1361,8 +1362,6 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 
 1. [] Send an email to Alan Steiner, Amy Alberts, and yourself (+++Alan Steiner;Amy Alberts;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
 
-	> [!KNOWLEDGE] Notice that there is a policy tip that has popped up to inform you that there is a credit card number in the email and it is being shared outside the organization.  This type of policy tip can be defined with the Office 365 Security and Compliance center and was pre-staged in the demo tenants we are using.  
-
 1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and review the received email.
 
 	!IMAGE[pidqfaa1.jpg](\Media\pidqfaa1.jpg)
@@ -1375,27 +1374,6 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 	>
 	>!IMAGE[599ljwfy.jpg](\Media\599ljwfy.jpg)
 
-	>[!NOTE] Note that you have received a message from your DLP policy stating that the email was not sent to the external recipient because it contained a credit card number.
-
-1. [] On Client 1, open an Edge InPrivate window to +++https://protection.office.com+++.
-1. [] In the Security and Compliance Center, expand **Data loss prevention** and click on **Policy**.  Then, in the Policy blade, click on the **Default Office 365 DLP Policy**.
-	
-	!IMAGE[a2m7ryn4.jpg](\Media\a2m7ryn4.jpg)
-1. [] In the Default Office 365 DLP Policy blade, next to Policy settings, click **Edit**.
-
-	!IMAGE[jsdej5i4.jpg](\Media\jsdej5i4.jpg)
-1. [] In the Editing policy settings blade, disable the switch next to **Items containing 1-9 credit card numbers shared externally** and click **Save**.
-
-!IMAGE[5y5gg696.jpg](\Media\5y5gg696.jpg)
-1. [] Return to @lab.VirtualMachine(Client03).SelectLink.
-1. [] In Microsoft Outlook, click on the **New email** button.
-
-	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
-
-1. [] Send an new email to Alan Steiner, Amy Alberts, and yourself (+++Alan Steiner;Amy Alberts;@lab.User.Email+++).  For the **Subject**, type +++Test Credit Card Email 2+++ and for the **Body**, type +++My AMEX card number is 344047014854133. The expiration date is 09/28, and the CVV is 4368+++, then click **Send**.
-	>[!NOTE] If you still receive a rejection, please wait a few minutes and try again.
-
-	>[!Knowledge] Notice that you do not receive the error messag this time.  Log into your personal email and you will see that the email has been encrypted in transit by the Exchange Online Mail Flow Rule defined in the previous exercise.
 1. [] Next, in Microsoft Outlook, click on the **New email** button.
 
 	^IMAGE[Open Screenshot](\Media\6wan9me1.jpg)
