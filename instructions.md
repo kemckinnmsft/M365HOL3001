@@ -1141,6 +1141,26 @@ In this task, we will test the configured recommended and automatic conditions w
 
 1. [] In the email, click **Send**.
 ===
+# Bulk Classification with the AIP Client
+
+In this task, we will perform bulk classification using the built-in functionality of the AIP Client.  This can be useful for users that want to classify/protect many documents that exist in a central location or locations identified by scanner discovery.  Because this is done manually, it is an AIP P1 feature.
+
+1. [] On @lab.VirtualMachine(Scanner01).SelectLink, browse to the **C:\\**.
+2. [] Right-click on the PII folder and select **Classify and Protect**.
+   
+   !IMAGE[CandP.png](\Media\CandP.png)
+1. [] When prompted, use the credentials below to authenticate:
+
+	+++AIPScanner@@lab.CloudCredential(134).TenantName+++
+
+	+++Somepass1+++
+
+1. [] In the AIP client Classify and protect interface, select **Highly Confidential\\All Employees** and press **Apply**. 
+
+	!IMAGE[CandP2.png](\Media\CandP2.png)
+
+> [!NOTE] You may review the results in a text file by clicking show results, or simply close the window.
+===
 # Exercise 5: Classification, Labeling, and Protection with the Azure Information Protection Scanner
 [🔙](#azure-information-protection)
 
@@ -1157,9 +1177,9 @@ Now that we know what types of sensitive data we need to protect, we will config
 
 1. [] Switch back to @lab.VirtualMachine(Client01).SelectLink and open the browser that is logged into the Azure Portal.
 
-1. [] Under **Classifications** on the left, click **Labels** then expand **Confidential**, and click on **Contoso Internal**.
+2. [] Under **Classifications** on the left, click **Labels** then expand **Confidential**, and click on **Contoso Internal**.
 
-1. [] In the Label : Contoso Internal blade, under **Select how this label is applied: automatically or recommended to user**, click **Automatic**.
+3. [] In the Label : Contoso Internal blade, under **Select how this label is applied: automatically or recommended to user**, click **Automatic**.
 
 	^IMAGE[Open Screenshot](\Media\1ifaer4l.jpg)
 
