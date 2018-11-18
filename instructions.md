@@ -320,7 +320,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 1. [] Right-click on the start menu and click **Run**.
 1. [] In the Run dialog, type +++ms-settings:workplace+++ and click **OK**.
 
-	>!IMAGE[mssettings.png](\Media\mssettings.png)
+	>^IMAGE[Open Screenshot](\Media\mssettings.png)
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
@@ -336,7 +336,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 1. [] Right-click on the start menu and click **Run**.
 1. [] In the Run dialog, type +++ms-settings:workplace+++ and click **OK**.
 
-	>!IMAGE[mssettings.png](\Media\mssettings.png)
+	>^IMAGE[Open Screenshot](\Media\mssettings.png)
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
