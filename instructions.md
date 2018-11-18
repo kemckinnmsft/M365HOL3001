@@ -1249,13 +1249,14 @@ We can now go back and look at the dashboards and observe how they have changed.
 
 1. [] Under **Dashboards**, click on **Usage report (Preview)**.
 
-	> [!NOTE] Observe that there are now entries from the AIP scanner, Microsoft Outlook, and Microsoft Word based on our activities in this lab.
+	> [!NOTE] Observe that there are now entries from the AIP scanner, File Explorer, Microsoft Outlook, and Microsoft Word based on our activities in this lab. You may not see details of label data right away as this takes longer to process.  I have included a screenshot of the results below, but you may check back later in the lab to see the full results.
 	>
 	> !IMAGE[Usage.png](\Media\Usage.png)
+	>
+	> !IMAGE[Usage2.png](\Media\Usage2.png)
+2. [] Next, under dashboards, click on **Data discovery (Preview)**.
 
-1. [] Next, under dashboards, click on **Data discovery (Preview)**.
-
-	> [!NOTE] This dashboard takes longer to receive all data (we are working on optimizing this), but you should start seeing protection data in the portal.  Label data takes more time, so please check back throughout the lab to see the full report from the AIP scanner.
+	> [!NOTE] As mentioned above, label data may not show up initially but you should start seeing protection data in the portal.  I have included a screenshot of the final result so please check back throughout the lab to see the label data from the AIP scanner.
 	>
 	> !IMAGE[Discovery.png](\Media\Discovery.png)
 	> 
