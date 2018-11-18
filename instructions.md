@@ -81,6 +81,8 @@ There are a few prerequisites that need to be set up to complete all the section
 - [Workplace Join Clients](#workplace-join-clients)
 
 - [Connect MCAS to Office 365](#connect-mcas-to-office-365)
+  
+- [Azure Security Center Setup](#azure-security-center-setup)
 
 ===
 # Azure AD Connect Configuration
@@ -165,7 +167,7 @@ For several of the exercises in this lab series, you will require an active subs
 
 ## Step 2: Activate your subscription:
 
-1. [] Enter your account information and click **Next**.
+1. [] Scroll to the bottom of the page and click **Next**.
 
 	!IMAGE[ihrjazqi.jpg](\Media\ihrjazqi.jpg)
 	> [!NOTE] You can keep the pre-populated information.
@@ -181,7 +183,7 @@ For several of the exercises in this lab series, you will require an active subs
 
 In this task, we will assign licenses to users that have been synced to the Office 365 portal.
 
-1. [] In the InPrivate window, navigate to +++https://admin.microsoft.com/AdminPortal/Home#/homepage+++.
+1. [] In a new tab, navigate to +++https://admin.microsoft.com/AdminPortal/Home#/homepage+++.
 
 	> [!KNOWLEDGE] If needed, log in using the credentials below:
 	>
@@ -190,7 +192,10 @@ In this task, we will assign licenses to users that have been synced to the Offi
 	>+++@lab.CloudCredential(134).Password+++
 
 1. [] In the middle of the homepage, click onn **Active users >**.
-1. [] Check the box to select all users and click **Edit product licenses**.
+
+	> [!NOTE] If there are only 2 users in the portal, the sync has not completed.  Switch to @lab.VittualMachine(Scanner01).SelectLink to verify the progress. Once it shows complete, return to @lab.VittualMachine(Client01).SelectLink and refresh the page to verify the users are now present.
+
+2. [] Check the box to select all users and click **Edit product licenses**.
 
 	!IMAGE[tpq0eb7f.jpg](\Media\tpq0eb7f.jpg)
 1. [] On the Assign products page, click **Next**.
@@ -200,8 +205,8 @@ In this task, we will assign licenses to users that have been synced to the Offi
 
 	^IMAGE[Open Screenshot](\Media\9xomkr35.jpg)
 	> [!NOTE] If there are no licenses available for Office 365 Enterprise E5, check the box next to Remove all product licenses... and click Replace. Wait for that to complete, then check the boxes next to only the accounts listed in the table below and repeat the steps above to assign the licenses.
-	>
-	> 
+	
+	
 	> |Users|
 	> |-----|
 	> |AatpService|
@@ -219,24 +224,18 @@ In this task, we will assign licenses to users that have been synced to the Offi
 
 In this task, we will link Windows Defender ATP licenses to your demo tenant.
 
-1. [] Log into @lab.VirtualMachine(Client01).SelectLink using the credentials below:
+1. [] In a new tab, use the provided Windows Defender Advanced Threat Protection Trial Sign up link.
 
-	+++LabUser+++
+1. [] Click **Yes, add it to my account**.
 
-	+++Pa$$w0rd+++
-1. [] Right-click on **Edge** in the taskbar and click on **New InPrivate window**.
+	!IMAGE[upx8fn9o.jpg](\Media\upx8fn9o.jpg)
 
-1. [] In the InPrivate window, use the provided Windows Defender Advanced Threat Protection Trial Sign up link.
-
-1. [] Click **Sign in** and use the credentials below:
-
-	+++@lab.CloudCredential(134).Username+++
-
-	+++@lab.CloudCredential(134).Password+++
-
-	> [!KNOWLEDGE] If you were already signed into your tenant with Global Admin credentials, you will see an image like the one below.  Click **Yes, add it to my account**.
+	> [!KNOWLEDGE] If you were not already signed into your tenant with Global Admin credentials, use the credentials below
 	>
-	> !IMAGE[upx8fn9o.jpg](\Media\upx8fn9o.jpg)
+	>+++@lab.CloudCredential(134).Username+++
+	>
+	>+++@lab.CloudCredential(134).Password+++  
+	
 1. [] On the Check out page, click **Try now**.
 
 	!IMAGE[wlgzkp40.jpg](\Media\wlgzkp40.jpg)
@@ -261,7 +260,7 @@ In this task, we will link Windows Defender ATP licenses to your demo tenant.
 
 In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 
-1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink, and log in using the details below:
+1. [] Switch to @lab.VirtualMachine(AdminPC).SelectLink, press @lab.CtrlAltDelete and log in using the details below:
 
 	+++NuckC+++
 
@@ -291,7 +290,7 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 1. [] Press **(Y)** to confirm onboarding.
 1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and copy the onboarding package there.
 2. [] Return to the browser and click **Start using Windows Defender ATP** (ignore any warnings about onboarding).
-4. [] In the Windows Defender Security Center, click on **Settings > Advanced Features** and toggle the switches on for **Azure ATP integration** and **Microsoft Cloud App Security**.
+4. [] In the Windows Defender Security Center, click on **Settings > Advanced Features** and toggle the switches on for **Azure ATP integration** and **Microsoft Cloud App Security** and press the **Save preferences** button at the bottom of the page.
 	
 	!IMAGE[g47p8c30.jpg](\Media\g47p8c30.jpg)
 
@@ -331,7 +330,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++pass@word1+++
 
-	[!NOTE] If the Next button does not light up on the username screen, press **Backspace** and the letter **m**.
+	> [!NOTE] If the Next button does not light up on the username screen, press **Backspace** and the letter **m**.
 
 1. [] Click **Done**.
 1. [] Log into @lab.VirtualMachine(Client02).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
@@ -368,7 +367,6 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 1. [] Click **Done**.
 ===
 # Connect MCAS to Office 365 
-[🔙](#microsoft-365-cloud-app-security)
 
 1. [] On @lab.VirtualMachine(Client01).SelectLink, open a new tab and go to +++https://portal.cloudappsecurity.com+++
 1. [] Go to the gear icon and select **App connectors** 
@@ -386,7 +384,64 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 	!IMAGE[a4c31yrk.jpg](\Media\a4c31yrk.jpg)
  
 ===
+# Azure Security Center Setup
 
+## VM and Workspace Deployment
+#### Estimated lab time: 15 minutes
+This section is intended to deploy dependency Azure resources in an automated way to get you started quickly or in case you need to re-provision your environment.
+
+***Additional notes**:*
+- Close the Azure Advisor recommendations if that opens for you.
+- When deploying the template below, a number of fields are locked to ensure that the references in the labs are accurate. You are free to choose your location for deployment
+- Create a new resource group for your deployment (like ASC-Labs)
+- As soon as the workspace has been created, you can continue with the lab exercise
+- Click on **Start Trial**, if you are prompted for a Security Center trial
+
+### Deploy VMs and Create a Workspace
+Use the **Deploy to Azure** button below to deploy the following:
+- A Log Analytics workspace (ASC-Workspace-xxxx)
+- Security Center OMS solution
+- 2 Windows VM's (*Win-x*, connected to the workspace)
+- 2 Linux Ubuntu VM's (*Linux-x*, connected to the workspace) <br><br>
+
+***Note**: after clicking on the Deploy to Azure button and filling in fields, scroll down, check the box with **I agree**... and click on **Purchase** to start the deployment.*
+
+Because we are deploying the Security Center solution in the workspace, the VM's will become security managed by Security Center.
+
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftianderturpijn%2FAzure-Security-Center%2Fmaster%2FLabs%2F01%2520-%2520VM%2520and%2520Workspace%2520Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
+<br><br>
+
+The deployment takes about 13 minutes.<br><br>
+After the deployment of the template, you can check the progress of your deployment if you click on your created resource group details, then click on **Deployments** (1 deploying). <br>
+Continue with the exercise below as soon as your workspace has been created. You don't have to wait until the deployment has completed.
+
+### Configure the data collection settings in ASC
+As soon as the the workspace has been deployed (you don't have to wait for all the resources to be deployed), do the following:
+1. [] Navigate to the **Security Center** blade
+2. [] Click on **Start Trial** (if you have clicked on Skip, you can click **on Getting Started**)
+3. [] Click on **Install agents**, if the button has been grayed out, then it's already set to **On**
+4. [] Click on **Security policy**
+5. [] Your subscription (Azure pass) should be listed (if it does not, close your browser session and open a new one)
+6. [] On the line where it lists your Azure subscription (Azure pass), click on **Edit settings**
+7. [] Set **Auto Provisioning** to **On** (if it's not already set to On)
+8. [] Select your workspace **ASC-Workspace-xxxx** (which has been created by the template) under **Use another workspace**
+9. [] Click on **Save**
+9. [] Click on **Yes** on **Would you like to reconfigure monitored VMs?**
+10. [] Switch back to **Security Policy** and ignore the message "Your unsaved edits will be discarded"
+11. [] On the line where it lists your **workspace**, click on **Edit settings**
+12. [] Click on **Pricing tier**, select **Standard** and click on **Save**
+13. [] Click on Data collection and select **All Events** and click on **Save**. <br><br>
+
+![alt text](https://raw.githubusercontent.com/tianderturpijn/Azure-Security-Center/master/Labs/01%20-%20VM%20and%20Workspace%20Deployment/Screenshots/datacollection_settings.png
+)<br>
+
+
+*Note: It can take some time for the VM's to become visible in Security Center*
+
+
+===
 # Azure Information Protection
 [🔙](#introduction)
 ### Objectives
