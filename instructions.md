@@ -74,6 +74,8 @@ There are a few prerequisites that need to be set up to complete all the section
 
 - [Assign User Licenses](#assign-user-licenses)
 
+- [Azure Security Center Setup](#azure-security-center-setup)
+  
 - [Link Windows Defender ATP Licenses](#link-windows-defender-atp-licenses)
 
 - [Windows Defender ATP Onboarding](#windows-defender-atp-onboarding)
@@ -82,8 +84,8 @@ There are a few prerequisites that need to be set up to complete all the section
 
 - [Connect MCAS to Office 365](#connect-mcas-to-office-365)
   
-- [Azure Security Center Setup](#azure-security-center-setup)
-
+- [Complete Azure Security Center Deployment](#complete-azure-security-center-deployment)
+ 
 ===
 # Azure AD Connect Configuration
 
