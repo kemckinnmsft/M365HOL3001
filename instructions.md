@@ -245,6 +245,23 @@ Because we are deploying the Security Center solution in the workspace, the VM's
 
 1. [] On @lab.VirtualMachine(Client01).SelectLink, open a new tab and navigate to +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftianderturpijn%2FAzure-Security-Center%2Fmaster%2FLabs%2F01%2520-%2520VM%2520and%2520Workspace%2520Deployment%2FFiles%2FdeployAscManagedVmsWithLA.json+++
 
+	> [!KNOWLEDGE] If needed, log in using the credentials below:
+	>
+	>+++@lab.CloudCredential(134).Username+++
+	>
+	>+++@lab.CloudCredential(134).Password+++
+
+1. [] On the Custom deployment page, next to **Resource group** click **Create new**.
+
+	!IMAGE[NewRG.png](\Media\NewRG.png)
+1. [] When prompted for a Name, provide a name such as +++ASC-Labs+++ and press **OK**.
+
+	^IMAGE[Open Screenshot](\Media\RGName.png)
+1. [] Select a location, then under **Settings**, type the password +++Securitycenter4ever!+++.
+1. [] Finally, check the box to agree to the terms and click **Purchase**.
+
+	^IMAGE[Open Screenshot](\Media\Password.png)
+
 The deployment takes about 13 minutes.<br><br>
 After the deployment of the template, you can check the progress of your deployment if you click on your created resource group details, then click on **Deployments** (1 deploying). <br>
 Continue with the exercise below as soon as your workspace has been created. You don't have to wait until the deployment has completed.
