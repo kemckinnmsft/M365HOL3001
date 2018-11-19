@@ -236,7 +236,7 @@ Use the link below to deploy the following:
 - A Log Analytics workspace (ASC-Workspace-xxxx)
 - Security Center OMS solution
 - 2 Windows VM's (*Win-x*, connected to the workspace)
-- 2 Linux Ubuntu VM's (*Linux-x*, connected to the workspace) <br><br>
+- 2 Linux Ubuntu VM's (*Linux-x*, connected to the workspace) 
 
 >[!NOTE] Because we are deploying the Security Center solution in the workspace, the VM's will become security managed by Security Center.
 
@@ -449,7 +449,7 @@ Now that the workspace has been deployed (you don't have to wait for all the res
 6. [] On the line where it lists your Azure subscription (Azure pass), click on **Edit settings**.
 
 	^IMAGE[Open Screenshot](\Media\EditSettings.png)
-7. [] Verify that **Auto Provisioning** to **On**.
+7. [] Verify that **Auto Provisioning** is set to **On**.
 8. [] Under Workspace configuration, select **Use another workspace** and select your workspace **ASC-Workspace-xxxx** (which has been created by the template).
 
 	^IMAGE[Open Screenshot](\Media\Workspace.png)
@@ -462,7 +462,7 @@ Now that the workspace has been deployed (you don't have to wait for all the res
 12. [] In the left pane, click on **Pricing tier**, select **Standard** and click on **Save**.
 
 	^IMAGE[Open Screenshot](\Media\Pricing.png)
-13. [] Click on Data collection and select **All Events** and click on **Save**. <br><br>
+13. [] Click on Data collection and select **All Events** and click on **Save**. 
 
 	^IMAGE[Open Screenshot](\Media\DC.png)
 
@@ -1079,7 +1079,6 @@ In this task, we will activate the labels from the Azure Portal for use in the S
 
 	>[!NOTE] Keep in mind that now the SCC Sensitivity Labels have been activated, so any modifications, additions, or deletions will be syncronised to Azure Information Protection in the Azure Portal. There are some functional differences between the two sections (DLP in SCC, HYOK & Custom Permissions in AIP), so please be aware of this when modifying policies to ensure a consistent experience on clients. 
 
-	>[!KNOWLEDGE] If you have a Mac with you and would like to test the Insider Fast Ring classification functionality, instructions will be provided at the end of this lab.  We will not do this configuration in the main lab as this functionality is still in preview and not all attendees will have access to Mac systems.
 ===
 
 # Exercise 4: Testing AIP Policies
@@ -1884,8 +1883,7 @@ collector, in MCAS, at the network level.
 	```
 	This command will show you the status of the log collector instance:
 
-	!IMAGE[CONTAINER ID 2d7cadgfS4a1 13.14\* CPU 1.22\* MEM USAGE / LIMIT 187
-	.1MiB / 1.39GiB NET I/o 10.gMB / 3 .23MB](vl5158cy.jpg)
+	!IMAGE[screenshot](\Media\vl5158cy.jpg)
 1. [] Press **Ctrl-C** to end the command. 
 1. [] Next, run the command below:
 
@@ -1898,17 +1896,7 @@ collector, in MCAS, at the network level.
 
 
 
-	!IMAGE[rootaubuntu-srt: \'hame,\'seb 5 \--dzt.ei15 Setting ftp configuration
-	Enter again: Setting syslog Reading configuration.. . Installing
-	collector successfully! zenzitive Starting 2018-06-28 2018-06-28
-	2018-06-28 2010-06-28 2018-06-28 08 2018-06-28 2018-06-28 seo 2018-06-28
-	53B 2018-06-28 €67 2018-06-28 2018-06-28 667 08:28: is, CRIT WARN I NEO
-	CR IT I NEO 1 NEO INFO I NEO INSO I NEO INFO I NEO INFO as uzez in file)
-	during parsing RBC interface \' supervisor • initialized http without
-	HTTP checking Started With pid 1059 spawned: spawned : success : • with
-	1062 •rsyslog• with pid 1063 with pid 2064 • Columbus\' with 1065
-	rsyslog RUNNING stace, ftpd entered RUNNING state, pza RUNNING scat\* ,
-	Stayed up for](4bfomeag.jpg)
+	!IMAGE[screenshot](\Media\4bfomeag.jpg)
 
 	 
 
@@ -1975,7 +1963,7 @@ log and see if it gets uploaded to MCAS.
 
 1. [] Upload the logs in the folder named by your source:
 
-!IMAGE[bqhxmpns.jpg](\Media\bqhxmpns.jpg)
+	!IMAGE[bqhxmpns.jpg](\Media\bqhxmpns.jpg)
 
  
 
@@ -2168,8 +2156,15 @@ complications.
 
         +++@lab.CloudCredential(134).Username+++
 
-    3. []  Fill in the rest of details, click Sign me up, accept the
-        verification email, and choose a new password.
+    3. []  Fill in the rest of details, and click Sign me up. 
+	
+	1. [] In a new tab, browse to +++https://portal.office.com+++ and log in with the credentials below:
+	
+		+++@lab.CloudCredential(134).username+++
+
+		+++@lab.CloudCredential(134).Password+++
+	
+	1. [] Open Outlook, accept the verification email, and choose a new password.
 
 2. []  Configure Salesforce in Azure AD
 
