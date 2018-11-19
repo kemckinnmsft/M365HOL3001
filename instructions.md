@@ -423,6 +423,50 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
  
 	!IMAGE[a4c31yrk.jpg](\Media\a4c31yrk.jpg)
  
+===
+# Complete Azure Security Center Deployment
+
+Now that the template has been deployed, we can continue with the configuration of the Azure Security Center settings.
+
+## Configure the data collection settings in ASC
+
+Now that the workspace has been deployed (you don't have to wait for all the resources to be deployed), do the following:
+
+1. [] Navigate to the **Security Center** blade.
+
+	^IMAGE[Open Screenshot](\Media\SC.png)
+2. [] In the Security Center - Getting started blade, scroll to the bottom of the window and click on **Start Trial**.
+
+	^IMAGE[Open Screenshot](\Media\StartTrial.png)
+3. [] In the next pane, click on **Install agents**.
+
+	^IMAGE[Open Screenshot](\Media\InstallAgent.png)
+4. [] In the left-hand pane, under POLICY & COMPLIANCE, click on **Security policy**.
+
+	!IMAGE[SecPol](\Media\SecPol.png)
+6. [] On the line where it lists your Azure subscription (Azure pass), click on **Edit settings**.
+
+	^IMAGE[Open Screenshot](\Media\EditSettings.png)
+7. [] Verify that **Auto Provisioning** to **On**.
+8. [] Under Workspace configuration, select **Use another workspace** and select your workspace **ASC-Workspace-xxxx** (which has been created by the template).
+
+	^IMAGE[Open Screenshot](\Media\Workspace.png)
+9. [] Click on **Save** at the top of the page.
+9. [] Click on **Yes** on **Would you like to reconfigure monitored VMs?**.
+10. [] Switch back to **Security Policy** and click **OK** to dismiss the message **Your unsaved edits will be discarded**.
+
+	!IMAGE[SecPol](\Media\SC2.png)
+11. [] Next, on the line where it lists your **workspace**, click on **Edit settings**.
+12. [] In the left pane, click on **Pricing tier**, select **Standard** and click on **Save**.
+
+	^IMAGE[Open Screenshot](\Media\Pricing.png)
+13. [] Click on Data collection and select **All Events** and click on **Save**. <br><br>
+
+	^IMAGE[Open Screenshot](\Media\DC.png)
+
+>[!NOTE] It can take some time for the VMs to become visible in Security Center
+		
+
 
 ===
 # Azure Information Protection
