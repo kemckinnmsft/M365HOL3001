@@ -2691,9 +2691,9 @@ To test our files policies, perform the following tasks:
  
 1. []	Login into ContosoDC by clicking @lab.CtrlAltDelete and using the credentials below:  
  
-+++NuckC+++ 
+	+++@lab.VirtualMachine(ContosoDC).UserName+++ 
  
-+++NinjaCat123+++ 
+	+++@lab.VirtualMachine(ContosoDC).Password+++ 
  
 2. []	Open Edge and browse to +++https://portal.atp.azure.com+++ and login with the following credentials.  
     
