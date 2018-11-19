@@ -2176,6 +2176,7 @@ complications.
     5. []  Save **full Salesforce domain name**, including **https://** for the
         next step, e.g., <https://ems123456-dev-ed.salesforce.com>
 
+		!IMAGE[sfdomain.png](\Media\sfdomain.png)
     6. []  Go to +++https://portal.azure.com+++ logging in with the credentials below:
 
 		+++@lab.CloudCredential(134).Username+++
@@ -2683,97 +2684,87 @@ To test our files policies, perform the following tasks:
 	!IMAGE[drm0yj0c.jpg](\Media\drm0yj0c.jpg)
 
 ===
-# Azure Advanced Threat Protection
-[🔙](#introduction)
+# Azure Advanced Threat Protection 
+[🔙](#introduction) 
+ 
+## Create and configure Azure ATP Workspace 
+ 
+1. []	Login into ContosoDC by clicking @lab.CtrlAltDelete and using the credentials below:  
+ 
++++NuckC+++ 
+ 
++++NinjaCat123+++ 
+ 
+2. []	Open Edge and browse to +++https://portal.atp.azure.com+++ and login with the following credentials.  
+    
+   +++@lab.CloudCredential(134).UserName+++ 
+ 
+   +++@lab.CloudCredential(134).Password+++ 
+    
+3. []	Click **Create workspace** 
+4. []	Enter name for the workspacefed95e69-8d73-43fe-affb-a7d85ede36fb 
+5. []	Select your Geolocation. 
+6. []	Click **Create**. 
+7. []	Click on the **workspace name** to open the Azure ATP workspace portal. 
+8. []	Click **Provide a username and password to connect to your Active Directory forest**.  
+9. []	On the Directory Services page enter the following and click **Save**: 
+ 
+||| 
+|-----|-----| 
+|Username|+++aatpservice+++| 
+|Password|+++Password123!@#+++| 
+|Domain|+++contoso.azure+++| 
+ 
+ 
+=== 
+## Deploy the Azure ATP Sensor  
+ 
+1. []	Click the **Download Sensor Setup** link. 
+1. []   Click  **Download** to download the Sensor installer package. 
+1. []   Copy the **Access key**, this will be needed during the installation of the Sensor. 
+1. []   Extract the installation files from the Zip file and run **Azure ATP sensor setup.exe**. 
+>[!NOTE] Do not run the installer from within the Zip file, you need to extract the files before running the installer.
 
-## Create and configure Azure ATP Workspace
+1.	Click **Run** in the Open File Security Warning page. 
+1.	Select the installation language of choice and click **Next**. 
+1.	Click **Next** on the Sensor deployment type page.  
+1.	**Paste the Access key** copied from above and click **Install**.  
+ 
+## Configure Domain Synchronizer 
+1.	In the Azure ATP console **click on the deployed Sensor** and **toggle the Domain synchronizer candidate switch** to **On** and click **Save**. 
 
-1. []	Login into AdminPC by clicking @lab.CtrlAltDelete and using the credentials below: 
-	
-	+++NuckC+++
+## Configure Windows Defender ATP Integration 
+1. In the Azure ATP console click **Windows Dender ATP** and then toggle the **Integration with Widnows Defender ATP** to **On** and click **Save**
 
-	+++NinjaCat123+++
-
-2. []	Open Edge and browse to +++https://portal.atp.azure.com+++ and login with the following credentials. 
+>[!NOTE] This requires that you have already enabled the Windows Defender ATP service. 
+ 
+=== 
+## Adding Guest User access to Azure ATP Console.  
+ 
+To allow users not in the companies Azure Active Directory to access the Azure ATP console you configure a guest user and then add them to the proper Azure ATP AAD group.  
+1. []	On ContosoDC open a new tab in IE and browse to +++https://portal.azure.com+++. You should be automatically logged in. If not, login with the following credentials.  
    
-   +++@lab.CloudCredential(134).UserName+++
-
-   +++@lab.CloudCredential(134).Password+++
-   
-3. []	Click **Create workspace**
-	1. []	Enter name for the workspace: for example, your last name with 001 at the end (levitz001).
-	1. []	Select your Geolocation.
-	1. []	Click **Create**.
-4. []	Click on the **workspace name** to open the Azure ATP workspace portal.
-5. []	Click **Provide a username and password to connect to your Active Directory forest**. 
-	1. []	On the Directory Services page enter the following and click **Save**:
-
-		|||
-		|-----|-----|
-		|Username|+++aatpservice+++|
-		|Password|+++Password123!@#+++|
-		|Domain|+++contoso.azure+++|
-
-
-===
-## Deploy the Azure ATP Sensor 
-[🔙](#azure-advanced-threat-protection)
-
-1. []	Login to ContosoDC server by clicking @lab.CtrlAltDelete and using the credentials below: 
-
-	+++@lab.VirtualMachine(ContosoDC).Username+++
-
-	+++@lab.VirtualMachine(ContosoDC).Password+++
-2. []	Open IE and browse to https://{workspacename}.atp.azure.com and login with the following credentials. 
-  
-   +++@lab.CloudCredential(134).UserName+++
-
-   +++@lab.CloudCredential(134).Password+++
-3. []	Click the **Download Sensor Setup** link.
-	
-	> [!NOTE] **Do not** download the sensor setup package
-1. [] On the Desktop, open the Azure ATP Sensor folder and right click the **SensorInstallationConfiguration.json** file and select **Open with** and select **Notepad**.
-	1. [] Modify the **Address** line to read {workspacename}sensorapi.atp.azure.com For example: *levitz001sensorapi.atp.azure.com*.
-	1. [] Replace the **WorkspaceID** with the WorkspaceID from **Azure ATP Console Help**. 
-1. [] Go back to the Azure ATP Console and **copy the Access key**.
-4. [] On the Desktop **open the Azure ATP Sensor Setup folder** and double click **Azure ATP Sensor Setup.exe**.  (We downloaded the Sensor setup for you to save some time. If you run the lab and you get an error deploying the  Sensor, re-download the Sensor and try again).
-	1.	Click **Run** in the Open File Security Warning page.
-	1.	Select the installation language of choice and click **Next**.
-	1.	Click **Next** on the Sensor deployment type page. 
-	1.	**Paste the Access key** copied from above and click **Install**. 
-
-## Configure Domain Synchronizer
-1.	In the Azure ATP console **click on the deployed Sensor** and **toggle the Domain synchronizer candidate switch** to **On** and click **Save**.
-
-===
-## Adding Guest User access to Azure ATP Console. 
-[🔙](#azure-advanced-threat-protection)
-
-To allow users not in the companies Azure Active Directory to access the Azure ATP console you configure a guest user and then add them to the proper Azure ATP AAD group. 
-
-1. []	On ContosoDC open a new tab in IE and browse to +++https://portal.azure.com+++. You should be automatically logged in. If not, login with the following credentials. 
-  
-   +++@lab.CloudCredential(134).UserName+++
-
-   +++@lab.CloudCredential(134).Password+++
-
-2. []	Close any popup windows that might have opened. 
-3. []	Click **Azure Active Directory**.
-4. []	Click **Users**.
-5. []	Click **New guest user**.
-6. []	Enter email address for guest user such as **@lab.User.Email** and click **Invite**.
-7. []	 Close the Users blade by clicking the **X** in the right-hand side. 
-8. []	Click **Groups**.
-9. []	Click **Azure ATP {workspace name} Administrators group**.
-10. []	Click **Members**.
-11. []	Click **Add members**.
-12. []	Select the **guest user added above** and click **Select**.
-
-> [!NOTE]	After the user accepts the invitation the user will be able to access the Azure ATP console for this workspace using their email account. 
-
-===
-## Azure ATP Immersion Lab
-[🔙](#azure-advanced-threat-protection)
+   +++@lab.CloudCredential(134).UserName+++ 
+ 
+   +++@lab.CloudCredential(134).Password+++ 
+ 
+2. []	Close any popup windows that might have opened.  
+3. []	Click **Azure Active Directory**. 
+4. []	Click **Users**. 
+5. []	Click **New guest user**. 
+6. []	Enter email address for guest user such as **@lab.User.Email** and click **Invite**. 
+7. []	Close the Users blade by clicking the **X** in the right-hand side.  
+8. []	Click **Groups**. 
+9. []	Click **Azure ATP {workspace name} Administrators group**. 
+10. []	Click **Members**. 
+11. []	Click **Add members**. 
+12. []	Select the **guest user added above** and click **Select**. 
+ 
+> [!NOTE]	After the user accepts the invitation the user will be able to access the Azure ATP console for this workspace using their email account.  
+ 
+=== 
+ 
+## Azure ATP Immersion Lab 
 
 The rest of the lab will be instructor led via PowerPoint. 
 ===
