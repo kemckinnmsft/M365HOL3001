@@ -2164,14 +2164,14 @@ complications.
 
 		+++@lab.CloudCredential(134).Password+++
 	
-	1. [] Open Outlook, accept the verification email, and choose a new password.
+	1. [] Open Outlook, accept the verification email (may be under **Other** mail), and choose a new password.
 
 2. []  Configure Salesforce in Azure AD
 
     1. []  In Salesforce, go to **Setup**, search for **My Domain** and
-        register a new domain, e.g., ems123456-dev-ed.salesforce.com
+        register a new domain. You can use the beginning part of +++@lab.CloudCredential(134).TenantName+++.
 
-        !IMAGE[f7idpipy.jpg](\Media\f7idpipy.jpg)
+        !IMAGE[MyDomain.png](\Media\MyDomain.png)
 
     5. []  Save **full Salesforce domain name**, including **https://** for the
         next step, e.g., <https://ems123456-dev-ed.salesforce.com>
