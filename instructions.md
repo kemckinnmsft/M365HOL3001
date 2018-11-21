@@ -1139,13 +1139,7 @@ However, helping your users to properly classify and protect sensitive data at t
 1. [] In the Label: All Employees blade, scroll down to the **Configure conditions for automatically applying this label** section, and click on **+ Add a new condition**.
 
 	^IMAGE[Open Screenshot](\Media\8cdmltcj.jpg)
-1. [] In the Condition blade, type +++International+++ and check the box next to the **International Classification of Diseases (ICD-10-CM)** entry.
-
-	^IMAGE[Open Screenshot](\Media\j163rbh7.jpg)
-1. [] Click **Save** in the Condition blade and **OK** to the Save settings prompt.
-
-	^IMAGE[Open Screenshot](\Media\ie6g5kta.jpg)
-1. [] Next, click on **+ Add a new condition** and select the **Custom** tab and enter +++Password+++ for the **Name** and in the textbox below **Match exact phrase or pattern**, type +++pass@word1+++.
+1. [] In the Condition blade, select the **Custom** tab and enter +++Password+++ for the **Name** and in the textbox below **Match exact phrase or pattern**, type +++pass@word1+++.
 
 	!IMAGE[ra7dnyg6.jpg](\Media\ra7dnyg6.jpg)
 1. [] Click **Save** in the Condition blade and **OK** to the Save settings prompt.
