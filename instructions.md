@@ -193,7 +193,7 @@ In this task, we will assign licenses to users that have been synced to the Offi
 
 1. [] In the middle of the homepage, click onn **Active users >**.
 
-	> [!NOTE] If there are only 2 users in the portal, the sync has not completed.  Switch to @lab.VittualMachine(Scanner01).SelectLink to verify the progress. Once it shows complete, return to @lab.VittualMachine(Client01).SelectLink and refresh the page to verify the users are now present.
+	> [!NOTE] If there are only 2 users in the portal, the sync has not completed.  Switch to @lab.VirtualMachine(Scanner01).SelectLink to verify the progress. Once it shows complete, return to @lab.VirtualMachine(Client01).SelectLink and refresh the page to verify the users are now present.
 
 2. [] Check the box to select all users and click **Edit product licenses**.
 
@@ -464,9 +464,7 @@ Now that the workspace has been deployed (you don't have to wait for all the res
 
 	^IMAGE[Open Screenshot](\Media\DC.png)
 
->[!NOTE] It can take some time for the VMs to become visible in Security Center
-		
-
+>[!HINT] It can take some time for the VMs to become visible in Security Center
 
 ===
 # Azure Information Protection
@@ -720,11 +718,7 @@ The next task is to configure repositories to scan.  These can be on-premises Sh
 	>
 	>!IMAGE[agnx2gws.jpg](\Media\agnx2gws.jpg)
  
-1. [] Next, switch to @lab.VirtualMachine(Client01).SelectLink, open a **File Explorer** window, and browse to +++\\\Scanner01\c$\users\aipscanner\AppData\Local\Microsoft\MSIP\Scanner\Reports+++ and log on using the credentials below:
-
-	+++Contoso\LabUser+++
-
-	+++Pa$$w0rd+++
+1. [] Next, switch to @lab.VirtualMachine(AdminPC).SelectLink, open a **File Explorer** window, and browse to +++\\\Scanner01\c$\users\aipscanner\AppData\Local\Microsoft\MSIP\Scanner\Reports+++.
 
 1. [] Review the summary txt and detailed csv files available there.  
 
