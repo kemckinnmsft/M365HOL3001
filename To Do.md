@@ -1,10 +1,11 @@
 To Do
 
-ContosoDC
+Scanner01
 
-AdminPC
+    Share PII folder
 
 Instructions
 
+    Add DLP steps to SCC section
 
 Update AIP lab

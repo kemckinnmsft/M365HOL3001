@@ -125,6 +125,13 @@ In this task, we will install Azure AD Connect and configure it using the expres
 
 10. [] Continue to next task while initial sync is running.
 ===
+# Initialize On Prem SharePoint
+
+Since these VMs are spun up on demand, we have to launch the On Prem SharePoint site so it has time to start up the database before we start trying to scan it.
+
+1. [] In an Internet Explorer window, navigate to +++http://Scanner01/Documents/+++.
+1. [] It will take a while to open this link, continue to the next task.
+===
 # Redeem Azure Pass
 
 For several of the exercises in this lab series, you will require an active subscription.  We are providing an Azure Pass for this purpose.  You will be provided with an Azure Pass code to use with the instructions below.
@@ -1135,7 +1142,10 @@ However, helping your users to properly classify and protect sensitive data at t
 1. [] In the Condition blade, type +++International+++ and check the box next to the **International Classification of Diseases (ICD-10-CM)** entry.
 
 	^IMAGE[Open Screenshot](\Media\j163rbh7.jpg)
-1. [] Next, before saving, click on **Custom** and enter +++Password+++ for the **Name** and in the textbox below **Match exact phrase or pattern**, type +++pass@word1+++.
+1. [] Click **Save** in the Condition blade and **OK** to the Save settings prompt.
+
+	^IMAGE[Open Screenshot](\Media\ie6g5kta.jpg)
+1. [] Next, click on **+ Add a new condition** and select the **Custom** tab and enter +++Password+++ for the **Name** and in the textbox below **Match exact phrase or pattern**, type +++pass@word1+++.
 
 	!IMAGE[ra7dnyg6.jpg](\Media\ra7dnyg6.jpg)
 1. [] Click **Save** in the Condition blade and **OK** to the Save settings prompt.
@@ -1372,7 +1382,7 @@ In this task, we will perform bulk classification using the built-in functionali
 2. [] Right-click on the PII folder and select **Classify and Protect**.
    
    !IMAGE[CandP.png](\Media\CandP.png)
-1. [] When prompted, use the credentials below to authenticate:
+1. [] When prompted, click use another user and use the credentials below to authenticate:
 
 	+++AIPScanner@@lab.CloudCredential(134).TenantName+++
 
