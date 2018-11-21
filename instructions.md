@@ -376,6 +376,15 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 	> [!NOTE] If the Next button does not light up on the username screen, press **Backspace** and the letter **m**.
 
 1. [] Click **Done**.
+1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and use the credentials below:
+
+	+++LabUser+++
+
+	+++Pa$$w0rd+++
+
+1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
+1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
+1. [] Press **(Y)** to confirm onboarding.
 1. [] Log into @lab.VirtualMachine(Client02).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
 
 	+++LabUser+++
@@ -392,6 +401,15 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++pass@word1+++
 1. [] Click **Done**.
+1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and use the credentials below:
+
+	+++LabUser+++
+
+	+++Pa$$w0rd+++
+
+1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
+1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
+1. [] Press **(Y)** to confirm onboarding.
 1. [] Log into @lab.VirtualMachine(Client03).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
 
 	+++LabUser+++
@@ -408,6 +426,15 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++pass@word1+++
 1. [] Click **Done**.
+1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and use the credentials below:
+
+	+++LabUser+++
+
+	+++Pa$$w0rd+++
+
+1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
+1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
+1. [] Press **(Y)** to confirm onboarding.
 ===
 # Connect MCAS to Office 365 
 
