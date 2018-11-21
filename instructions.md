@@ -235,7 +235,7 @@ In this task, we will assign licenses to users that have been synced to the Offi
 	>
 	>+++@lab.CloudCredential(134).Password+++
 
-1. [] In the middle of the homepage, click onn **Active users >**.
+1. [] In the middle of the homepage, click on **Active users >**.
 
 	> [!NOTE] If there are only 2 users in the portal, the sync has not completed.  Switch to @lab.VirtualMachine(Scanner01).SelectLink to verify the progress. Once it shows complete, return to @lab.VirtualMachine(Client01).SelectLink and refresh the page to verify the users are now present.
 
@@ -316,6 +316,8 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 
 	+++@lab.CloudCredential(134).Password+++
 
+	>[!NOTE] If you get a message regarding 
+
 1. [] On Step 1, click **Next**.
 1. [] On Step 2, choose a data storage location and click **Next**.
 1. [] On Step 3, click **Next** several times until the Create your cloud instance dialog pops up, then click **Continue**.
@@ -376,13 +378,13 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 	> [!NOTE] If the Next button does not light up on the username screen, press **Backspace** and the letter **m**.
 
 1. [] Click **Done**.
-1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and use the credentials below:
+1. [] Browse to +++\\\Contosodc\sysvol+++ and use the credentials below:
 
-	+++LabUser+++
+	+++Contoso\LabUser+++
 
 	+++Pa$$w0rd+++
 
-1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
+1. [] Navigate to the **Contoso.Azure\scripts** directory and copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
 1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
 1. [] Press **(Y)** to confirm onboarding.
 1. [] Log into @lab.VirtualMachine(Client02).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
@@ -401,13 +403,13 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++pass@word1+++
 1. [] Click **Done**.
-1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and use the credentials below:
+1. [] Browse to +++\\\Contosodc\sysvol+++ and use the credentials below:
 
-	+++LabUser+++
+	+++Contoso\LabUser+++
 
 	+++Pa$$w0rd+++
 
-1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
+1. [] Navigate to the **Contoso.Azure\scripts** directory and copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
 1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
 1. [] Press **(Y)** to confirm onboarding.
 1. [] Log into @lab.VirtualMachine(Client03).SelectLink by pressing @lab.CtrlAltDelete and using the credentials below:
@@ -426,13 +428,13 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++pass@word1+++
 1. [] Click **Done**.
-1. [] Browse to +++\\\Contosodc\sysvol\Contoso.Azure\scripts+++ and use the credentials below:
+1. [] Browse to +++\\\Contosodc\sysvol+++ and use the credentials below:
 
-	+++LabUser+++
+	+++Contoso\LabUser+++
 
 	+++Pa$$w0rd+++
 
-1. [] Copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
+1. [] Navigate to the **Contoso.Azure\scripts** directory and copy **WindowsDefenderATPLocalOnboardingScript** to the desktop.
 1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
 1. [] Press **(Y)** to confirm onboarding.
 ===
