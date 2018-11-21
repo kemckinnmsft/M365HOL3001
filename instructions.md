@@ -182,46 +182,6 @@ For several of the exercises in this lab series, you will require an active subs
 
 1. [] When you are redirected to the Azure Portal, the process is complete.
 ===
-# Assign User Licenses
-
-In this task, we will assign licenses to users that have been synced to the Office 365 portal.
-
-1. [] In a new tab, navigate to +++https://admin.microsoft.com/AdminPortal/Home#/homepage+++.
-
-	> [!KNOWLEDGE] If needed, log in using the credentials below:
-	>
-	>+++@lab.CloudCredential(134).Username+++
-	>
-	>+++@lab.CloudCredential(134).Password+++
-
-1. [] In the middle of the homepage, click onn **Active users >**.
-
-	> [!NOTE] If there are only 2 users in the portal, the sync has not completed.  Switch to @lab.VirtualMachine(Scanner01).SelectLink to verify the progress. Once it shows complete, return to @lab.VirtualMachine(Client01).SelectLink and refresh the page to verify the users are now present.
-
-2. [] Check the box to select all users and click **Edit product licenses**.
-
-	!IMAGE[tpq0eb7f.jpg](\Media\tpq0eb7f.jpg)
-1. [] On the Assign products page, click **Next**.
-
-	!IMAGE[nzzweacz.jpg](\Media\nzzweacz.jpg)
-1. [] On the Replace existing products page, turn on licenses for **Enterprise Mobility + Security E5** and **Office 365 Enterprise E5** and click **Replace**.
-
-	^IMAGE[Open Screenshot](\Media\9xomkr35.jpg)
-	> [!NOTE] If there are no licenses available for Office 365 Enterprise E5, check the box next to Remove all product licenses... and click Replace. Wait for that to complete, then check the boxes next to only the accounts listed in the table below and repeat the steps above to assign the licenses.
-	
-	
-	> |Users|
-	> |-----|
-	> |AatpService|
-	> |Adam Smith|
-	> |AIPScanner|
-	> |Alice Anderson|
-	> |Bob Winkler|
-	> |Evan Green|
-	> |Jeff Victim|
-	> |Nuck Chorris|
-	> |Ron Helpdesk|
-===
 # Azure Security Center Setup
 
 ## VM and Workspace Deployment
@@ -263,6 +223,46 @@ Use the link below to deploy the following:
 1. [] The deployment takes about 13 minutes. Continue to the next task and we will return to the ASC deployment later.
 
 ===
+# Assign User Licenses
+
+In this task, we will assign licenses to users that have been synced to the Office 365 portal.
+
+1. [] In a new tab, navigate to +++https://admin.microsoft.com/AdminPortal/Home#/homepage+++.
+
+	> [!KNOWLEDGE] If needed, log in using the credentials below:
+	>
+	>+++@lab.CloudCredential(134).Username+++
+	>
+	>+++@lab.CloudCredential(134).Password+++
+
+1. [] In the middle of the homepage, click onn **Active users >**.
+
+	> [!NOTE] If there are only 2 users in the portal, the sync has not completed.  Switch to @lab.VirtualMachine(Scanner01).SelectLink to verify the progress. Once it shows complete, return to @lab.VirtualMachine(Client01).SelectLink and refresh the page to verify the users are now present.
+
+2. [] Check the box to select all users and click **Edit product licenses**.
+
+	!IMAGE[tpq0eb7f.jpg](\Media\tpq0eb7f.jpg)
+1. [] On the Assign products page, click **Next**.
+
+	!IMAGE[nzzweacz.jpg](\Media\nzzweacz.jpg)
+1. [] On the Replace existing products page, turn on licenses for **Enterprise Mobility + Security E5** and **Office 365 Enterprise E5** and click **Replace**.
+
+	^IMAGE[Open Screenshot](\Media\9xomkr35.jpg)
+	
+	> [!KNOWLEDGE] If there are no licenses available for Office 365 Enterprise E5, check the box next to Remove all product licenses... and click Replace. Wait for that to complete, then check the boxes next to only the accounts listed in the table below and repeat the steps above to assign the licenses.
+	>
+	> |Users|
+	> |-----|
+	> |AatpService|
+	> |Adam Smith|
+	> |AIPScanner|
+	> |Alice Anderson|
+	> |Bob Winkler|
+	> |Evan Green|
+	> |Jeff Victim|
+	> |Nuck Chorris|
+	> |Ron Helpdesk|
+===
 # Link Windows Defender ATP Licenses
 
 In this task, we will link Windows Defender ATP licenses to your demo tenant.
@@ -284,20 +284,20 @@ In this task, we will link Windows Defender ATP licenses to your demo tenant.
 	!IMAGE[wlgzkp40.jpg](\Media\wlgzkp40.jpg)
 1. [] On the Order Receipt page, click **Continue**.
 
-1. [] Next, navigate to +++https://admin.microsoft.com/AdminPortal/Home#/users+++.
+1. [] Next, click on **Active Users >** or navigate to +++https://admin.microsoft.com/AdminPortal/Home#/users+++.
 
-1. [] If necessary, log in using the credentials below:
+	>[!NOTE] If necessary, log in using the credentials below:
+	>
+	>+++@lab.CloudCredential(134).Username+++
+	>
+	>+++@lab.CloudCredential(134).Password+++
 
-	+++@lab.CloudCredential(134).Username+++
-
-	+++@lab.CloudCredential(134).Password+++
 1. [] Click on MOD Administrator, and in the details page, click **Edit** next to Product licenses.
 
 	!IMAGE[fe5k7wwn.jpg](\Media\fe5k7wwn.jpg)
 1. [] Toggle the **WD ATP** license to On and click **Save**.
 
 	!IMAGE[6crecugz.jpg](\Media\6crecugz.jpg)
-	> [!NOTE] This license allows up to 100 systems to connect to the WD ATP service.
 ===
 # Windows Defender ATP Onboarding
 
