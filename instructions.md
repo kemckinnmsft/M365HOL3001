@@ -378,7 +378,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 	> [!NOTE] If the Next button does not light up on the username screen, press **Backspace** and the letter **m**.
 
 1. [] Click **Done**.
-1. [] Browse to +++\\\Contosodc\sysvol+++ and use the credentials below:
+1. [] Browse to +++\\\Contosodc.contoso.azure\sysvol+++ and use the credentials below:
 
 	+++Contoso\LabUser+++
 
@@ -403,7 +403,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++pass@word1+++
 1. [] Click **Done**.
-1. [] Browse to +++\\\Contosodc\sysvol+++ and use the credentials below:
+1. [] Browse to +++\\\Contosodc.contoso.azure\sysvol+++ and use the credentials below:
 
 	+++Contoso\LabUser+++
 
@@ -428,7 +428,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++pass@word1+++
 1. [] Click **Done**.
-1. [] Browse to +++\\\Contosodc\sysvol+++ and use the credentials below:
+1. [] Browse to +++\\\Contosodc.contoso.azure\sysvol+++ and use the credentials below:
 
 	+++Contoso\LabUser+++
 
