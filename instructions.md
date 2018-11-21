@@ -99,9 +99,8 @@ In this task, we will install Azure AD Connect and configure it using the expres
 
 	+++Pa$$w0rd+++
 
-2. [] On the desktop, **double-click** on **AzureADConnect.msi**.
-3. [] When prompted, click **Run** to continue.
-4. [] On the Welcome page, **check the box** next to **I agree** and click the **Continue** button.
+2. [] On the desktop, **double-click** on **Azure AD Connect**.
+3. [] When prompted, click **Yes** to continue.
 5. [] On the Express Settings page, click **Use express settings**.
 6. [] On the Connect to Azure AD page, enter the credentials below and press the **Next** button.
 
