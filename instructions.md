@@ -836,7 +836,7 @@ The next task is to configure repositories to scan.  These can be on-premises Sh
 	>
 	>!IMAGE[agnx2gws.jpg](\Media\agnx2gws.jpg)
  
-1. [] Next, switch to @lab.VirtualMachine(AdminPC).SelectLink, open a **File Explorer** window, and browse to +++\\\Scanner01.contoso.azure\c$\users\aipscanner\AppData\Local\Microsoft\MSIP\Scanner\Reports+++.
+1. [] Next, switch to @lab.VirtualMachine(Client01).SelectLink, open a **File Explorer** window, and browse to +++\\\Scanner01.contoso.azure\c$\users\aipscanner\AppData\Local\Microsoft\MSIP\Scanner\Reports+++.
 
 	> If needed, use the credentials below:
 	>
