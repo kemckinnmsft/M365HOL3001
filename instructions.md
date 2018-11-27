@@ -1124,7 +1124,7 @@ However, helping your users to properly classify and protect sensitive data at t
 1. [] In the Condition blade, in the **Select information types** search box, type +++EU+++ and check the boxes next to the **items shown below**.
 
 	!IMAGE[xaj5hupc.jpg](\Media\xaj5hupc.jpg)
-1. [] Next, before saving, replace Credit in the search bar with +++credit+++ and check the box next to **Credit Card Number**.
+1. [] Next, before saving, replace EU in the search bar with +++credit+++ and check the box next to **Credit Card Number**.
 
 	^IMAGE[Open Screenshot](\Media\9rozp61b.jpg)
 1. [] Click **Save** in the Condition blade and **OK** to the Save settings prompt.
