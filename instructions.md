@@ -373,7 +373,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++AlanS@@lab.CloudCredential(134).TenantName+++
 
-	+++@lab.CloudCredential(134).Password+++
+	+++pass@word1+++
 1. [] Click **Done**.
 1. [] Browse to +++\\\Contosodc.contoso.azure\sysvol+++ and use the credentials below:
 
@@ -398,7 +398,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++AmyA@@lab.CloudCredential(134).TenantName+++
 
-	+++@lab.CloudCredential(134).Password+++
+	+++pass@word1+++
 1. [] Click **Done**.
 1. [] Browse to +++\\\Contosodc.contoso.azure\sysvol+++ and use the credentials below:
 
@@ -423,7 +423,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 	+++EricG@@lab.CloudCredential(134).TenantName+++
 
-	+++@lab.CloudCredential(134).Password+++
+	+++pass@word1+++
 1. [] Click **Done**.
 1. [] Browse to +++\\\Contosodc.contoso.azure\sysvol+++ and use the credentials below:
 
