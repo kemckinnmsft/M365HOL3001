@@ -93,6 +93,12 @@ There are a few prerequisites that need to be set up to complete all the section
 
 In this task, we will install Azure AD Connect and configure it using the express settings.
 
+	+++Connect-MSOLService+++
+    +++$tenantfqdn = @lab.cloudcredential(134).TenantName+++
+    +++$tenant = $tenantfqdn.Split('.')+++
+    +++$x = Get-MsolUser -All  | where {$_.isLicensed -eq $true}+++
+    +++$x | foreach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "$tenant(0):ENTERPRISEPREMIUM", "$tenant(0):EMSPREMIUM"}+++
+
 1. [] Switch to @lab.VirtualMachine(Scanner01).SelectLink and log in with the password +++@lab.VirtualMachine(Client01).Password+++.
 
 2. [] On the desktop, **double-click** on **Azure AD Connect**.
@@ -2839,15 +2845,15 @@ Those commands download a script installing the Docker engine on your host compu
 
 ### Create a data source and a log collector in the Cloud App Security portal
 
-1. Switch to **Client01**.
+1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and log in with the password +++@lab.VirtualMachine(Client01).Password+++.
 
-2. Create a new tab in the InPrivate window and browse to [**https://portal.cloudappsecurity.com**](https://portal.cloudappsecurity.com).
+2. Create a new tab in the InPrivate window and browse to +++https://portal.cloudappsecurity.com+++.
 
    >INFO: If necessary, log in using the credentials below:
    >
-   >**Global Admin Username**
+   >+++@lab.CloudCredential(134).Username+++
    >
-   >**Global Admin Password**
+   >+++@lab.CloudCredential(134).Password+++
 
 3. In the Cloud App Security dashboard, click on the **Settings** icon and click **Log collectors**.
 
