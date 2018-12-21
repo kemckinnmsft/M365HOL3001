@@ -307,7 +307,7 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 
 1. [] Switch to @lab.VirtualMachine(VictimPC).SelectLink and log in with the password +++@lab.VirtualMachine(VictimPC).Password+++.
 
-1. [] Open an Edge InPrivate window and navigate to +++https://securitycenter.windows.com/+++.
+1. [] Open an Edge InPrivate window and navigate to ```https://securitycenter.windows.com/```.
 1. [] Log in using the credentials below:
 
 	+++@lab.CloudCredential(134).Username+++
