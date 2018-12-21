@@ -10,7 +10,7 @@ This lab is designed to be used as a supplement to Instructor Led Training and h
 
 ## [Lab 1: Azure Information Protection](#azure-information-protection)
 
-## [Lab 2: Microsoft 365 Cloud App Security](#microsoft-365-cloud-app-security)
+## [Lab 2: Microsoft Cloud App Security](#microsoft-cloud-app-security)
 
 ## [Lab 3: Azure Advanced Threat Protection](#azure-advanced-threat-protection)
 
