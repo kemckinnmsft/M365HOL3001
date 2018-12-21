@@ -68,16 +68,14 @@ There are also Knowledge Items, Notes, and Hints throughout the lab.
 
 There are a few prerequisites that need to be set up to complete all the sections in this lab.  This Exercise will walk you through the items below.
 
-- [Configure Azure AD Connect](#azure-ad-connect-configuration)
+- [Link Windows Defender ATP Licenses](#link-windows-defender-atp-licenses)
 
 - [Redeem Azure Pass](#redeem-azure-pass)
 
-- [Assign User Licenses](#assign-user-licenses)
+- [Azure AD User Creation](#Azure-ad-user-creation)
 
 - [Azure Security Center Setup](#azure-security-center-setup)
   
-- [Link Windows Defender ATP Licenses](#link-windows-defender-atp-licenses)
-
 - [Windows Defender ATP Onboarding](#windows-defender-atp-onboarding)
 
 - [Workplace Join Clients](#workplace-join-clients)
@@ -89,47 +87,41 @@ There are a few prerequisites that need to be set up to complete all the section
 - [Azure Advanced Threat Protection Setup](#azure-advanced-threat-protection-setup)
  
 ===
-# Azure AD Connect Configuration
+# Link Windows Defender ATP Licenses
 
-In this task, we will install Azure AD Connect and configure it using the express settings.
+In this task, we will link Windows Defender ATP licenses to your demo tenant.
 
-	+++Connect-MSOLService+++
+1. [] In a new tab, use the provided Windows Defender Advanced Threat Protection Trial Sign up link.
 
-    +++$tenantfqdn = @lab.cloudcredential(134).TenantName+++
+1. [] Click **Yes, add it to my account**.
 
-    +++$tenant = $tenantfqdn.Split('.')++
+	!IMAGE[upx8fn9o.jpg](\Media\upx8fn9o.jpg)
 
-    +++$x = Get-MsolUser -All  | where {$_.isLicensed -eq $true}+++
+	> [!KNOWLEDGE] If you were not already signed into your tenant with Global Admin credentials, use the credentials below
+	>
+	>+++@lab.CloudCredential(134).Username+++
+	>
+	>+++@lab.CloudCredential(134).Password+++  
+	
+1. [] On the Check out page, click **Try now**.
 
-    +++$x | foreach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "$tenant(0):ENTERPRISEPREMIUM", "$tenant(0):EMSPREMIUM"}+++
+	!IMAGE[wlgzkp40.jpg](\Media\wlgzkp40.jpg)
+1. [] On the Order Receipt page, click **Continue**.
 
-1. [] Switch to @lab.VirtualMachine(Scanner01).SelectLink and log in with the password +++@lab.VirtualMachine(Client01).Password+++.
+1. [] Next, click on **Active Users >** or navigate to +++https://admin.microsoft.com/AdminPortal/Home#/users+++.
 
-2. [] On the desktop, **double-click** on **Azure AD Connect**.
-3. [] When prompted, click **Yes** to continue.
-5. [] On the Express Settings page, click **Use express settings**.
-6. [] On the Connect to Azure AD page, enter the credentials below and press the **Next** button.
+	>[!NOTE] If necessary, log in using the credentials below:
+	>
+	>+++@lab.CloudCredential(134).Username+++
+	>
+	>+++@lab.CloudCredential(134).Password+++
 
-	+++@lab.CloudCredential(134).Username+++
+1. [] Click on MOD Administrator, and in the details page, click **Edit** next to Product licenses.
 
-	+++@lab.CloudCredential(134).Password+++
+	!IMAGE[fe5k7wwn.jpg](\Media\fe5k7wwn.jpg)
+1. [] Toggle the **WD ATP** license to On and click **Save**.
 
-> [!NOTE] The wizard will connect to the Microsoft Online tenant to verify the credentials.
-
-7. [] On the Connect to AD DS page, enter the credentials below then click the **Next** button.
-
-	+++Contoso.Azure\LabUser+++
-
-	+++Pa$$w0rd+++
-8. [] On the Azure AD sign-in page, **check the box** next to **Continue without any verified domains** and click the **Next** button.
-
-> [!NOTE] Verified domains are primarily for SSO purposes and are not needed for this lab
-
-9. [] On the Configure page, click the **Install** button.
-
-> [!ALERT] **Do not** uncheck the box for initial synchronization
-
-10. [] Continue to next task while initial sync is running.
+	!IMAGE[6crecugz.jpg](\Media\6crecugz.jpg)
 ===
 # Redeem Azure Pass
 
@@ -184,6 +176,13 @@ For several of the exercises in this lab series, you will require an active subs
 
 1. [] When you are redirected to the Azure Portal, the process is complete.
 ===
+# Azure AD User Creation
+
+In this task, we will create new Azure AD users and assign licenses via PowerShell.  Ina procduction evironment this would be done using Azure AD Connect or a similar tool to maintain a single source of authority, but for lab purposes we are doing it via script to reduce setup time.
+
+
+
+===
 # Azure Security Center Setup
 
 ## VM and Workspace Deployment
@@ -226,82 +225,7 @@ Use the link below to deploy the following:
 1. [] The deployment takes about 13 minutes. Continue to the next task and we will return to the ASC deployment later.
 
 ===
-# Assign User Licenses
 
-In this task, we will assign licenses to users that have been synced to the Office 365 portal.
-
-1. [] In a new tab, navigate to +++https://admin.microsoft.com/AdminPortal/Home#/homepage+++.
-
-	> [!KNOWLEDGE] If needed, log in using the credentials below:
-	>
-	>+++@lab.CloudCredential(134).Username+++
-	>
-	>+++@lab.CloudCredential(134).Password+++
-
-1. [] In the middle of the homepage, click on **Active users >**.
-
-	> [!NOTE] If there are only 2 users in the portal, the sync has not completed.  Switch to @lab.VirtualMachine(Scanner01).SelectLink to verify the progress. Once it shows complete, return to @lab.VirtualMachine(Client01).SelectLink and refresh the page to verify the users are now present.
-
-2. [] Check the box to select all users and click **Edit product licenses**.
-
-	!IMAGE[tpq0eb7f.jpg](\Media\tpq0eb7f.jpg)
-1. [] On the Assign products page, click **Next**.
-
-	!IMAGE[nzzweacz.jpg](\Media\nzzweacz.jpg)
-1. [] On the Replace existing products page, turn on licenses for **Enterprise Mobility + Security E5** and **Office 365 Enterprise E5** and click **Replace**.
-
-	^IMAGE[Open Screenshot](\Media\9xomkr35.jpg)
-	
-	> [!KNOWLEDGE] If there are no licenses available for Office 365 Enterprise E5, check the box next to Remove all product licenses... and click Replace. Wait for that to complete, then check the boxes next to only the accounts listed in the table below and repeat the steps above to assign the licenses.
-	>
-	> |Users|
-	> |-----|
-	> |AatpService|
-	> |Adam Smith|
-	> |AIPScanner|
-	> |Alice Anderson|
-	> |Bob Winkler|
-	> |Evan Green|
-	> |Jeff Victim|
-	> |Nuck Chorris|
-	> |Ron Helpdesk|
-===
-# Link Windows Defender ATP Licenses
-
-In this task, we will link Windows Defender ATP licenses to your demo tenant.
-
-1. [] In a new tab, use the provided Windows Defender Advanced Threat Protection Trial Sign up link.
-
-1. [] Click **Yes, add it to my account**.
-
-	!IMAGE[upx8fn9o.jpg](\Media\upx8fn9o.jpg)
-
-	> [!KNOWLEDGE] If you were not already signed into your tenant with Global Admin credentials, use the credentials below
-	>
-	>+++@lab.CloudCredential(134).Username+++
-	>
-	>+++@lab.CloudCredential(134).Password+++  
-	
-1. [] On the Check out page, click **Try now**.
-
-	!IMAGE[wlgzkp40.jpg](\Media\wlgzkp40.jpg)
-1. [] On the Order Receipt page, click **Continue**.
-
-1. [] Next, click on **Active Users >** or navigate to +++https://admin.microsoft.com/AdminPortal/Home#/users+++.
-
-	>[!NOTE] If necessary, log in using the credentials below:
-	>
-	>+++@lab.CloudCredential(134).Username+++
-	>
-	>+++@lab.CloudCredential(134).Password+++
-
-1. [] Click on MOD Administrator, and in the details page, click **Edit** next to Product licenses.
-
-	!IMAGE[fe5k7wwn.jpg](\Media\fe5k7wwn.jpg)
-1. [] Toggle the **WD ATP** license to On and click **Save**.
-
-	!IMAGE[6crecugz.jpg](\Media\6crecugz.jpg)
-===
 # Windows Defender ATP Onboarding
 
 In this task, we will perform initial setup of WD ATP and onboard 2 machines.
