@@ -379,7 +379,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 	
 	+++pass@word1+++
 1. [] Click **Done**.
-1. [] Open an Edge InPrivate window and navigate to +++https://securitycenter.windows.com/preferneces2/onboarding+++.
+1. [] Open an Edge InPrivate window and navigate to +++https://securitycenter.windows.com/+++.
 1. [] Log in using the credentials below:
 
 	+++@lab.CloudCredential(134).Username+++
@@ -414,7 +414,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 	
 	+++pass@word1+++
 1. [] Click **Done**.
-1. [] Open an Edge InPrivate window and navigate to +++https://securitycenter.windows.com/preferneces2/onboarding+++.
+1. [] Open an Edge InPrivate window and navigate to +++https://securitycenter.windows.com/+++.
 1. [] Log in using the credentials below:
 
 	+++@lab.CloudCredential(134).Username+++
