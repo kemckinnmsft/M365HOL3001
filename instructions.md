@@ -343,7 +343,7 @@ In this task, we will perform initial setup of WD ATP and onboard 2 machines.
 
 In this task, we will join 3 systems to the Azure AD tenant to provide SSO capabilities in Office.
 
-1. [] Log into @lab.VirtualMachine(Client01).SelectLink using the password ```Pa$$w0rd```.
+1. [] Log into @lab.VirtualMachine(Client01).SelectLink using the password +++@lab.VirtualMachine(Client01).Password+++.
 1. [] Right-click on the start menu and click **Run**.
 1. [] In the Run dialog, type ```ms-settings:workplace``` and click **OK**.
 
@@ -374,7 +374,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 2. [] Copy the **WindowsDefenderATPLocalOnboardingScript** to the desktop.
 1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
 1. [] Press **(Y)** to confirm onboarding.
-1. [] Log into @lab.VirtualMachine(Client02).SelectLink using the password ```Pa$$w0rd```.
+1. [] Log into @lab.VirtualMachine(Client02).SelectLink using the password +++@lab.VirtualMachine(Client01).Password+++.
 1. [] Right-click on the start menu and click **Run**.
 1. [] In the Run dialog, type ```ms-settings:workplace``` and click **OK**.
 
@@ -405,7 +405,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 2. [] Copy the **WindowsDefenderATPLocalOnboardingScript** to the desktop.
 1. [] Right-click on **WindowsDefenderATPLocalOnboardingScript** and click **Run as Administrator**.
 1. [] Press **(Y)** to confirm onboarding.
-1. [] Log into @lab.VirtualMachine(Client03).SelectLink using the password ```Pa$$w0rd```.
+1. [] Log into @lab.VirtualMachine(Client03).SelectLink using the password +++@lab.VirtualMachine(Client01).Password+++.
 1. [] Right-click on the start menu and click **Run**.
 1. [] In the Run dialog, type ```ms-settings:workplace``` and click **OK**.
 
