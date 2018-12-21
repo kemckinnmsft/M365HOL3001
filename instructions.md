@@ -391,7 +391,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 
 3. [] On the Settings page, under **Machine management**, click **Onboarding**.
    
-	^IMAGE[Open Screenshot](\Media\onboarding.png)
+	!IMAGE[Open Screenshot](\Media\onboarding.png)
 
 1. [] Click **Download package** and **Open** when the download dialog pops up.
 2. [] Copy the **WindowsDefenderATPLocalOnboardingScript** to the desktop.
@@ -405,7 +405,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 1. [] Right-click on the start menu and click **Run**.
 1. [] In the Run dialog, type +++ms-settings:workplace+++ and click **OK**.
 
-	>!IMAGE[mssettings.png](\Media\mssettings.png)
+	^IMAGE[Open Screenshot](\Media\mssettings.png)
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
@@ -422,7 +422,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 	+++@lab.CloudCredential(134).Password+++
 1. [] On the left, click the **Settings** icon.
  
-	!IMAGE[settings.png](\Media\settings.png)
+	^IMAGE[Open Screenshot](\Media\settings.png)
 
 3. [] On the Settings page, under **Machine management**, click **Onboarding**.
    
@@ -440,7 +440,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 1. [] Right-click on the start menu and click **Run**.
 1. [] In the Run dialog, type +++ms-settings:workplace+++ and click **OK**.
 
-	>!IMAGE[mssettings.png](\Media\mssettings.png)
+	^IMAGE[Open Screenshot](\Media\mssettings.png)
 
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
@@ -457,7 +457,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 	+++@lab.CloudCredential(134).Password+++
 1. [] On the left, click the **Settings** icon.
  
-	!IMAGE[settings.png](\Media\settings.png)
+	^IMAGE[Open Screenshot](\Media\settings.png)
 
 3. [] On the Settings page, under **Machine management**, click **Onboarding**.
    
