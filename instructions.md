@@ -463,7 +463,8 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 ===
 # Connect MCAS to Office 365 
 
-1. [] On @lab.VirtualMachine(Client01).SelectLink, open a new tab and go to +++https://portal.cloudappsecurity.com+++
+1. [] Log into @lab.VirtualMachine(Client01).SelectLink using the password +++Pa$$w0rd+++.
+1. [] Open a new tab and go to +++https://portal.cloudappsecurity.com+++
 1. [] Go to the gear icon and select **App connectors** 
 
 	!IMAGE[GetImage.png](\Media\GetImage.png)
@@ -525,11 +526,7 @@ Now that the workspace has been deployed (you don't have to wait for all the res
  
 ## Create and configure Azure ATP Workspace 
  
-1. []	Login into @lab.VirtualMachine(ContosoDC).SelectLink by clicking @lab.CtrlAltDelete and using the credentials below:  
- 
-	+++@lab.VirtualMachine(ContosoDC).UserName+++ 
- 
-	+++@lab.VirtualMachine(ContosoDC).Password+++ 
+1. []	Login into @lab.VirtualMachine(ContosoDC).SelectLink using the password	+++@lab.VirtualMachine(ContosoDC).Password+++ 
  
 2. []	Open Internet Explorer and browse to +++https://portal.atp.azure.com+++ and login with the following credentials.  
     
