@@ -352,8 +352,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
 	```adams@@lab.CloudCredential(134).TenantName```
-	> [!NOTE] Press **backspace** and **m** after the autotype to enable the Next button
-	
+		
 	```pass@word1```
 1. [] Click **Done**.
 1. [] Open an Edge InPrivate window and navigate to ```https://securitycenter.windows.com/```.
@@ -383,8 +382,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
 	```alicea@@lab.CloudCredential(134).TenantName```
-	> [!NOTE] Press **backspace** and **m** after the autotype to enable the Next button
-	
+		
 	```pass@word1```
 1. [] Click **Done**.
 1. [] Open an Edge InPrivate window and navigate to ```https://securitycenter.windows.com/```.
@@ -414,8 +412,7 @@ In this task, we will join 3 systems to the Azure AD tenant to provide SSO capab
 1. [] In the Access Work or School settings menu, click on **+ Connect** and enter the credentials below to workplace join the client.
 
 	```evang@@lab.CloudCredential(134).TenantName```
-	> [!NOTE] Press **backspace** and **m** after the autotype to enable the Next button
-	
+		
 	```pass@word1```
 1. [] Click **Done**.
 1. [] Open an Edge InPrivate window and navigate to ```https://securitycenter.windows.com/```.
