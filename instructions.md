@@ -181,6 +181,52 @@ For several of the exercises in this lab series, you will require an active subs
 In this task, we will create new Azure AD users and assign licenses via PowerShell.  Ina procduction evironment this would be done using Azure AD Connect or a similar tool to maintain a single source of authority, but for lab purposes we are doing it via script to reduce setup time.
 
 
+```
+# Store Tenant FQDN and Short name
+$tenantfqdn = "@lab.CloudCredential(134).TenantName"
+$tenant = $tenantfqdn.Split('.')[0]
+
+# Build Licensing SKUs
+$office = $tenant+":ENTERPRISEPREMIUM"
+$ems = $tenant+":EMSPREMIUM"
+$wdatp = $tenant+":WIN_DEF_ATP"
+
+# Get Global Admin Credentials
+$cred = Get-Credential
+
+# Connect to MSOLService for licensing Operations
+Connect-MSOLService -Credential $cred
+
+# Remove existing licenses to ensure enough licenses exist for our users
+$LicensedUsers = Get-MsolUser -All  | where {$_.isLicensed -eq $true}
+$LicensedUsers | foreach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses $office, $ems}
+
+# Connect to Azure AD using stored credentials to create users
+Connect-AzureAD -Credential $cred
+
+# Import Users from local csv file
+$users = Import-csv C:\users.csv
+foreach ($user in $users){
+# Create password profile preventing automatic password change and storing password from csv
+$PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile 
+$PasswordProfile.ForceChangePasswordNextLogin = $false 
+$PasswordProfile.Password = $user.password
+
+# Store UPN created from csv and tenant
+$upn = $user.username+"@"+$tenantfqdn
+
+# Create new Azure AD user
+New-AzureADUser -AccountEnabled $True -DisplayName $user.displayname -PasswordProfile $PasswordProfile -MailNickName $user.username -UserPrincipalName $upn
+
+# Assign Office and EMS licenses to users
+Set-MsolUserLicense -UserPrincipalName $upn -AddLicenses $office, $ems
+}
+
+# Assign Office, EMS, and WDATP licenses to Admin user
+$upn = "admin@"+$tenantfqdn
+Set-MsolUserLicense -UserPrincipalName $upn -AddLicenses $office, $ems, wdatp
+```
+
 
 ===
 # Azure Security Center Setup
