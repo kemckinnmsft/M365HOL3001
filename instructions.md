@@ -97,15 +97,11 @@ In this task, we will link Windows Defender ATP licenses to your demo tenant.
 3. [] In the InPrivate window, navigate to the provided Windows Defender Advanced Threat Protection Trial Sign up link using the Type Text functionality of the lab environment.
 
 	!IMAGE[w7cijc7e.jpg](\Media\w7cijc7e.jpg)
-1. [] Click **Yes, add it to my account**.
+1. [] Click **Sign in** in the upper right corner of the page and use the credentials below.
+   
+    ```@lab.CloudCredential(134).Username```
 
-	!IMAGE[upx8fn9o.jpg](\Media\upx8fn9o.jpg)
-
-	> [!KNOWLEDGE] If you were not already signed into your tenant with Global Admin credentials, use the credentials below
-	>
-	>```@lab.CloudCredential(134).Username```
-	>
-	>```@lab.CloudCredential(134).Password```  
+	```@lab.CloudCredential(134).Password```  
 	
 1. [] On the Check out page, click **Try now**.
 
@@ -143,9 +139,9 @@ For several of the exercises in this lab series, you will require an active subs
 	!IMAGE[wdir7lb3.jpg](\Media\wdir7lb3.jpg)
 1. [] Enter the credentials below and select **Sign In**.
 
-	```@lab.CloudCredential(17).Username```
+	```@lab.CloudCredential(134).Username```
 
-	```@lab.CloudCredential(17).Password``` 
+	```@lab.CloudCredential(134).Password``` 
 
 	!IMAGE[gtg8pvp1.jpg](\Media\gtg8pvp1.jpg)
 1. [] Click **Confirm** if the correct email address is listed.
