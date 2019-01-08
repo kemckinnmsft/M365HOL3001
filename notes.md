@@ -37,3 +37,6 @@ Install-module MSonline
 https://labondemand.com/AuthenticatedLaunch/48390?providerId=4 
 
 Update AIP Client on Clients and Scanner
+
+Set client systems internet to metered
+Activate/rearm all clients and office on adminpc

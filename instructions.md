@@ -466,7 +466,15 @@ To be able to complete the different parts of the Cloud App Security labs, the f
 
 Most Cloud App Security treat detections capabilities rely on auditing being enabled in your environment. By default, auditing is not enabled in Office 365 and must then be turned on using the **Security & Compliance** admin console or PowerShell.
 
-1. On Client01, go to the [Office 365 admin portal](https://admin.office.com "Office 365 admin portal")
+1. [] Switch to @lab.VirtualMachine(Client01).SelectLink and log in with the password +++@lab.VirtualMachine(Client01).Password+++.
+1. Open a new InPrivate tab and navigate to ```https://admin.office.com```.	
+	
+	> [!KNOWLEDGE] If needed, log in using the credentials below:
+	>
+	>```@lab.CloudCredential(134).Username```
+	>
+	>```@lab.CloudCredential(134).Password```
+
     ![Admin portal](\Media\conf-adminportal.png "Admin portal")
 
 2. Go down on this page and open the **Security & Compliance Center**
