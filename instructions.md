@@ -720,7 +720,6 @@ In this exercise, we will install the AIP scanner and run it against repositorie
 
 ---
 # Configuring Azure Log Analytics
-[:arrow_up: Top](#exercise-1-configuring-aip-scanner-for-discovery)
 
 In order to collect log data from Azure Information Protection clients and services, you must first configure the log analytics workspace.
 
@@ -763,6 +762,7 @@ In order to collect log data from Azure Information Protection clients and servi
 1. [] Click **Yes**, in the confirmation dialog.
 
 	!IMAGE[zgvmm4el.jpg](\Media\zgvmm4el.jpg)
+	
 ---
 # AIP Scanner Setup
 [:arrow_up: Top](#exercise-1-configuring-aip-scanner-for-discovery)
