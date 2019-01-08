@@ -35,3 +35,5 @@ On Scanner01
 Install-module MSonline
 
 https://labondemand.com/AuthenticatedLaunch/48390?providerId=4 
+
+Update AIP Client on Clients and Scanner
