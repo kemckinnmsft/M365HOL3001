@@ -27,3 +27,10 @@ https://labondemand.com/AuthenticatedLaunch/48390?providerId=4
 
 
 Move new group creation steps from delegation MCAS page
+
+
+
+delete change log and recent files on scanner01
+
+remove click the pencil (move to note)
+
