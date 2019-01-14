@@ -29,8 +29,18 @@ https://labondemand.com/AuthenticatedLaunch/48390?providerId=4
 Move new group creation steps from delegation MCAS page
 
 
+Install Adobe and MIP plugin 
+
+Make modification to registry for PDF
+
+Add PDF instructions to HOL3000/M365HOL
 
 delete change log and recent files on scanner01
-
-remove click the pencil (move to note)
-
+username,displayname,password
+AdamS,Adam Smith,pass@word1
+AIPScanner,AIPScanner,Somepass1
+alicea,Alice Anderson,pass@word1
+evang,Evan Green,pass@word1
+nuckc,Nuck Chorris,NinjaCat123
+bobh,Bob Helpdesk,Password123!@#
+McasAdminUS,MCAS AdminUS,pass@word1
