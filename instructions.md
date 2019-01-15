@@ -2369,9 +2369,9 @@ Now that we have Classified and Protected documents using the scanner, we can re
 
 3. [] Open one of the Contoso Purchasing Permissions documents.
 ​	
-   > [!NOTE] Observe that the document is classified as Confidential \ All Employees. 
-   >
-   > !IMAGE[s1okfpwu.jpg](\Media\s1okfpwu.jpg)
+   	> [!NOTE] Observe that the document is classified as Confidential \ All Employees. 
+   	>
+   	> !IMAGE[s1okfpwu.jpg](\Media\s1okfpwu.jpg)
 
 4. [] Next, in the same documents folder, open one of the pdf files.
 5. [] When prompted by Adobe, enter ```AdamS@@lab.CloudCredential(134).TenantName``` and press OK.
@@ -2393,7 +2393,7 @@ We can now go back and look at the dashboards and observe how they have changed.
 
 1. [] On @lab.VirtualMachine(Client01).SelectLink, open the browser that is logged into the Azure Portal.
 
-  > [!ALERT] Some of the content shown in this dashboard will not be present because we skipped the manual labeling sections.  This content has been left in to show the capabilities of the reports.
+  	> [!ALERT] Some of the content shown in this dashboard will not be present because we skipped the manual labeling sections.  This content has been left in to show the capabilities of the reports.
 
 1. [] Under **Dashboards**, click on **Usage report (Preview)**.
 
