@@ -162,13 +162,13 @@ For several of the exercises in this lab series, you will require an active subs
 
   	!IMAGE[ihrjazqi.jpg](\Media\ihrjazqi.jpg)
 
-  	> [!NOTE] You can keep the pre-populated information.
+    > [!NOTE] You can keep the pre-populated information.
 
 9. [] Check the box to agree to the terms and click **Sign up**.
 
   	!IMAGE[k2a97g8e.jpg](\Media\k2a97g8e.jpg)
 
-  	> [!NOTE] It may take a few minutes to process the request.
+    > [!NOTE] It may take a few minutes to process the request.
 
 1. [] While this is processing, you may continue to the next task.
 
