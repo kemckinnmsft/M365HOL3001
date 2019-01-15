@@ -2005,8 +2005,6 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 	$Access = New-Object -TypeName "Microsoft.Open.AzureAD.Model.RequiredResourceAccess"
 	$Access.ResourceAppId = $WebApp.AppId
 	$Access.ResourceAccess = $Scope
-	```
-
 
 	New-AzureADApplication -DisplayName AIPClient -ReplyURLs http://localhost -RequiredResourceAccess $Access -PublicClient $true
 	$NativeApp = Get-AzureADApplication -Filter "DisplayName eq 'AIPClient'"
@@ -2189,10 +2187,12 @@ However, helping your users to properly classify and protect sensitive data at t
 
    !IMAGE[245lpjvk.jpg](\Media\245lpjvk.jpg)
 
-   > [!HINT] The policy tip is automatically updated when you switch the condition to Automatic.
+	> [!HINT] The policy tip is automatically updated when you switch the condition to Automatic.
+
 1. [] Click **Save** in the Label: All Employees blade and **OK** to the Save settings prompt.
 
 	^IMAGE[Open Screenshot](\Media\gek63ks8.jpg)
+
 1. [] Press the **X** in the upper right-hand corner to close the Label: All Employees blade.
 
 	^IMAGE[Open Screenshot](\Media\wzwfc1l4.jpg)
