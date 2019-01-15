@@ -1325,7 +1325,7 @@ However, helping your users to properly classify and protect sensitive data at t
 1. [] Click **Save** in the Label: All Employees blade and **OK** to the Save settings prompt.
 
 	^IMAGE[Open Screenshot](\Media\gek63ks8.jpg)
-	
+
 1. [] Press the **X** in the upper right-hand corner to close the Label: All Employees blade.
 
 	^IMAGE[Open Screenshot](\Media\wzwfc1l4.jpg)
@@ -1459,33 +1459,33 @@ One of the most common use cases for AIP is the ability to send emails using Use
 
    !IMAGE[0xby56qt.jpg](\Media\0xby56qt.jpg)
 
-   > [!Hint] The **Do Not Forward** protection template will normally prevent the sharing of the screen and taking screenshots when protected documents or emails are loaded.  However, since this screenshot was taken within a VM, the operating system was unaware of the protected content and could not prevent the capture.  
-   >
-   >It is important to understand that although we put controls in place to reduce risk, if a user has view access to a document or email they can take a picture with their smartphone or even retype the message. That said, if the user is not authorized to read the message then it will not even render and we will demonstrate that next.
+	> [!Hint] The **Do Not Forward** protection template will normally prevent the sharing of the screen and taking screenshots when protected documents or emails are loaded.  However, since this screenshot was taken within a VM, the operating system was unaware of the protected content and could not prevent the capture.  
+	>
+	>It is important to understand that although we put controls in place to reduce risk, if a user has view access to a document or email they can take a picture with their smartphone or even retype the message. That said, if the user is not authorized to read the message then it will not even render and we will demonstrate that next.
 
-   > [!KNOWLEDGE] If you elected to send a Do Not Forward message to an external email, you will have an experience similar to the images below.  These captures are included to demonstrate the functionality for those that chose not to send an external message.
-   >
-   > !IMAGE[tzj04wi9.jpg](\Media\tzj04wi9.jpg)
-   > 
-   > Here the user has received an email from Evan Green and they can click on the **Read the message** button.
-   >
-   >!IMAGE[wiefwcho.jpg](\Media\wiefwcho.jpg)
-   >
-   >Next, the user is given the option to either log in using the social identity provider (**Sign in with Google**, Yahoo, Microsoft Account), or to **sign in with a one-time passcode**.
-   >
-   >If they choose the social identity provider login, it should use the token previously cached by their browser and display the message directly.
-   >
-   >If they choose one-time passcode, they will receive an email like the one below with the one-time passcode.
-   >
-   >!IMAGE[m6voa9xi.jpg](\Media\m6voa9xi.jpg)
-   >
-   >They can then use this code to authenticate to the Office 365 Message Encryption portal.
-   >
-   >!IMAGE[8pllxint.jpg](\Media\8pllxint.jpg)
-   >
-   >After using either of these authentication methods, the user will see a portal experience like the one shown below.
-   >
-   >!IMAGE[3zi4dlk9.jpg](\Media\3zi4dlk9.jpg)
+	> [!KNOWLEDGE] If you elected to send a Do Not Forward message to an external email, you will have an experience similar to the images below.  These captures are included to demonstrate the functionality for those that chose not to send an external message.
+	>
+	> !IMAGE[tzj04wi9.jpg](\Media\tzj04wi9.jpg)
+	> 
+	> Here the user has received an email from Evan Green and they can click on the **Read the message** button.
+	>
+	>!IMAGE[wiefwcho.jpg](\Media\wiefwcho.jpg)
+	>
+	>Next, the user is given the option to either log in using the social identity provider (**Sign in with Google**, Yahoo, Microsoft Account), or to **sign in with a one-time passcode**.
+	>
+	>If they choose the social identity provider login, it should use the token previously cached by their browser and display the message directly.
+	>
+	>If they choose one-time passcode, they will receive an email like the one below with the one-time passcode.
+	>
+	>!IMAGE[m6voa9xi.jpg](\Media\m6voa9xi.jpg)
+	>
+	>They can then use this code to authenticate to the Office 365 Message Encryption portal.
+	>
+	>!IMAGE[8pllxint.jpg](\Media\8pllxint.jpg)
+	>
+	>After using either of these authentication methods, the user will see a portal experience like the one shown below.
+	>
+	>!IMAGE[3zi4dlk9.jpg](\Media\3zi4dlk9.jpg)
 
 ---
 
