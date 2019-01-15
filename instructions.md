@@ -836,9 +836,9 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 
 1. [] In PowerShell, run ```Connect-AzureAD``` and use the username and password below. 
 
-  ```@lab.CloudCredential(17).Username```
+  ```@lab.CloudCredential(134).Username```
 
-  ```@lab.CloudCredential(17).Password```
+  ```@lab.CloudCredential(134).Password```
 
 1. [] Next, click the **T** to **type the commands below** in the PowerShell window and press **Enter**. 
 
@@ -887,7 +887,7 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 
 8. [] When prompted, enter the username and password below:
 
-	```AIPScanner@@lab.CloudCredential(17).TenantName```
+	```AIPScanner@@lab.CloudCredential(134).TenantName```
 
 	```Somepass1```
 
@@ -904,6 +904,7 @@ Now that you have installed the scanner bits, you need to get an Azure AD token 
 10. [] **In the admin PowerShell window** and type the command below.
 
   ```Restart-Service AIPScanner```
+
 ---
 
 # Configuring Repositories
@@ -1319,10 +1320,12 @@ However, helping your users to properly classify and protect sensitive data at t
 
    !IMAGE[245lpjvk.jpg](\Media\245lpjvk.jpg)
 
-   > [!HINT] The policy tip is automatically updated when you switch the condition to Automatic.
+	> [!HINT] The policy tip is automatically updated when you switch the condition to Automatic.
+
 1. [] Click **Save** in the Label: All Employees blade and **OK** to the Save settings prompt.
 
 	^IMAGE[Open Screenshot](\Media\gek63ks8.jpg)
+	
 1. [] Press the **X** in the upper right-hand corner to close the Label: All Employees blade.
 
 	^IMAGE[Open Screenshot](\Media\wzwfc1l4.jpg)
