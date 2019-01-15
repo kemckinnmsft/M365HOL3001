@@ -3393,12 +3393,11 @@ With the access and session policies, you can:
 >:memo: In this lab, we will cover only some scenarios.
 
 ---
-
 ## Configuration
 
 1. Go to ```https://portal.azure.com``` and open the **Azure Active Directory** blade.
 
-   !IMAGE[AAD portal](\Media\aad-1.png)
+   !IMAGE[AAD portal](\Media\aad-1.png) 
 
 2. Go to the **Conditional Access** section.
 
