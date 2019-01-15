@@ -1691,9 +1691,9 @@ Now that we have Classified and Protected documents using the scanner, we can re
 
 3. [] Open one of the Contoso Purchasing Permissions documents.
 ​	
-​	 > [!NOTE] Observe that the document is classified as Confidential \ Contoso Internal. 
-​	 >
-​	 > !IMAGE[s1okfpwu.jpg](\Media\s1okfpwu.jpg)
+	> [!NOTE] Observe that the document is classified as Confidential \ Contoso Internal. 
+	>
+	> !IMAGE[s1okfpwu.jpg](\Media\s1okfpwu.jpg)
 
 4. [] Next, in the same documents folder, open one of the pdf files.
 5. [] When prompted by Adobe, enter ```AdamS@@lab.CloudCredential(134).TenantName``` and press OK.
