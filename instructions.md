@@ -2573,7 +2573,7 @@ Congratulations! You have completed the Azure Information Protection Hands on La
 
 !IMAGE[](\Media\ninjacat.png)
 
-https://blogs.msdn.microsoft.com/oldnewthing/20160804-00/?p=94025
+[https://blogs.msdn.microsoft.com/oldnewthing/20160804-00/?p=94025](https://blogs.msdn.microsoft.com/oldnewthing/20160804-00/?p=94025)
 
 ===
 # Microsoft Cloud App Security
@@ -2608,17 +2608,17 @@ Although some labs are pretty straight forward ,we expect you to already have so
 The different Cloud App Security capabilities covered in the labs are:
 
 * [Module 01 - Management](#manage-admin-access)
-* [Module 02 - Cloud Discovery continuous report](#cloud-App-Security-Discovery-lab)
+* [Module 02 - Cloud Discovery continuous report](#cloud-app-security-discovery-lab)
 * [Module 03 - Information protection](#information-protection)
-* [Module 04 - Threat detection](#cloud-App-Security-threat-detection-lab)
-* [Module 05 - Conditional Access App Control with Office 365](#conditional-Access-App-Control-with-Office-365)
+* [Module 04 - Threat detection](#cloud-app-security-threat-detection-lab)
+* [Module 05 - Conditional Access App Control with Office 365](#conditional-access-app-control-with-office-365)
 
 ### Optional/follow on labs
 
-* [Module 06a - Management with PowerShell](#management-with-PowerShell)
-* [Module 06b - Cloud Discovery snapshot report](#cloud-Discovery-snapshot-report)
+* [Module 06a - Management with PowerShell](#management-with-powershell)
+* [Module 06b - Cloud Discovery snapshot report](#cloud-discovery-snapshot-report)
 * [Module 06c - Log collector troubleshooting](#log-collector-troubleshooting)
-* [Module 06d - Conditional Access App Control with 3rd party apps](#conditional-Access-App-Control-with-3rd-party-apps)
+* [Module 06d - Conditional Access App Control with 3rd party apps](#conditional-access-app-control-with-3rd-party-apps)
 
 >:question: If you have questions or want to go further in your Cloud App Security journey, join our **[Tech community](https://techcommunity.microsoft.com/t5/Microsoft-Cloud-App-Security/bd-p/MicrosoftCloudAppSecurity)** !
 ===
@@ -2640,7 +2640,7 @@ Documentation:
 
 In this lab, we are going to delegate the management of US employees to a new administrator (**mcasadminUS**). This administrator will only see those users alerts and activities for the users bieing members of the group **US employees**.
 
-1. In the [Cloud App Security portal](https://portal.cloudappsecurity.com), import the **US employees** group.
+1. In an InPrivate window, browse to ```https://https://portal.cloudappsecurity.com```, import the **US employees** group.
     > :warning: Cloud App Security has to synchronize the Azure AD groups before importing them. This operation can take up to 1h.
 
     !IMAGE[Import group](\Media\mgmt-import1.png "Import group")
@@ -2651,7 +2651,7 @@ In this lab, we are going to delegate the management of US employees to a new ad
 
     !IMAGE[Import group](\Media\mgmt-import4.png "Import group")
 
-2. In the [Cloud App Security portal](https://portal.cloudappsecurity.com), add **mcasAdminUS** as **User group admin** for the **US employees** group.
+2. Next, add **mcasAdminUS** as **User group admin** for the **US employees** group.
 
     !IMAGE[New admin](\Media\mgmt-admin1.png "New admin")
 
@@ -2663,7 +2663,7 @@ In this lab, we are going to delegate the management of US employees to a new ad
 
     !IMAGE[New admin](\Media\mgmt-admin5.png "New admin")
 
-3. Open a new **private** tab and connect to the [Cloud App Security portal](https://portal.cloudappsecurity.com) with **mcasAdminUS** and compare the activities, alerts and actions that this scoped admin can perform compared to your regular Global admin account.
+3. Open a new **private** window and browse to ```https://portal.cloudappsecurity.com```. Log in using the **mcasAdminUS** user and compare the activities, alerts and actions that this scoped admin can perform compared to your regular Global admin account.
 
 ---
 
@@ -3396,7 +3396,7 @@ With the access and session policies, you can:
 
 ## Configuration
 
-1. Go to the [Azure portal](https://portal.azure.com) and open the **Azure Active Directory** blade.
+1. Go to ```https://portal.azure.com``` and open the **Azure Active Directory** blade.
 
    !IMAGE[AAD portal](\Media\aad-1.png)
 
@@ -3422,11 +3422,11 @@ With the access and session policies, you can:
 
    !IMAGE[New policy](\Media\cond-policy-5.png)
 
-4. Sign out, close you browser and open the [Exchange Web App](https://outlook.office.com).
+4. Sign out, close you browser and open the Exchange Web App at ```https://outlook.office.com```.
 
    >:memo: We do this to force the use of conditional access. Once a session has been redirected to Cloud App Security, you will be able to add the application for App Control.
 
-5. Go back to [Cloud App Security](https://portal.cloudappsecurity.com), click on the gear icon and go to the **Conditional Access App Control** section.
+5. Go back to ```https://portal.cloudappsecurity.com```, click on the gear icon and go to the **Conditional Access App Control** section.
    You will see that Exchange Online appeared and can now be configured.
 
    !IMAGE[Menu](\Media\appc-office-1.png)
@@ -3463,7 +3463,7 @@ With the access and session policies, you can:
 
 Let's now test our configuration.
 
-1. Sign out, close you browser and open the [Exchange Web App](https://outlook.office.com).
+1. Sign out, close you browser and open the Exchange Web App at ```https://outlook.office.com```.
    You should receive the followin message, as you are redirected through Cloud App Security before accessing the application. **Click** to continue to Exchange Online.
 
    !IMAGE[Warning](\Media\appc-office-12.png)
