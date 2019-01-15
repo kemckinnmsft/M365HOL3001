@@ -1699,13 +1699,13 @@ Now that we have Classified and Protected documents using the scanner, we can re
 5. [] When prompted by Adobe, enter ```AdamS@@lab.CloudCredential(134).TenantName``` and press OK.
 6. [] Check the box to save credentials and press OK.
 
-  > [!NOTE] The PDF will now open and display the sensitivity across the top of the document.
+	> [!NOTE] The PDF will now open and display the sensitivity across the top of the document.
 
-  > [!Knowledge] The latest version of Acrobat Reader DC and the MIP Plugin have been installed on this system prior to the lab. Additionally, the sensitivity does not display by default in Adobe Acrobat Reader DC.  You must make the modifications below to the registry to make this bar display.
-  >
-  > In **HKEY_CURRENT_USER\Software\Adobe\Acrobat Reader\DC\MicrosoftAIP**, create a new **DWORD** value of **bShowDMB** and set the **Value** to **1**.
-  >
-  > !IMAGE[1547416250228](\Media\1547416250228.png)
+	> [!Knowledge] The latest version of Acrobat Reader DC and the MIP Plugin have been installed on this system prior to the lab. Additionally, the sensitivity does not display by default in Adobe Acrobat Reader DC.  You must make the modifications below to the registry to make this bar display.
+	>
+	> In **HKEY_CURRENT_USER\Software\Adobe\Acrobat Reader\DC\MicrosoftAIP**, create a new **DWORD** value of **bShowDMB** and set the **Value** to **1**.
+	>
+	> !IMAGE[1547416250228](\Media\1547416250228.png)
   
 ---
 # Reviewing the Dashboards
