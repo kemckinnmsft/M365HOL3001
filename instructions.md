@@ -2369,9 +2369,21 @@ Now that we have Classified and Protected documents using the scanner, we can re
 3. [] Open one of the Contoso Purchasing Permissions documents.
 
 ​	
-​	> [!NOTE] Observe that the document is classified as Confidential \ All Employees. 
-​	>
-​	>!IMAGE[s1okfpwu.jpg](\Media\s1okfpwu.jpg)
+	> [!NOTE] Observe that the document is classified as Confidential \ All Employees. 
+	>
+	> !IMAGE[s1okfpwu.jpg](\Media\s1okfpwu.jpg)
+
+4. [] Next, in the same documents folder, open one of the pdf files.
+5. [] When prompted by Adobe, enter ```AdamS@@lab.CloudCredential(134).TenantName``` and press OK.
+6. [] Check the box to save credentials and press OK.
+
+	> [!NOTE] The PDF will now open and display the sensitivity across the top of the document.
+
+	> [!Knowledge] The latest version of Acrobat Reader DC and the MIP Plugin have been installed on this system prior to the lab. Additionally, the sensitivity does not display by default in Adobe Acrobat Reader DC.  You must make the modifications below to the registry to make this bar display.
+	>
+	> In **HKEY_CURRENT_USER\Software\Adobe\Acrobat Reader\DC\MicrosoftAIP**, create a new **DWORD** value of **bShowDMB** and set the **Value** to **1**.
+	>
+	> !IMAGE[1547416250228](\Media\1547416250228.png)
 
 ---
 # Reviewing the Dashboards 🐱‍👤
@@ -2524,15 +2536,15 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 
 11. [] Switch to @lab.VirtualMachine(Client01).SelectLink and review the received email.
 
-   !IMAGE[pidqfaa1.jpg](\Media\pidqfaa1.jpg)
+	!IMAGE[pidqfaa1.jpg](\Media\pidqfaa1.jpg)
 
-   > [!Knowledge] Note that there is no encryption applied to the message.  That is because we set up the rule to only apply to external recipients.  If you were to leave that condition out of the mail flow rule, internal recipients would also receive an encrypted copy of the message.  The image below shows the encrypted message that was received externally.
-   >
-   >!IMAGE[c5foyeji.jpg](\Media\c5foyeji.jpg)
-   >
-   >Below is another view of the same message received in Outlook Mobile on an iOS device.
-   >
-   >!IMAGE[599ljwfy.jpg](\Media\599ljwfy.jpg)
+	> [!Knowledge] Note that there is no encryption applied to the message.  That is because we set up the rule to only apply to external recipients.  If you were to leave that condition out of the mail flow rule, internal recipients would also receive an encrypted copy of the message.  The image below shows the encrypted message that was received externally.
+	>
+	>!IMAGE[c5foyeji.jpg](\Media\c5foyeji.jpg)
+	>
+	>Below is another view of the same message received in Outlook Mobile on an iOS device.
+	>
+	>!IMAGE[599ljwfy.jpg](\Media\599ljwfy.jpg)
 
 12. [] Click on the **New email** button.
 
@@ -2548,9 +2560,9 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 15. [] In about a minute, you should receive an **Undeliverable** message from Exchange with the users that the message did not reach and the message you defined in the previous task.
 
    !IMAGE[kgjvy7ul.jpg](\Media\kgjvy7ul.jpg)
-> [!NOTE] This rule may take a few minutes to take effect, so if you do not get the undeliverable message, try again in a few minutes.
+	> [!NOTE] This rule may take a few minutes to take effect, so if you do not get the undeliverable message, try again in a few minutes.
 
-> [!HINT] There are many other use cases for Exchange Online mail flow rules but this should give you a quick view into what is possible and how easy it is to improve the security of your sensitive data through the use of Exchange Online mail flow rules and Azure Information Protection.
+	> [!HINT] There are many other use cases for Exchange Online mail flow rules but this should give you a quick view into what is possible and how easy it is to improve the security of your sensitive data through the use of Exchange Online mail flow rules and Azure Information Protection.
 
 ===
 
@@ -2558,6 +2570,7 @@ In this task, we will send emails to demonstrate the results of the Exchange Onl
 [:arrow_left: Home](#azure-information-protection)
 
 Congratulations! You have completed the Azure Information Protection Hands on Lab. 
+
 >[ninja-cat]: !(\Media\ninjacat.png)
 
 !INSTRUCTIONS[][ninja-cat]
