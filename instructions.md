@@ -2588,7 +2588,7 @@ Although some labs are pretty straight forward ,we expect you to already have so
 * **LinuxVM** is an Ubuntu 18.04 computer on which we install Docker to run the Cloud App Security Discovery log collector.
 * Office 365 and Cloud App Security are test tenants for the labs.
 
->:memo: We recommend using the [Cloud App Security documentation](https://docs.microsoft.com/en-us/cloud-app-security/what-is-cloud-app-security "Cloud App Security documentation") to have details on the different use cases, capabilities and configuration steps.
+
 
 ### Portals URLs
 
@@ -2631,14 +2631,16 @@ For this task, you are asked to delegate admin access to monitor a dedicated gro
 > :memo: Cloud App Security Global admin role is not the same as the regular Office 365 Global admin role.
 > Although the Office 365 Global admins are automatically granted the Cloud App Security Global admin role, you can grant users MCAS Global Admin role without adding them to the Office 365 Global admins
 
-Documentation:
-[https://docs.microsoft.com/en-us/cloud-app-security/manage-admins](https://docs.microsoft.com/en-us/cloud-app-security/manage-admins)
+
 
 ## Delegate user group administration
 
 In this lab, we are going to delegate the management of US employees to a new administrator (**mcasadminUS**). This administrator will only see those users alerts and activities for the users bieing members of the group **US employees**.
 
-1. In an InPrivate window, browse to ```https://https://portal.cloudappsecurity.com```, import the **US employees** group.
+1. [] On @lab.VirtualMachine(Client01).SelectLink log in with the password +++@lab.VirtualMachine(Client01).Password+++.
+
+1. [] In a in Private Browsing session navigate to the ```https://portal.cloudappsecurity.com```
+1. [] Import the **US employees** group.
     > :warning: Cloud App Security has to synchronize the Azure AD groups before importing them. This operation can take up to 1h.
 
     !IMAGE[Import group](\Media\mgmt-import1.png "Import group")
@@ -2649,7 +2651,7 @@ In this lab, we are going to delegate the management of US employees to a new ad
 
     !IMAGE[Import group](\Media\mgmt-import4.png "Import group")
 
-2. Next, add **mcasAdminUS** as **User group admin** for the **US employees** group.
+2. [] In the [Cloud App Security portal](https://portal.cloudappsecurity.com), add **mcasAdminUS** as **User group admin** for the **US employees** group.
 
     !IMAGE[New admin](\Media\mgmt-admin1.png "New admin")
 
@@ -2661,7 +2663,7 @@ In this lab, we are going to delegate the management of US employees to a new ad
 
     !IMAGE[New admin](\Media\mgmt-admin5.png "New admin")
 
-3. Open a new **private** window and browse to ```https://portal.cloudappsecurity.com```. Log in using the **mcasAdminUS** user and compare the activities, alerts and actions that this scoped admin can perform compared to your regular Global admin account.
+3. [] Open a new **private** tab and connect to the [Cloud App Security portal](https://portal.cloudappsecurity.com) with **mcasAdminUS** and compare the activities, alerts and actions that this scoped admin can perform compared to your regular Global admin account.
 
 ---
 
@@ -3391,11 +3393,12 @@ With the access and session policies, you can:
 >:memo: In this lab, we will cover only some scenarios.
 
 ---
+
 ## Configuration
 
-1. Go to ```https://portal.azure.com``` and open the **Azure Active Directory** blade.
+1. Go to the [Azure portal](https://portal.azure.com) and open the **Azure Active Directory** blade.
 
-   !IMAGE[AAD portal](\Media\aad-1.png) 
+   !IMAGE[AAD portal](\Media\aad-1.png)
 
 2. Go to the **Conditional Access** section.
 
@@ -3404,7 +3407,7 @@ With the access and session policies, you can:
 3. Create a new conditional access policy with the following settings:
 
    |Name|Assignments|Apps|
-   |-|-|-|
+   |-----|-----|-----|
    |Office365 AppControl|All users|Exchange, SharePoint|
 
    !IMAGE[New policy](\Media\cond-policy-1.png)
@@ -3419,11 +3422,11 @@ With the access and session policies, you can:
 
    !IMAGE[New policy](\Media\cond-policy-5.png)
 
-4. Sign out, close you browser and open the Exchange Web App at ```https://outlook.office.com```.
+4. Sign out, close you browser and open the [Exchange Web App](https://outlook.office.com).
 
    >:memo: We do this to force the use of conditional access. Once a session has been redirected to Cloud App Security, you will be able to add the application for App Control.
 
-5. Go back to ```https://portal.cloudappsecurity.com```, click on the gear icon and go to the **Conditional Access App Control** section.
+5. Go back to [Cloud App Security](https://portal.cloudappsecurity.com), click on the gear icon and go to the **Conditional Access App Control** section.
    You will see that Exchange Online appeared and can now be configured.
 
    !IMAGE[Menu](\Media\appc-office-1.png)
@@ -3460,7 +3463,7 @@ With the access and session policies, you can:
 
 Let's now test our configuration.
 
-1. Sign out, close you browser and open the Exchange Web App at ```https://outlook.office.com```.
+1. Sign out, close you browser and open the [Exchange Web App](https://outlook.office.com).
    You should receive the followin message, as you are redirected through Cloud App Security before accessing the application. **Click** to continue to Exchange Online.
 
    !IMAGE[Warning](\Media\appc-office-12.png)
@@ -4402,3 +4405,5 @@ Now that we have taken a look at risky sign-ins, let’s find out what happens i
 3. []	Click on the risky sign-in record for Bob and select **confirmed compromise**
 4. []	Now, open a new InPrivate window and try to log-in to portal.office.com as Bob
 	1. []	You will be prompted to reset Bob’s password
+
+
