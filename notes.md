@@ -21,6 +21,7 @@
     $tenantfqdn = @lab.cloudcredential(134).TenantName
     $tenant = $tenantfqdn.Split('.')
 
+!IMAGE[activity.png](\Media\activity.png)
 
 https://labondemand.com/AuthenticatedLaunch/48390?providerId=4 
 
